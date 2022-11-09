@@ -1,12 +1,12 @@
 ---
-title: Chapter 30. Network Servers
+title: Chapter 31. Network Servers
 part: IV. Network Communication
 prev: books/handbook/mail
 next: books/handbook/firewalls
 description: This chapter covers some of the more frequently used network services on UNIX systems
 tags: ["network", "servers", "inetd", "NFS", "NIS", "LDAP", "DHCP", "DNS", "Apache HTTP", "FTP", "Samba", "NTP", "iSCSI"]
 showBookMenu: true
-weight: 35
+weight: 36
 path: "/books/handbook/"
 aliases: ["/en/books/handbook/network-inetd/","/en/books/handbook/network-nfs/","/en/books/handbook/network-nis/","/en/books/handbook/network-ldap/","/en/books/handbook/network-dhcp/","/en/books/handbook/network-dns/","/en/books/handbook/network-apache/","/en/books/handbook/network-ftp/","/en/books/handbook/network-samba/","/en/books/handbook/network-ntp/","/en/books/handbook/network-iscsi/"]
 ---
@@ -19,7 +19,7 @@ aliases: ["/en/books/handbook/network-inetd/","/en/books/handbook/network-nfs/",
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 30
+:sectnumoffset: 31
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -93,8 +93,8 @@ This section covers the basics of configuring inetd.
 
 Configuration of inetd is done by editing [.filename]#/etc/inetd.conf#.
 Each line of this configuration file represents an application which can be started by inetd.
-By default, every line starts with a comment (`#`), meaning that inetd is not listening for any applications.
-To configure inetd to listen for an application's connections, remove the `#` at the beginning of the line for that application.
+By default, every line starts with a comment (`+#+`), meaning that inetd is not listening for any applications.
+To configure inetd to listen for an application's connections, remove the `+#+` at the beginning of the line for that application.
 
 After saving your edits, configure inetd to start at system boot by editing [.filename]#/etc/rc.conf#:
 
@@ -124,7 +124,7 @@ Once inetd is started, it needs to be notified whenever a modification is made t
 
 ====
 
-Typically, the default entry for an application does not need to be edited beyond removing the `#`.
+Typically, the default entry for an application does not need to be edited beyond removing the `+#+`.
 In some situations, it may be appropriate to edit the default entry.
 
 As an example, this is the default entry for man:ftpd[8] over IPv4:
@@ -643,7 +643,7 @@ Think of the NIS domain name as the name for a group of hosts.
 Some organizations choose to use their Internet domain name for their NIS domain name.
 This is not recommended as it can cause confusion when trying to debug network problems.
 The NIS domain name should be unique within the network and it is helpful if it describes the group of machines it represents.
-For example, the Art department at Acme Inc. might be in the "acme-art"NIS domain.
+For example, the Art department at Acme Inc. might be in the "acme-art" NIS domain.
 This example will use the domain name `test-domain`.
 
 However, some non-FreeBSD operating systems require the NIS domain name to be the same as the Internet domain name.
@@ -760,7 +760,7 @@ ellington has been setup as an YP master server without any errors.
 
 This will create [.filename]#/var/yp/Makefile# from [.filename]#/var/yp/Makefile.dist#.
 By default, this file assumes that the environment has a single NIS server with only FreeBSD clients.
-Since `test-domain` has a slave server, edit this line in [.filename]#/var/yp/Makefile# so that it begins with a comment (`#`):
+Since `test-domain` has a slave server, edit this line in [.filename]#/var/yp/Makefile# so that it begins with a comment (`+#+`):
 
 [.programlisting]
 ....
@@ -922,7 +922,7 @@ Since RPC is a broadcast-based service, any system running ypbind within the sam
 To prevent unauthorized transactions, man:ypserv[8] supports a feature called "securenets" which can be used to restrict access to a given set of hosts.
 By default, this information is stored in [.filename]#/var/yp/securenets#, unless man:ypserv[8] is started with `-p` and an alternate path.
 This file contains entries that consist of a network specification and a network mask separated by white space.
-Lines starting with `#` are considered to be comments.
+Lines starting with `+"#"+` are considered to be comments.
 A sample [.filename]#securenets# might look like this:
 
 [.programlisting]
@@ -1058,7 +1058,7 @@ INTERNS (,able,test-domain)     (,baker,test-domain)
 ....
 
 Each entry configures a netgroup. The first column in an entry is the name of the netgroup.
-Each set of brackets represents either a group of one or more users or the name of another netgroup.
+Each set of parentheses represents either a group of one or more users or the name of another netgroup.
 When specifying a user, the three comma-delimited fields inside each group represent:
 
 . The name of the host(s) where the other fields representing the user are valid. If a hostname is not specified, the entry is valid on all hosts.
@@ -2017,7 +2017,7 @@ For more detailed information about Apache 2.X and its configuration directives,
 === Configuring and Starting Apache
 
 In FreeBSD, the main Apache HTTP Server configuration file is installed as [.filename]#/usr/local/etc/apache2x/httpd.conf#, where _x_ represents the version number.
-This ASCII text file begins comment lines with a `#`.
+This ASCII text file begins comment lines with a `+#+`.
 The most frequently modified directives are:
 
 `ServerRoot "/usr/local"`::

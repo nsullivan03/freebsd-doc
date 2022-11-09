@@ -1,12 +1,12 @@
 ---
-title: Chapter 12. Configuration and Tuning
+title: Chapter 13. Configuration and Tuning
 part: Part III. System Administration
 prev: books/handbook/partiii
 next: books/handbook/boot
 description: This chapter explains much of the FreeBSD configuration process, including some of the parameters which can be set to tune a FreeBSD system.
 tags: ["configuration", "tuning", "services", "cron", "virtual hosts", "logging", "configuration files", "sysctl", "tuning disks", "kernel limits", "swap", "power management"]
 showBookMenu: true
-weight: 16
+weight: 17
 path: "/books/handbook/"
 aliases: ["/en/books/handbook/configtuning-starting-services/","/en/books/handbook/configtuning-cron/","/en/books/handbook/configtuning-rcd/","/en/books/handbook/config-network-setup/","/en/books/handbook/configtuning-virtual-hosts/","/en/books/handbook/configtuning-syslog/","/en/books/handbook/configtuning-configfiles/","/en/books/handbook/configtuning-sysctl/","/en/books/handbook/configtuning-disk/","/en/books/handbook/configtuning-kernel-limits/","/en/books/handbook/adding-swap-space/","/en/books/handbook/acpi-overview/"]
 ---
@@ -19,7 +19,7 @@ aliases: ["/en/books/handbook/configtuning-starting-services/","/en/books/handbo
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 12
+:sectnumoffset: 13
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -168,7 +168,7 @@ PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin <.>
 */5	*	*	*	*	root	/usr/libexec/atrun <.>
 ....
 
-<.> Lines that begin with the `#` character are comments. A comment can be placed in the file as a reminder of what and why a desired action is performed. Comments cannot be on the same line as a command or else they will be interpreted as part of the command; they must be on a new line. Blank lines are ignored.
+<.> Lines that begin with the `+#+` character are comments. A comment can be placed in the file as a reminder of what and why a desired action is performed. Comments cannot be on the same line as a command or else they will be interpreted as part of the command; they must be on a new line. Blank lines are ignored.
 
 <.> The equals (`=`) character is used to define any environment settings. In this example, it is used to define the `SHELL` and `PATH`. If the `SHELL` is omitted, cron will use the default Bourne shell. If the `PATH` is omitted, the full path must be given to the command or script to run.
 

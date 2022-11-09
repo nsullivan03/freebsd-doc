@@ -1,12 +1,12 @@
 ---
-title: Chapter 10. Linux Binary Compatibility
+title: Chapter 11. Linux Binary Compatibility
 part: Part II. Common Tasks
 prev: books/handbook/printing
 next: books/handbook/wine
 description: FreeBSD provides binary compatibility with Linux, allowing users to install and run most Linux binaries on a FreeBSD system without having to first modify the binary
 tags: ["linux", "linuxulator", "emulation", "binary", "compatibility"]
 showBookMenu: true
-weight: 13
+weight: 14
 path: "/books/handbook/"
 aliases: ["/en/books/handbook/linuxemu-lbc-install/","/en/books/handbook/linuxemu-advanced/"]
 ---
@@ -19,7 +19,7 @@ aliases: ["/en/books/handbook/linuxemu-lbc-install/","/en/books/handbook/linuxem
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 10
+:sectnumoffset: 11
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -325,7 +325,7 @@ The Linux system call vector contains, among other things, a list of `sysent[]` 
 When a system call is called by the Linux binary, the trap code dereferences the system call function pointer off the `proc` structure, and gets the Linux, not the FreeBSD, system call entry points.
 
 Linux mode dynamically _reroots_ lookups.
-This is, in effect, equivalent to `union` to file system mounts.
+This is, in effect, equivalent to `union` file system mounts.
 First, an attempt is made to look up the file in [.filename]#/compat/linux/original-path#.
 If that fails, the lookup is done in [.filename]#/original-path#.
 This makes sure that binaries that require other binaries can run.

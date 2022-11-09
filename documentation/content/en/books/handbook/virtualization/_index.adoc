@@ -1,12 +1,12 @@
 ---
-title: Chapter 22. Virtualization
+title: Chapter 23. Virtualization
 part: Part III. System Administration
 prev: books/handbook/filesystems
 next: books/handbook/l10n
 description: Virtualization software allows multiple operating systems to run simultaneously on the same computer
 tags: ["virtualization", "Parallels", "VMware", "VirtualBox", "bhyve", "XEN"]
 showBookMenu: true
-weight: 26
+weight: 27
 path: "/books/handbook/"
 aliases: ["/en/books/handbook/virtualization-guest-parallels/","/en/books/handbook/virtualization-guest-virtualpc/","/en/books/handbook/virtualization-guest-vmware/","/en/books/handbook/virtualization-guest-virtualbox/","/en/books/handbook/virtualization-host-virtualbox/","/en/books/handbook/virtualization-host-bhyve/","/en/books/handbook/virtualization-host-xen/"]
 ---
@@ -19,7 +19,7 @@ aliases: ["/en/books/handbook/virtualization-guest-parallels/","/en/books/handbo
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 22
+:sectnumoffset: 23
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -1100,7 +1100,7 @@ freebsd                                      1  1024     1     -b----   663.9
 
 To begin the installation of the base operating system, start the VNC client, directing it to the main network address of the host or to the IP address defined on the `vnclisten` line of [.filename]#freebsd.cfg#.
 After the operating system has been installed, shut down the DomU and disconnect the VNC viewer.
-Edit [.filename]#freebsd.cfg#, removing the line with the `cdrom` definition or commenting it out by inserting a `#` character at the beginning of the line.
+Edit [.filename]#freebsd.cfg#, removing the line with the `cdrom` definition or commenting it out by inserting a `+#+` character at the beginning of the line.
 To load this new configuration, it is necessary to remove the old DomU with `xl destroy`, passing either the name or the id as the parameter.
 Afterwards, recreate it using the modified [.filename]*freebsd.cfg*.
 

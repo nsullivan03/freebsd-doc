@@ -141,8 +141,8 @@
 * {sunpoet}
 * {lwhsu}
 * {whu}
+* {zlei}
 * {jkh}
-* {bhughes}
 * {shurd}
 * {rhurlin}
 * {davide}
@@ -169,6 +169,7 @@
 * {jkim}
 * {jceel}
 * {kai}
+* {corvink}
 * {wulf}
 * {jkois}
 * {maxim}
@@ -388,7 +389,6 @@
 * {egypcio}
 * {zec}
 * {bz}
-* {zeising}
 * {mizhka}
 * {tz}
 * {dsl}
