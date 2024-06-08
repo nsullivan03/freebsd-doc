@@ -1,14 +1,13 @@
 ---
-title: Chapter 32. Firewalls
+title: Chapter 33. Firewalls
 part: IV. Network Communication
 prev: books/handbook/network-servers
 next: books/handbook/advanced-networking
 description: "FreeBSD has three firewalls built into the base system: PF, IPFW, and IPFILTER. This chapter covers how to define packet filtering rules, the differences between the firewalls built into FreeBSD and how to use them"
 tags: ["firewall", "pf", "ipfw", "ipfilter", "blacklistd", "filtering"]
 showBookMenu: true
-weight: 37
-path: "/books/handbook/"
-aliases: ["/en/books/handbook/firewalls-concepts/","/en/books/handbook/firewalls-pf/","/en/books/handbook/firewalls-ipfw/","/en/books/handbook/firewalls-ipf/","/en/books/handbook/firewalls-blacklistd/"]
+weight: 38
+path: "/books/handbook/firewalls/"
 ---
 
 [[firewalls]]
@@ -19,7 +18,7 @@ aliases: ["/en/books/handbook/firewalls-concepts/","/en/books/handbook/firewalls
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 32
+:sectnumoffset: 33
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -1624,7 +1623,7 @@ Refer to man:rc.conf[5] for details.
 Let us start with a statement: the userspace NAT implementation: man:natd[8], has more overhead than in-kernel NAT.
 For man:natd[8] to translate packets, the packets have to be copied from the kernel to userspace and back which brings in extra overhead that is not present with in-kernel NAT.
 
-To enable the userpace NAT daemon man:natd[8] at boot time, the following is a minimum configuration in [.filename]#/etc/rc.conf#.
+To enable the userspace NAT daemon man:natd[8] at boot time, the following is a minimum configuration in [.filename]#/etc/rc.conf#.
 Where `natd_interface` is set to the name of the NIC attached to the Internet.
 The man:rc[8] script of man:natd[8] will automatically check if a dynamic IP address is used and configure itself to handle that.
 
@@ -2246,7 +2245,7 @@ map dc0 192.168.1.0/24 -> 204.134.75.0/255.255.255.0
 map dc0 192.168.1.0/24 -> 204.134.75.0/24
 ....
 
-A common practice is to have a publically accessible web server or mail server segregated to an internal network segment.
+A common practice is to have a publicly accessible web server or mail server segregated to an internal network segment.
 The traffic from these servers still has to undergo NAT, but port redirection is needed to direct inbound traffic to the correct server.
 For example, to map a web server using the internal address `10.0.10.25` to its public IP address of `20.20.20.5`, use this rule:
 

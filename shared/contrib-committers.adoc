@@ -1,7 +1,5 @@
 
-* {eadler}
 * {ambrisko}
-* {pauamma}
 * {shaun}
 * {jonathan}
 * {mandree}
@@ -15,7 +13,6 @@
 * {dbaio}
 * {timur}
 * {jhb}
-* {gjb}
 * {lbartoletti}
 * {jbeich}
 * {kib}
@@ -26,6 +23,7 @@
 * {kaktus}
 * {tdb}
 * {zbb}
+* {jbo}
 * {novel}
 * {garga}
 * {kbowling}
@@ -43,6 +41,7 @@
 * {jchandra}
 * {acm}
 * {carlavilla}
+* {olce}
 * {gahr}
 * {adrian}
 * {dchagin}
@@ -52,7 +51,9 @@
 * {melifaro}
 * {theraven}
 * {davidcs}
+* {jrtc27}
 * {marcus}
+* {fuz}
 * {lcook}
 * {ngie}
 * {tijl}
@@ -63,6 +64,7 @@
 * {cracauer}
 * {jeb}
 * {bcran}
+* {cc}
 * {joel}
 * {alfredo}
 * {bapt}
@@ -77,8 +79,10 @@
 * {donner}
 * {bdrewery}
 * {gad}
+* {vvd}
 * {kd}
 * {ale}
+* {dutra}
 * {deischen}
 * {julian}
 * {ae}
@@ -98,6 +102,7 @@
 * {fanf}
 * {mdf}
 * {blackend}
+* {jfree}
 * {decke}
 * {sgalabov}
 * {ultima}
@@ -119,8 +124,6 @@
 * {jamie}
 * {adridg}
 * {eugen}
-* {bar}
-* {rigoletto}
 * {anish}
 * {jmg}
 * {mjg}
@@ -132,7 +135,6 @@
 * {jgh}
 * {wen}
 * {jhibbits}
-* {nhibma}
 * {jhixson}
 * {pho}
 * {oh}
@@ -158,7 +160,6 @@
 * {kan}
 * {bjk}
 * {phk}
-* {pluknet}
 * {karels}
 * {pkelsey}
 * {yasu}
@@ -167,6 +168,7 @@
 * {kientzle}
 * {stevek}
 * {jkim}
+* {akiyano}
 * {jceel}
 * {kai}
 * {corvink}
@@ -174,6 +176,7 @@
 * {jkois}
 * {maxim}
 * {tobik}
+* {jkoshy}
 * {ak}
 * {skozlov}
 * {skra}
@@ -219,6 +222,7 @@
 * {mm}
 * {slavash}
 * {slm}
+* {rcm}
 * {mckusick}
 * {jmcneill}
 * {mmel}
@@ -239,9 +243,9 @@
 * {jsm}
 * {tmunro}
 * {markm}
+* {rnagy}
 * {trasz}
 * {neel}
-* {bland}
 * {joneum}
 * {gnn}
 * {khng}
@@ -249,6 +253,7 @@
 * {obrien}
 * {nick}
 * {olgeni}
+* {michaelo}
 * {osa}
 * {rodrigo}
 * {philip}
@@ -265,7 +270,6 @@
 * {cperciva}
 * {alfred}
 * {csjp}
-* {grahamperrin}
 * {gerald}
 * {scottph}
 * {0mp}
@@ -334,7 +338,6 @@
 * {xride}
 * {marius}
 * {cs}
-* {ryusuke}
 * {nyan}
 * {tagattie}
 * {tota}
@@ -353,7 +356,7 @@
 * {chuck}
 * {ericbsd}
 * {andrew}
-* {gonzo}
+* {uzsolt}
 * {ume}
 * {fsu}
 * {mikael}
@@ -373,7 +376,6 @@
 * {peter}
 * {nwhitehorn}
 * {bwidawsk}
-* {swills}
 * {rew}
 * {def}
 * {mw}
@@ -393,3 +395,5 @@
 * {tz}
 * {dsl}
 * {ronald}
+* {christos}
+* {bnovkov}

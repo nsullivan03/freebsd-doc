@@ -4,7 +4,7 @@ prev: books/porters-handbook/plist
 next: books/porters-handbook/testing
 showBookMenu: true
 weight: 8
-path: "/books/porters-handbook/"
+path: "/books/porters-handbook/pkg-files/"
 ---
 
 [[pkg-files]]
@@ -63,6 +63,14 @@ update-etc-shells:
 	${ECHO_CMD} ${PREFIX}/bin/bash) >/etc/shells
     @${RM} /etc/shells.bak
 ....
+
+[NOTE]
+====
+Stellen Sie sicher, dass sie auf die korrekten Tools zum Verwalten von Diensten verweisen.
+* Verwenden Sie `service name start`, um einen Dienst zu starten, anstatt `/usr/local/etc/rc.d/name start` zu verwenden.
+* Verwenden Sie `sysrc name_enable=YES`, um Optionen in rc.conf zu ändern.
+
+====
 
 [NOTE]
 ====

@@ -1,14 +1,13 @@
 ---
-title: Chapter 29. PPP
+title: Chapter 30. PPP
 part: IV. Network Communication
 prev: books/handbook/serialcomms
 next: books/handbook/mail
 description: FreeBSD supports the Point-to-Point (PPP) protocol which can be used to establish a network or Internet connection using a dial-up modem
 tags: ["PPP", "PPPoE", "PPPoA", "modem"]
 showBookMenu: true
-weight: 34
-path: "/books/handbook/"
-aliases: ["/en/books/handbook/userppp/","/en/books/handbook/ppp-troubleshoot/","/en/books/handbook/pppoe/","/en/books/handbook/pppoa/"]
+weight: 35
+path: "/books/handbook/ppp-and-slip/"
 ---
 
 [[ppp-and-slip]]
@@ -19,7 +18,7 @@ aliases: ["/en/books/handbook/userppp/","/en/books/handbook/ppp-troubleshoot/","
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 29
+:sectnumoffset: 30
 :partnums:
 :source-highlighter: rouge
 :experimental:

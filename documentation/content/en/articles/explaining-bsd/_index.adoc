@@ -4,7 +4,7 @@ authors:
   - author: Greg Lehey
     email: grog@FreeBSD.org
 description: Brief explanation about BSD
-trademarks: ["freebsd", "amd", "apple", "intel", "linux", "opengroup", "sun", "unix", "general"]
+trademarks: ["freebsd", "amd", "apple", "git", intel", "linux", "opengroup", "sun", "unix", "general"]
 tags: ["Explaining BSD", "BSD", "FreeBSD", "operating system"]
 ---
 
@@ -145,23 +145,23 @@ Users can obtain a complete copy of any version.
 A large number of developers worldwide contribute to improvements to BSD.
 They are divided into three kinds:
 
-* _Contributors_ write code or documentation. They are not permitted to commit (add code) directly to the source tree. In order for their code to be included in the system, it must be reviewed and checked in by a registered developer, known as a __committer__.
-* _Committers_ are developers with write access to the source tree. In order to become a committer, an individual must show ability in the area in which they are active.
+* _Contributors_ write code or documentation. They are not permitted to commit (add code) directly to the source tree. For their code to be included in the system, it must be reviewed and checked in by a registered developer, known as a __committer__.
+* _Committers_ are developers with write access to the source tree. To become a committer, an individual must show ability in the area in which they are active.
 +
 It is at the individual committer's discretion whether they should obtain authority before committing changes to the source tree.
 In general, an experienced committer may make changes which are obviously correct without obtaining consensus.
 For example, a documentation project committer may correct typographical or grammatical errors without review.
-On the other hand, developers making far-reaching or complicated changes are expected to submit their changes for review before committing them
+On the other hand, developers making far-reaching or complicated changes are expected to submit their changes for review before committing them.
 In extreme cases, a core team member with a function such as Principal Architect may order that changes be removed from the tree, a process known as _backing out_.
 All committers receive mail describing each individual commit, so it is not possible to commit secretly.
-* The _Core team_. FreeBSD and NetBSD each have a core team which manages the project. The core teams developed in the course of the projects, and their role is not always well-defined. It is not necessary to be a developer in order to be a core team member, though it is normal. The rules for the core team vary from one project to the other, but in general they have more say in the direction of the project than non-core team members have.
+* The _Core team_. FreeBSD and NetBSD each have a core team which manages the project. The core teams developed in the course of the projects, and their role is not always well-defined. It is not necessary to be a developer to be a core team member, though it is normal. The rules for the core team vary from one project to the other, but in general they have more say in the direction of the project than non-core team members have.
 
 This arrangement differs from Linux in a number of ways:
 
 . No one person controls the content of the system. In practice, this difference is overrated, since the Principal Architect can require that code be backed out, and even in the Linux project several people are permitted to make changes.
 . On the other hand, there _is_ a central repository, a single place where you can find the entire operating system sources, including all older versions.
 . BSD projects maintain the entire "Operating System", not only the kernel. This distinction is only marginally useful: neither BSD nor Linux is useful without applications. The applications used under BSD are frequently the same as the applications used under Linux.
-. As a result of the formalized maintenance of a single SVN source tree, BSD development is clear, and it is possible to access any version of the system by release number or by date. SVN also allows incremental updates to the system: for example, the FreeBSD repository is updated about 100 times a day. Most of these changes are small.
+. As a result of the formalized maintenance of a single Git source tree, BSD development is clear, and it is possible to access any version of the system by release number or by date. Git also allows incremental updates to the system: for example, the FreeBSD repository is updated about 100 times a day. Most of these changes are small.
 
 === BSD releases
 
@@ -171,7 +171,7 @@ In addition, the version number has a suffix indicating its purpose:
 
 . The development version of the system is called _CURRENT_. FreeBSD assigns a number to CURRENT, for example FreeBSD 5.0-CURRENT. NetBSD uses a slightly different naming scheme and appends a single-letter suffix which indicates changes in the internal interfaces, for example NetBSD 1.4.3G. OpenBSD does not assign a number ("OpenBSD-current"). All new development on the system goes into this branch.
 . At regular intervals, between two and four times a year, the projects bring out a _RELEASE_ version of the system, which is available on CD-ROM and for free download from FTP sites, for example OpenBSD 2.6-RELEASE or NetBSD 1.4-RELEASE. The RELEASE version is intended for end users and is the normal version of the system. NetBSD also provides _patch releases_ with a third digit, for example NetBSD 1.4.2.
-. As bugs are found in a RELEASE version, they are fixed, and the fixes are added to the SVN tree. In FreeBSD, the resultant version is called the _STABLE_ version, while in NetBSD and OpenBSD it continues to be called the RELEASE version. Smaller new features can also be added to this branch after a period of test in the CURRENT branch. Security and other important bug fixes are also applied to all supported RELEASE versions.
+. As bugs are found in a RELEASE version, they are fixed, and the fixes are added to the Git tree. In FreeBSD, the resultant version is called the _STABLE_ version, while in NetBSD and OpenBSD it continues to be called the RELEASE version. Smaller new features can also be added to this branch after a period of test in the CURRENT branch. Security and other important bug fixes are also applied to all supported RELEASE versions.
 
 _By contrast, Linux maintains two separate code trees: the stable version and the development version.
 Stable versions have an even minor version number, such as 2.0, 2.2 or 2.4.
@@ -206,7 +206,7 @@ This is particularly attractive for embedded applications.
 === What else should I know?
 
 Since fewer applications are available for BSD than Linux, the BSD developers created a Linux compatibility package, which allows Linux programs to run under BSD.
-The package includes both kernel modifications, in order to correctly perform Linux system calls, and Linux compatibility files such as the C library.
+The package includes both kernel modifications, to correctly perform Linux system calls, and Linux compatibility files such as the C library.
 There is no noticeable difference in execution speed between a Linux application running on a Linux machine and a Linux application running on a BSD machine of the same speed.
 
 The "all from one supplier" nature of BSD means that upgrades are much easier to handle than is frequently the case with Linux.
@@ -228,6 +228,6 @@ Here are some guidelines:
 
 === Who provides support, service, and training for BSD?
 
-BSDi / http://www.freebsdmall.com[FreeBSD Mall, Inc.] have been providing support contracts for FreeBSD for nearly a decade.
+http://www.ixsystems.com/[iXsystems, Inc.] provides support contracts for FreeBSD.
 
 In addition, each of the projects has a list of consultants for hire: link:https://www.FreeBSD.org/commercial/consult_bycat/[FreeBSD], http://www.netbsd.org/gallery/consultants.html[NetBSD], and http://www.openbsd.org/support.html[OpenBSD].

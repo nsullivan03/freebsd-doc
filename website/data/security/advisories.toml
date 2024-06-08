@@ -2,6 +2,102 @@
 # $FreeBSD$
 
 [[advisories]]
+name = "FreeBSD-SA-24:03.unbound"
+date = "2024-03-28"
+
+[[advisories]]
+name = "FreeBSD-SA-24:02.tty"
+date = "2024-02-14"
+
+[[advisories]]
+name = "FreeBSD-SA-24:01.bhyveload"
+date = "2024-02-14"
+
+[[advisories]]
+name = "FreeBSD-SA-23:19.openssh"
+date = "2023-12-19"
+
+[[advisories]]
+name = "FreeBSD-SA-23:18.nfsclient"
+date = "2023-12-12"
+
+[[advisories]]
+name = "FreeBSD-SA-23:17.pf"
+date = "2023-12-05"
+
+[[advisories]]
+name = "FreeBSD-SA-23:16.cap_net"
+date = "2023-11-08"
+
+[[advisories]]
+name = "FreeBSD-SA-23:15.stdio"
+date = "2023-11-08"
+
+[[advisories]]
+name = "FreeBSD-SA-23:14.smccc"
+date = "2023-10-03"
+
+[[advisories]]
+name = "FreeBSD-SA-23:13.capsicum"
+date = "2023-10-03"
+
+[[advisories]]
+name = "FreeBSD-SA-23:12.msdosfs"
+date = "2023-10-03"
+
+[[advisories]]
+name = "FreeBSD-SA-23:11.wifi"
+date = "2023-09-06"
+
+[[advisories]]
+name = "FreeBSD-SA-23:10.pf"
+date = "2023-09-06"
+
+[[advisories]]
+name = "FreeBSD-SA-23:09.pam_krb5"
+date = "2023-08-01"
+
+[[advisories]]
+name = "FreeBSD-SA-23:08.ssh"
+date = "2023-08-01"
+
+[[advisories]]
+name = "FreeBSD-SA-23:07.bhyve"
+date = "2023-08-01"
+
+[[advisories]]
+name = "FreeBSD-SA-23:06.ipv6"
+date = "2023-08-01"
+
+[[advisories]]
+name = "FreeBSD-SA-23:05.openssh"
+date = "2023-06-21"
+
+[[advisories]]
+name = "FreeBSD-SA-23:04.pam_krb5"
+date = "2023-06-21"
+
+[[advisories]]
+name = "FreeBSD-SA-23:03.openssl"
+date = "2023-02-16"
+
+[[advisories]]
+name = "FreeBSD-SA-23:02.openssh"
+date = "2023-02-16"
+
+[[advisories]]
+name = "FreeBSD-SA-23:01.geli"
+date = "2023-02-08"
+
+[[advisories]]
+name = "FreeBSD-SA-22:15.ping"
+date = "2022-11-29"
+
+[[advisories]]
+name = "FreeBSD-SA-22:14.heimdal"
+date = "2022-11-15"
+
+[[advisories]]
 name = "FreeBSD-SA-22:13.zlib"
 date = "2022-08-30"
 

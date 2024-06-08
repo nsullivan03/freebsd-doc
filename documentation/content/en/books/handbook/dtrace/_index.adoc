@@ -1,14 +1,13 @@
 ---
-title: Chapter 26. DTrace
+title: Chapter 27. DTrace
 part: Part III. System Administration
 prev: books/handbook/cutting-edge
 next: books/handbook/usb-device-mode
 description: This chapter explains how to use DTrace in FreeBSD
 tags: ["DTrace", "features", "guide", "tutorial", "kldload"]
 showBookMenu: true
-weight: 30
-path: "/books/handbook/"
-aliases: ["/en/books/handbook/dtrace-implementation/","/en/books/handbook/dtrace-enable/","/en/books/handbook/dtrace-using/"]
+weight: 31
+path: "/books/handbook/dtrace/"
 ---
 
 [[dtrace]]
@@ -19,7 +18,7 @@ aliases: ["/en/books/handbook/dtrace-implementation/","/en/books/handbook/dtrace
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 26
+:sectnumoffset: 27
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -153,6 +152,19 @@ The DTrace Toolkit includes many scripts in the special language of DTrace.
 This language is called the D language and it is very similar to C++.
 An in depth discussion of the language is beyond the scope of this document.
 It is covered extensively in the http://www.dtrace.org/guide[Illumos Dynamic Tracing Guide].
+
+[[dtrace-out-of-kernel]]
+== Enabling DTrace in Out-of-Kernel Modules
+
+To add DTrace support to an out-of-kernel module, which is useful for development and debugging, include the following line in the module's Makefile:
+
+[.programlisting]
+....
+CFLAGS+= -DKDTRACE_HOOKS
+....
+
+This flag enables DTrace hooks during compilation, allowing for advanced debugging and monitoring of the module.
+Ensure to recompile the module after this modification to activate DTrace functionality.
 
 [[dtrace-using]]
 == Using DTrace

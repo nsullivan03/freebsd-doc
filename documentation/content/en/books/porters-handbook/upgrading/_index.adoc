@@ -6,7 +6,7 @@ description: Upgrading a FreeBSD Port
 tags: ["upgrading", "port", "git"]
 showBookMenu: true
 weight: 11
-path: "/books/porters-handbook/"
+path: "/books/porters-handbook/upgrading/"
 ---
 
 [[port-upgrading]]
@@ -51,7 +51,7 @@ When a port is not the most recent version available from the authors, update th
 The port might have already been updated to the new version.
 
 When working with more than a few ports, it will probably be easier to use Git to keep the whole ports collection up-to-date,
-as described in the extref:{handbook}[Handbook, ports-using].
+as described in extref:{handbook}ports[Using the Ports Collection, ports-using].
 This will have the added benefit of tracking all the port's dependencies.
 
 The next step is to see if there is an update already pending.
@@ -92,7 +92,7 @@ FreeBSD has over 4000 ports without maintainers, and this is an area where more 
 (For a detailed description of the responsibilities of maintainers, refer to the section in the extref:{developers-handbook}[Developer's Handbook, POLICIES-MAINTAINER].)
 
 To submit the diff, use the https://bugs.freebsd.org/submit/[bug submit form] (product `Ports & Packages`, component `Individual Port(s)`).
-Always include the category with the port name, followed by colon, and brief descripton of the issue.
+Always include the category with the port name, followed by colon, and brief description of the issue.
 Examples: `_category/portname_: _add FOO option_`; `_category/portname_: _Update to X.Y_`.
 Please mention any added or deleted files in the message, as they have to be explicitly specified to man:git[1] when doing a commit.
 Do not compress or encode the diff.

@@ -4,8 +4,8 @@ prev: books/handbook/pgpkeys
 next: books/handbook/colophon
 description: FreeBSD Handbook Glossary
 showBookMenu: true
-weight: 44
-path: "/books/handbook/"
+weight: 45
+path: "/books/handbook/glossary/"
 ---
 
 [glossary]

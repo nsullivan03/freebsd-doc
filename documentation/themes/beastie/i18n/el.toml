@@ -8,103 +8,103 @@ other = "FreeBSD"
 other = "The FreeBSD Project"
 
 [freebsd-foundation]
-other = "The FreeBSD Foundation"
+other = "Το ίδρυμα FreeBSD"
 
 [freebsd-documentation]
-other = "FreeBSD Documentation"
+other = "Τεκμηρίωση FreeBSD"
 
 [freebsd-documentation-main-desc]
-other = "FreeBSD is an operating system used to power modern servers, desktops, and embedded platforms."
+other = "Το FreeBSD είναι ένα λειτουργικό σύστημα το οποίο χρησιμοποιείται από servers, desktops, και ενσωματωμένα συστήματα."
 
 [global-search-placeholder]
-other = "Search in the articles, books and guides."
+other = "Αναζήτηση σε άρθρα, βιβλία και οδηγούς"
 
 [toc]
-other = "Table of Contents"
+other = "Πίνακας περιεχομένων"
 
 [resources]
-other = "Resources"
+other = "Πηγές"
 
 [download-pdf]
-other = "Download PDF"
+other = "Λήψη PDF"
 
 [edit-page]
-other = "Edit this page"
+other = "Τροποποίηση αυτής της σελίδας"
 
 [trademarks]
-other = "trademarks"
+other = "Εμπορικά σύμβολα"
 
 [books]
-other = "Books"
+other = "Βιβλία"
 
 [articles]
-other = "Articles"
+other = "Άρθρα"
 
 [choose-language]
-other = "Choose language"
+other = "Επιλογή γλώσσας"
 
 [last-modified]
-other = "Last modified on"
+other = "Τελευταία τροποποίηση"
 
 [by]
-other = "by"
+other = "από"
 
 [search]
-other = "Search"
+other = "Αναζήτηση"
 
 # ---------------------------------------------------
 # Header
 # ---------------------------------------------------
 [documentation]
-other = "Documentation"
+other = "Τεκμηρίωση"
 
 [community]
-other = "Community"
+other = "Κοινότητα"
 
 # ---------------------------------------------------
 # Main page
 # ---------------------------------------------------
 [getting-started]
-other = "Getting started"
+other = "Εισαγωγή"
 
 [learn-basics]
-other = "Learn about FreeBSD basics"
+other = "Μάθετε τα βασικά σχετικά με το FreeBSD"
 
 [download]
 other = "Download"
 
 [download-freebsd]
-other = "Download FreeBSD"
+other = "Λήψη του FreeBSD"
 
 [handbook]
-other = "FreeBSD Handbook"
+other = "Εγχειρίδιο FreeBSD"
 
 [handbook-desc]
-other = "A constantly evolving, comprehensive resource for FreeBSD users"
+other = "Μια συνεχώς εξελισσόμενη, περιεκτική πηγή για χρήστες του FreeBSD"
 
 [porters-handbook]
 other = "FreeBSD Porter's Handbook"
 
 [porters-handbook-desc]
-other = "A complete reference about the FreeBSD ports system"
+other = "Ένας ολοκληρωμένος οδηγός για την συλλογή Ports του FreeBSD"
 
 [faq]
 other = "FreeBSD FAQ"
 
 [faq-desc]
-other = "FreeBSD frequently Asked Questions (FAQ) for 13.X and 12.X"
+other = "Συχνές ερωτήσεις για το FreeBSD"
 
 [fdp]
 other = "Documentation Project Primer"
 
 [fdp-desc]
-other = "A complete guide about how to start contributing to the documentation"
+other = "Ένας ολοκληρωμένος οδηγός για το πως να συνεισφέρετε στην τεκμηρίωση"
 
 [books-list]
-other = "List of FreeBSD books"
+other = "Λίστα βιβλίων FreeBSD"
 
 [articles-list]
-other = "List of FreeBSD articles"
+other = "Λίστα άρθρων FreeBSD"
 
 [manual-pages]
 other = "Manual pages"
@@ -115,6 +115,9 @@ other = "FreeBSD Manual Pages"
 # ---------------------------------------------------
 # Footer
 # ---------------------------------------------------
+[system]
+other = "Σύστημα"
+
 [light]
 other = "Light"
 
@@ -122,31 +125,31 @@ other = "Light"
 other = "Dark"
 
 [high-contrast]
-other = "High contrast"
+other = "Υψηλή αντίθεση"
 
 [previous-versions]
-other = "Previous versions"
+other = "Προηγούμενες εκδόσεις"
 
 [4-4bsd-documents]
 other = "4.4BSD Documents"
 
 [about]
-other = "About"
+other = "Σχετικά"
 
 [legal]
 other = "Legal"
 
 [donations]
-other = "Donations"
+other = "Δωρεές"
 
 [legal-notices]
-other = "Legal notices"
+other = "Νομικές συστάσεις"
 
 [made-with]
 other = "Made with"
 
 [by-freebsd-community]
-other = "by the FreeBSD Community"
+other = "από την κοινότητα FreeBSD"
 
 [copyright]
 other = "All rights reserved."
@@ -155,19 +158,19 @@ other = "All rights reserved."
 # Articles page
 # ---------------------------------------------------
 [list-desc-articles]
-other = "Explore a comprehensive list of FreeBSD articles."
+other = "Εξερευνήστε μια αναλυτική λίστα άρθρων FreeBSD."
 
 # ---------------------------------------------------
 # Books page
 # ---------------------------------------------------
 [prev]
-other = "Prev"
+other = "Προηγούμενη"
 
 [next]
-other = "Next"
+other = "Επόμενη"
 
 [home]
-other = "Home"
+other = "Αρχική"
 
 [split-html]
 other = "Split HTML"
@@ -176,22 +179,22 @@ other = "Split HTML"
 other = "Single HTML"
 
 [book-chapters]
-other = "Book chapters"
+other = "Κεφάλαια βιβλίων"
 
 [book-menu]
 other = "Book menu"
 
 [list-desc-books]
-other = "Explore a comprehensive list of FreeBSD books."
+other = "Εξερευνήστε μία αναλυτική λίστα βιβλίων FreeBSD."
 
 # ---------------------------------------------------
 # Languages page
 # ---------------------------------------------------
 [select-language]
-other = "Select a language"
+other = "Επιλογή γλώσσας"
 
 [current-selection]
-other = "Current selection:"
+other = "Τρέχουσα επιλογή:"
 
 # ---------------------------------------------------
 # Copyright
@@ -203,7 +206,7 @@ other = "Το FreeBSD είναι ένα κατοχυρωμένο εμπορικ�
 other = "This article was written for the FreeBSD Project by ThinkSec AS and Network Associates Laboratories, the Security Research Division of Network Associates, Inc. under DARPA/SPAWAR contract N66001-01-C-8035 (“CBOSS”), as part of the DARPA CHATS research program."
 
 [coverity]
-other = "Η λέξη Coverity είναι ένα κατοχυρωμένο εμπορικό σύμβολο.  Οι λέξεις ή φράσεις Coverity Extend, Coverity Prevent και Coverity Prevent SQS είναι εμπορικά σύμβολα της Coverity, Inc."
+other = "Η λέξη Coverity είναι ένα κατοχυρωμένο εμπορικό σύμβολο. Οι λέξεις ή φράσεις Coverity Extend, Coverity Prevent και Coverity Prevent SQS είναι εμπορικά σύμβολα της Coverity, Inc."
 
 [ibm]
 other = "Οι λέξεις ή φράσεις IBM, AIX, OS/2, PowerPC, PS/2, S/390, και ThinkPad είναι εμπορικά σύμβολα της International Business Machines Corporation στις Ηνωμένες Πολιτείες, άλλες χώρες, ή και στα δύο ταυτόχρονα."
@@ -226,6 +229,15 @@ other = "Οι λέξεις ή φράσεις Adobe, Acrobat, Acrobat Reader, κ�
 [apple]
 other = "Οι λέξεις ή φράσεις Apple, AirPort, FireWire, Mac, Macintosh, Mac OS, Quicktime, και TrueType είναι εμπορικά σύμβολα της Apple Computer, Inc., κατοχυρωμένα στις Ηνωμένες Πολιτείες και σε άλλες χώρες."
 
+[git]
+other = "Git and the Git logo are either registered trademarks or trademarks of Software Freedom Conservancy, Inc., corporate home of the Git Project, in the United States and/or other countries."
+
+[github]
+other = "GitHub is a trademark of GitHub Inc., registered in the United States and other countries."
+
+[gitlab]
+other = "GITLAB is a trademark of GitLab Inc. in the United States and other countries and regions."
+
 [intel]
 other = "Οι λέξεις Intel, Celeron, EtherExpress, i386, i486, Itanium, Pentium, και Xeon είναι εμπορικά σύμβολα ή κατοχυρωμένα εμπορικά σύμβολα της Intel Corporation και των θυγατρικών της στις Ηνωμένες Πολιτείες και σε άλλες χώρες."
 
@@ -242,10 +254,10 @@ other = "Οι λέξεις Motif, OSF/1, και UNIX είναι κατοχυρω
 other = "Οι λέξεις QUALCOMM και Eudora είναι κατοχυρωμένα εμπορικά σύμβολα της QUALCOMM Incorporated."
 
 [sparc]
-other = "Οι λέξεις ή φράσεις SPARC, SPARC64, και UltraSPARC είναι εμπορικά σύμβολα της SPARC International, Inc. στις Ηνωμένες Πολιτείες και σε άλλες χώρες.  Η SPARC International Inc. κατέχει όλα τα εμπορικά δικαιώματα των συμβόλων SPARC και επιτρέπει την ορθή χρήση τους από όλα τα μέλη της, κατόπιν σχετικής άδειας."
+other = "Οι λέξεις ή φράσεις SPARC, SPARC64, και UltraSPARC είναι εμπορικά σύμβολα της SPARC International, Inc. στις Ηνωμένες Πολιτείες και σε άλλες χώρες. Η SPARC International Inc. κατέχει όλα τα εμπορικά δικαιώματα των συμβόλων SPARC και επιτρέπει την ορθή χρήση τους από όλα τα μέλη της, κατόπιν σχετικής άδειας."
 
 [sun]
-other = "Οι λέξεις ή φράσεις Sun, Sun Microsystems, Java, Java Virtual Machine, JDK, JRE, JSP, JVM, Netra, OpenJDK, Solaris, StarOffice, SunOS και VirtualBox είναι εμπορικά σύμβολα ή κατοχυρωμένα εμπορικά σύμβολα της Sun Microsystems, Inc.  στις Ηνωμένες Πολιτείες και σε άλλες χώρες."
+other = "Οι λέξεις ή φράσεις Sun, Sun Microsystems, Java, Java Virtual Machine, JDK, JRE, JSP, JVM, Netra, OpenJDK, Solaris, StarOffice, SunOS και VirtualBox είναι εμπορικά σύμβολα ή κατοχυρωμένα εμπορικά σύμβολα της Sun Microsystems, Inc. στις Ηνωμένες Πολιτείες και σε άλλες χώρες."
 
 [unix]
 other = "Η λέξη UNIX είναι κατοχυρωμένο εμπορικό σύμβολο του Open Group στις Ηνωμένες Πολιτείες και σε άλλες χώρες."
@@ -299,7 +311,7 @@ other = "Οι λέξεις ή φράσεις Ogg Vorbis και Xiph.Org είνα
 other = "Η λέξη XFree86 είναι ένα εμπορικό σύμβολο του The XFree86 Project, Inc."
 
 [daemon-news]
-other = "This article was originally published in the January 2000 issue of <a class=\"link\" href=\"http://www.daemonnews.org/\">DaemonNews</a>. This version of the article may include updates from Matt and other authors to reflect changes in FreeBSD's VM implementation."
+other = "Αυτό το άρθρο δημοσιεύτηκε αρχικά στο τεύχος του Ιανουαρίου 2000 <a class=\"link\" href=\"http://www.daemonnews.org/\">DaemonNews</a>. Αυτή η έκδοση του άρθρου μπορεί να περιέχει ενημερώσεις από τον Matt και άλλους συγγραφείς, που αντικατοπτρίζουν τις αλλαγές στην υλοποίηση της εικονικοποίησης του FreeBSD."
 
 [general]
 other = "Πολλές από τις λέξεις ή φράσεις οι οποίες χρησιμοποιούνται από τους κατασκευαστές ή τους πωλητές τους για να διακρίνουν τα προϊόντα τους θεωρούνται εμπορικά σύμβολα. Όπου αυτές εμφανίζονται σε αυτό το κείμενο και για όσες από αυτές γνωρίζει η Ομάδα Ανάπτυξης του FreeBSD ότι είναι πιθανόν να είναι εμπορικά σύμβολα, θα δείτε ένα από τα σύμβολα: “™” ή “®”."

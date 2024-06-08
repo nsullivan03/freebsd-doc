@@ -3,8 +3,8 @@ title: Colophon
 prev: books/handbook/glossary
 description: FreeBSD Handbook Colophon
 showBookMenu: true
-weight: 45
-path: "/books/handbook/"
+weight: 46
+path: "/books/handbook/colophon/"
 ---
 
 [colophon]

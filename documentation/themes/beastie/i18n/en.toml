@@ -52,6 +52,12 @@ other = "by"
 [search]
 other = "Search"
 
+[stale-warning-message]
+other = "This translation may be out of date. To help with the translations please access the"
+
+[translation-instance]
+other = "FreeBSD translations instance"
+
 # ---------------------------------------------------
 # Header
 # ---------------------------------------------------
@@ -92,28 +98,28 @@ other = "Documentation"
 other = "Documentation portal"
 
 [h-freebsd-handbook]
-other = "FreeBSD's Handbook"
+other = "FreeBSD Handbook"
 
 [h-porter-handbook]
 other = "Porter's Handbook"
 
 [h-documentation-handbook]
-other = "Documentation's Handbook"
+other = "Documentation Project Handbook"
 
 [h-manual-pages]
 other = "Manual pages"
 
 [h-presentation-and-papers]
-other = "Presentation and papers"
+other = "Presentations and papers"
 
 [h-wiki]
 other = "Wiki"
 
 [h-books]
-other = "List of books"
+other = "Books"
 
 [h-articles]
-other = "List of articles"
+other = "Articles"
 
 [h-community]
 other = "Community"
@@ -122,7 +128,7 @@ other = "Community"
 other = "Get involved"
 
 [h-community-forum]
-other = "Community forum"
+other = "Forum"
 
 [h-mailing-lists]
 other = "Mailing lists"
@@ -152,7 +158,7 @@ other = "Learn about FreeBSD basics"
 other = "Download"
 
 [download-freebsd]
-other = "Download FreeBSD"
+other = "Get FreeBSD"
 
 [handbook]
 other = "FreeBSD Handbook"
@@ -170,7 +176,7 @@ other = "A complete reference about the FreeBSD ports system"
 other = "FreeBSD FAQ"
 
 [faq-desc]
-other = "FreeBSD Frequently Asked Questions (FAQ) for 13.X and 12.X"
+other = "Frequently Asked Questions for FreeBSD"
 
 [fdp]
 other = "Documentation Project Primer"
@@ -193,6 +199,9 @@ other = "FreeBSD Manual Pages"
 # ---------------------------------------------------
 # Footer
 # ---------------------------------------------------
+[system]
+other = "System"
+
 [light]
 other = "Light"
 
@@ -230,7 +239,7 @@ other = "Documentation portal"
 other = "Manual pages"
 
 [f-presentation-and-papers]
-other = "Presentation and papers"
+other = "Presentations and papers"
 
 [f-previous-versions]
 other = "Previous versions"
@@ -357,6 +366,15 @@ other = "Adobe, Acrobat, Acrobat Reader, Flash and PostScript are either registe
 
 [apple]
 other = "Apple, AirPort, FireWire, iMac, iPhone, iPad, Mac, Macintosh, Mac OS, Quicktime, and TrueType are trademarks of Apple Inc., registered in the U.S. and other countries."
+
+[git]
+other = "Git and the Git logo are either registered trademarks or trademarks of Software Freedom Conservancy, Inc., corporate home of the Git Project, in the United States and/or other countries."
+
+[github]
+other = "GitHub is a trademark of GitHub Inc., registered in the United States and other countries."
+
+[gitlab]
+other = "GITLAB is a trademark of GitLab Inc. in the United States and other countries and regions."
 
 [intel]
 other = "Intel, Celeron, Centrino, Core, EtherExpress, i386, i486, Itanium, Pentium, and Xeon are trademarks or registered trademarks of Intel Corporation or its subsidiaries in the United States and other countries."

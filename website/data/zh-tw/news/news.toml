@@ -1,5 +1,255 @@
 # Sort news by year, month and day
 # $FreeBSD$
+[[news]]
+date = "2024-06-04"
+title = "FreeBSD 14.1-RELEASE 發布了"
+description = "<a href=\"https://www.FreeBSD.org/releases/14.1R/announce/\">FreeBSD 14.1-RELEASE</a>現已發布了。安裝前，請查看 <a href=\"https://www.FreeBSD.org/releases/14.1R/relnotes/\">發布通知</a>和 <a href=\"https://www.FreeBSD.org/releases/14.1R/errata/\">發行勘誤</a>以了解 14.1 的最新消息和問題。更多資訊可查看 <a href=\"https://www.FreeBSD.org/releases/\">發行版資訊</a>頁面。"
+
+[[news]]
+date= "2024-05-03"
+title = "2024 第一季開發進度報告發布"
+description = "The <a href=\"https://www.freebsd.org/status/report-2024-01-2024-03/\">2024 第一季開發進度報告發布</a> 21則條目現已發布。"
+
+[[news]]
+date = "2024-03-05"
+title = "FreeBSD 13.3-RELEASE 發布了"
+description = "<a href=\"https://www.FreeBSD.org/releases/13.3R/announce/\">FreeBSD 13.3-RELEASE</a>現已發布了。安裝前，請查看 <a href=\"https://www.FreeBSD.org/releases/13.3R/relnotes/\">發布通知</a> 和 <a href=\"https://www.FreeBSD.org/releases/13.3R/errata/\">發行勘誤</a> 以了解 13.3 的最新消息和問題。更多資訊可查看 <a href=\"https://www.FreeBSD.org/releases/\">發行版資訊</a>頁面。"
+
+[[news]]
+date= "2024-02-16"
+title = "2023 第四季開發進度報告發布"
+description = "<a href=\"https://www.freebsd.org/status/report-2023-10-2023-12/\">2023 第四季開發進度報告發布</a> 18則條目現已發布。"
+
+[[news]]
+date = "2024-02-13"
+description = "新任 committer: <a href=\"mailto:bnovkov@FreeBSD.org\">Bojan Novković</a> (src)"
+
+[[news]]
+date = "2024-01-26"
+description = "新任 committer: <a href=\"mailto:uzsolt@FreeBSD.org\">Zsolt Udvari</a> (ports)"
+
+[[news]]
+date = "2024-01-12"
+description = "新任 committer: <a href=\"mailto:dutra@FreeBSD.org\">Gabriel M. Dutra</a> (ports)"
+
+[[news]]
+date = "2023-12-01"
+description = "新任 committer: <a href=\"mailto:olce@FreeBSD.org\">Olivier Certner</a> (src)"
+
+[[news]]
+date = "2023-11-20"
+title = "FreeBSD 14.0-RELEASE 發布了"
+description = "<a href=\"https://www.FreeBSD.org/releases/14.0R/announce/\">FreeBSD 14.0-RELEASE</a>現已發布了。安裝前，請查看 <a href=\"https://www.FreeBSD.org/releases/14.0R/relnotes/\">發布通知</a>和 <a href=\"https://www.FreeBSD.org/releases/14.0R/errata/\">發行勘誤</a>以了解 14.0 的最新消息和問題。更多資訊可查看 <a href=\"https://www.FreeBSD.org/releases/\">發行版資訊</a>頁面。"
+
+[[news]]
+date = "2023-11-17"
+description = "發行工程團隊更新： <a href=\"mailto:cperciva@FreeBSD.org\">Colin Percival</a> 晉升為首席發行工程師。"
+
+[[news]]
+date = "2023-11-14"
+description = "新任 committer: <a href=\"mailto:rcm@FreeBSD.org\">R. Christian McDonald</a> (src)"
+
+[[news]]
+date = "2023-11-14"
+description = "新任 committer: <a href=\"mailto:akiyano@FreeBSD.org\">Arthur Kiyanovski</a> (src)"
+
+[[news]]
+date = "2023-11-03"
+description = "新任 committer: <a href=\"mailto:jfree@FreeBSD.org\">Jake Freeland</a> (src)"
+
+[[news]]
+date = "2023-11-03"
+title = "FreeBSD 14.0-RC4 發布了"
+description = "FreeBSD 14.0 的第四個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-October/004928.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date= "2023-11-01"
+title = "2023 第三季開發進度報告發布"
+description = "<a href=\"https://www.freebsd.org/status/report-2023-07-2023-09/\">2023 第三季開發進度報告發布</a> 32則條目現已發布。"
+
+[[news]]
+date = "2023-10-27"
+title = "FreeBSD 14.0-RC3 發布了"
+description = "FreeBSD 14.0 的第三個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-October/004904.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-10-20"
+title = "FreeBSD 14.0-RC2 發布了"
+description = "FreeBSD 14.0 的第二個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-October/004880.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date= "2023-10-16"
+description = "新任 committer: <a href=\"mailto:michaelo@FreeBSD.org\">Michael Osipov</a> (ports)"
+
+[[news]]
+date = "2023-10-13"
+title = "FreeBSD 14.0-RC1 發布了"
+description = "FreeBSD 14.0 的第一個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-October/004844.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-10-06"
+title = "FreeBSD 14.0-BETA5 發布了"
+description = "FreeBSD 14.0 的第五個 BETA 版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2023-October/004814.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-09-30"
+title = "FreeBSD 14.0-BETA4 發布了"
+description = "FreeBSD 14.0 的第四個 BETA 版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2023-September/004773.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-09-22"
+title = "FreeBSD 14.0-BETA3 發布了"
+description = "FreeBSD 14.0 的第三個 BETA 版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2023-September/004736.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-09-16"
+title = "FreeBSD 14.0-BETA2 發布了"
+description = "FreeBSD 14.0 的第二個 BETA 版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2023-September/004685.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-09-08"
+title = "FreeBSD 14.0-BETA1 發布了"
+description = "FreeBSD 14.0 的第一個 BETA 版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2023-September/004614.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-09-06"
+description = "新任 committer: <a href=\"mailto:jbo@FreeBSD.org\">Joel Bodenmann</a> (ports)"
+
+
+[[news]]
+date= "2023-07-27"
+title = "2023 第二季開發進度報告發布"
+description = "<a href=\"https://www.freebsd.org/status/report-2023-04-2023-06/\">2023 第二季開發進度報告發布</a> 37則條目現已發布。"
+
+[[news]]
+date = "2023-05-22"
+description = "新任 committer: <a href=\"mailto:christos@FreeBSD.org\">Christos Margiolis</a> (src)"
+
+[[news]]
+date= "2023-04-19"
+title = "2023 第一季開發進度報告發布"
+description = "<a href=\"https://www.freebsd.org/status/report-2023-01-2023-03/\">2023 第一季開發進度報告發布</a> 25則條目現已發布。"
+
+[[news]]
+date = "2023-04-11"
+title = "FreeBSD 13.2-RELEASE 發布了"
+description = "<a href=\"https://www.FreeBSD.org/releases/13.2R/announce/\">FreeBSD 13.2-RELEASE</a>現已發布了。安裝前，請查看 <a href=\"https://www.FreeBSD.org/releases/13.2R/relnotes/\">發布通知</a>和 <a href=\"https://www.FreeBSD.org/releases/13.2R/errata/\">發行勘誤</a>以了解 13.2 的最新消息和問題。更多資訊可查看 <a href=\"https://www.FreeBSD.org/releases/\">發行版資訊</a>頁面。"
+
+[[news]]
+date = "2023-04-02"
+title = "FreeBSD 13.2-RC6 發布了"
+description = "FreeBSD 13.2 的第六個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-April/000234.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-03-27"
+title = "FreeBSD 13.2-RC5 發布了"
+description = "FreeBSD 13.2 的第五個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-March/000230.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-03-25"
+title = "FreeBSD 13.2-RC4 發布了"
+description = "FreeBSD 13.2 的第四個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-March/000229.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-03-20"
+description = "增加提交權限: <a href=\"mailto:salvadore@FreeBSD.org\">Lorenzo Salvadore</a> (ports, doc)"
+
+[[news]]
+date = "2023-03-18"
+title = "FreeBSD 13.2-RC3 發布了"
+description = "FreeBSD 13.2 的第三個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-March/000222.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-03-11"
+title = "FreeBSD 13.2-RC2 發布了"
+description = "FreeBSD 13.2 的第二個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-March/000221.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-03-04"
+title = "FreeBSD 13.2-RC1 發布了"
+description = "FreeBSD 13.2 的第一個候選發布版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-March/000217.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-02-26"
+title = "FreeBSD 13.2-BETA3 發布了"
+description = "FreeBSD 13.2 的第三個 BETA 版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-February/000213.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2023-02-18"
+title = "FreeBSD 13.2-BETA2 發布了"
+description = "FreeBSD 13.2 的第二個 BETA 版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-snapshots/2023-February/000209.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date= "2023-02-15"
+description = "新任 committer: <a href=\"mailto:cc@FreeBSD.org\">Cheng Cui</a> (src)"
+
+[[news]]
+date = "2023-02-14"
+title = "FreeBSD 13.2-BETA1 發布了"
+description = "FreeBSD 13.2 的第一個 BETA 版本現已發布。用於 amd64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv6、armv7、aarch64和 riscv64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2023-February/001114.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date= "2023-02-09"
+description = "新任 committer: <a href=\"mailto:rnagy@FreeBSD.org\">Robert Nagy</a> (ports)"
+
+[[news]]
+date = "2023-02-02"
+description = "新任 committer: <a href=\"mailto:fuz@FreeBSD.org\">Robert Clausecker</a> (ports)"
+
+[[news]]
+date= "2023-01-26"
+title = "2022 第四季開發進度報告發布"
+description = "<a href=\"https://www.freebsd.org/status/report-2022-10-2022-12/\">2022 第四季開發進度報告發布</a> 34則條目現已發布。"
+
+[[news]]
+date = "2022-12-05"
+title = "FreeBSD 12.4-RELEASE 發布了"
+description = "<a href=\"https://www.FreeBSD.org/releases/12.4R/announce/\">FreeBSD 12.4-RELEASE</a>現已發布了。安裝前，請查看 <a href=\"https://www.FreeBSD.org/releases/12.4R/relnotes/\">發布通知</a>和 <a href=\"https://www.FreeBSD.org/releases/12.4R/errata/\">發行勘誤</a>以了解 12.4 的最新消息和問題。更多資訊可查看 <a href=\"https://www.FreeBSD.org/releases/\">發行版資訊</a>頁面。"
+
+[[news]]
+date = "2022-11-11"
+title = "FreeBSD 12.4-RC2 發布了"
+description = "FreeBSD 12.4 的第二個候選發布版本現已發布。 用於 amd64、armv6、armv7、i386、arm64、powerpc、powerpc64、powerpcspe、和 sparc64 的 ISO 映像檔案已經<a href=\"https://lists.freebsd.org/pipermail/freebsd-stable/2022-November/000943.html\">發布</a> ，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2022-11-04"
+title = "FreeBSD 12.4-RC1 發布了"
+description = "FreeBSD 12.4 的第一個候選發布版本現已發布。 用於 amd64、armv6、armv7、i386、arm64、powerpc、powerpc64、powerpcspe、和 sparc64 的 ISO 映像檔案已經<a href=\"https://lists.freebsd.org/pipermail/freebsd-stable/2022-November/000937.html\">發布</a> ，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date = "2022-10-26"
+description = "新任 committer: <a href=\"mailto:corvink@FreeBSD.org\">Corvin Köhne</a> (src)"
+
+[[news]]
+date = "2022-10-21"
+title = "FreeBSD 12.4-BETA1 發布了"
+description = "FreeBSD 12.4 的第一個 BETA 版本現已發布。用於 amd64、armv6、armv7、i386、arm64、powerpc、powerpc64、powerpcspe、和 sparc64 的 ISO 映像檔案已經 <a href=\"https://lists.freebsd.org/archives/freebsd-stable/2022-October/000920.html\">發布</a>，可以在多數的 <a href=\"https://docs.freebsd.org/en/books/handbook/mirrors/#mirrors-ftp\">FreeBSD 鏡像站</a>取得。"
+
+[[news]]
+date= "2022-10-21"
+title = "2022 第三季開發進度報告發布"
+description = "<a href=\"https://www.freebsd.org/status/report-2022-07-2022-09/\">2022 第三季開發進度報告發布</a> 24則條目現已發布。"
+
+[[news]]
+date= "2022-10-16"
+description = "新任 committer: <a href=\"mailto:zlei@FreeBSD.org\">Zhenlei Huang</a> (src)"
+
+[[news]]
+date = "2022-10-08"
+description = "增加提交權限: <a href=\"mailto:bofh@FreeBSD.org\">Muhammad Moinur Rahman</a> (doc, ports)"
+
+[[news]]
+date= "2022-10-06"
+description = "新任 committer: <a href=\"mailto:ronald@FreeBSD.org\">Ronald Klop</a> (ports)"
+
+[[news]]
+date= "2022-08-09"
+title = "2022 第二季開發進度報告發布"
+description = "<a href=\"https://www.freebsd.org/status/report-2022-04-2022-06/\">2022 第二季開發進度報告發布</a> 26則條目現已發布。"
+
+[[news]]
+date= "2022-08-01"
+description = "新任 committer: <a href=\"mailto:zirias@FreeBSD.org\">Felix Palmen</a> (ports)"
 
 [[news]]
 date= "2022-06-29"
@@ -246,7 +496,7 @@ description = "新任 committer: <a href=\"mailto:lcook@FreeBSD.org\">Lewis Cook
 [[news]]
 date = "2021-01-16"
 title = "2020 第四季開發進度報告發布"
-description = "<a href=\"https://www.FreeBSD.org/status/report-2020-10-2020-12.html\"> 2020 第四季開發進度報告</a> 42 則條目現已發布。"
+description = "<a href=\"https://www.FreeBSD.org/status/report-2020-10-2020-12.html\">2020 第四季開發進度報告</a> 42 則條目現已發布。"
 
 [[news]]
 date = "2021-01-14"
@@ -276,7 +526,7 @@ description = "<p><a href=\"https://www.FreeBSD.org/releases/12.2R/announce.html
 [[news]]
 date = "2020-10-21"
 title = "2020 第三季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2020-07-2020-09.html\"> 2020 第三季開發進度報告</a> 35 則條目現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2020-07-2020-09.html\">2020 第三季開發進度報告</a> 35 則條目現已發布。</p>"
 
 [[news]]
 date = "2020-10-17"
@@ -323,7 +573,7 @@ description = "新任 committer: <a href=\"mailto:rew@FreeBSD.org\">Robert Wing<
 [[news]]
 date = "2020-07-15"
 title = "2020 第二季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2020-04-2020-06.html\"> 2020 第二季開發進度報告</a>51則條目現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2020-04-2020-06.html\">2020 第二季開發進度報告</a>51則條目現已發布。</p>"
 
 [[news]]
 date = "2020-07-01"
@@ -367,7 +617,7 @@ description = "<p> FreeBSD 11.4 的第二個 BETA 版本現已發布。 用於am
 [[news]]
 date = "2020-05-16"
 title = "FreeBSD 參與 Google Season of Docs"
-description = "<p>FreeBSD 計畫再次在 <a href=\"https://developers.google.com/season-of-docs\"> Google Season of Docs</a> 計畫 <a href=\"https://developers.google.com/season-of-docs/docs/participants/\"> 擔任指導組織 </a>。此計畫的目的是讓開源與技術作家們聚在一起， 技術作家會花三個月和開源社群緊密地一起工作，提供他們的專業給開源計畫的文件。 任務與連絡資訊清單請洽 <a href=\"https://wiki.freebsd.org/GoogleSeasonOfDocs\">FreeBSD wiki</a>。</p>"
+description = "<p>FreeBSD 計畫再次在 <a href=\"https://developers.google.com/season-of-docs\">Google Season of Docs</a> 計畫 <a href=\"https://developers.google.com/season-of-docs/docs/participants/\">擔任指導組織 </a>。此計畫的目的是讓開源與技術作家們聚在一起， 技術作家會花三個月和開源社群緊密地一起工作，提供他們的專業給開源計畫的文件。 任務與連絡資訊清單請洽 <a href=\"https://wiki.freebsd.org/GoogleSeasonOfDocs\">FreeBSD wiki</a>。</p>"
 
 [[news]]
 date = "2020-05-09"
@@ -377,7 +627,7 @@ description = "<p> FreeBSD 11.4 的第一個 BETA 版本現已發布。 用於am
 [[news]]
 date = "2020-04-12"
 title = "2020 第一季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2020-01-2020-03.html\"> 2020 第一季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2020-01-2020-03.html\">2020 第一季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2020-04-06"
@@ -410,12 +660,12 @@ description = "新任 committer: <a href=\"mailto:alfredo@FreeBSD.org\">Alfredo 
 [[news]]
 date = "2020-01-27"
 title = "2019 第四季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2019-10-2019-12.html\"> 2019 第四季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2019-10-2019-12.html\">2019 第四季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2020-01-21"
 title = "以 Weblate 翻譯 FreeBSD 官方文件與書籍"
-description = "<p>為了讓新貢獻者翻譯 <a href=\"https://www.freebsd.org/docs/books.html\">FreeBSD 官方文件與書籍 </a> 的過程更平易近人，本計畫採用 <a href=\"https://weblate.org/\">Weblate</a> 做為網頁翻譯平台。</p> <p>本工具已由部分翻譯團隊 (pt_BR、 es_ES 和 zh_CN) 使用數個月。 由於有優異的成果和成熟的工作流程，我們決定採用它。 我們相信我們已經準備好啟用此平台給新協同翻譯者使用。</p> <p>採用這個新工具後，翻譯過程變得很簡單， 想貢獻的任何人都可以花個幾分鐘貢獻翻譯！</p> <p>如果您有興趣藉由翻譯官方文件貢獻文件計畫，您可以在 <a href=\"https://wiki.freebsd.org/DocTranslationOnWeblate\"> wiki</a> 和 freebsd-translators 郵件論壇的 <a href=\"https://lists.freebsd.org/pipermail/freebsd-translators/2019-December/000161.html\"> 公告</a> 獲得更多訊息。</p>"
+description = "<p>為了讓新貢獻者翻譯 <a href=\"https://www.freebsd.org/docs/books.html\">FreeBSD 官方文件與書籍 </a> 的過程更平易近人，本計畫採用 <a href=\"https://weblate.org/\">Weblate</a> 做為網頁翻譯平台。</p> <p>本工具已由部分翻譯團隊 (pt_BR、 es_ES 和 zh_CN) 使用數個月。 由於有優異的成果和成熟的工作流程，我們決定採用它。 我們相信我們已經準備好啟用此平台給新協同翻譯者使用。</p> <p>採用這個新工具後，翻譯過程變得很簡單， 想貢獻的任何人都可以花個幾分鐘貢獻翻譯！</p> <p>如果您有興趣藉由翻譯官方文件貢獻文件計畫，您可以在 <a href=\"https://wiki.freebsd.org/DocTranslationOnWeblate\"> wiki</a> 和 freebsd-translators 郵件論壇的 <a href=\"https://lists.freebsd.org/pipermail/freebsd-translators/2019-December/000161.html\">公告</a> 獲得更多訊息。</p>"
 
 [[news]]
 date = "2020-01-10"
@@ -428,7 +678,7 @@ description = "新任 committer: <a href=\"mailto:lbartoletti@FreeBSD.org\">Loï
 [[news]]
 date = "2019-11-25"
 title = "2019 第三季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2019-07-2019-09.html\"> 2019 第三季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2019-07-2019-09.html\">2019 第三季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2019-11-04"
@@ -474,7 +724,7 @@ description = "新任 committer: <a href=\"mailto:dmgk@FreeBSD.org\">Dmitri Gout
 
 [[news]]
 date = "2019-09-10"
-description = "新任 committer: <a href=\"mailto:sg@FreeBSD.org\">Stephen Gregoratto</a> (src). 從事 <a href=\"https://developers.google.com/season-of-docs/\"> Google's Season of Docs</a> 之 FreeBSD 計畫使用者手冊的改善工作。"
+description = "新任 committer: <a href=\"mailto:sg@FreeBSD.org\">Stephen Gregoratto</a> (src). 從事 <a href=\"https://developers.google.com/season-of-docs/\">Google's Season of Docs</a> 之 FreeBSD 計畫使用者手冊的改善工作。"
 
 [[news]]
 date = "2019-08-28"
@@ -483,12 +733,12 @@ description = "新任 committer: <a href=\"mailto:fox@FreeBSD.org\">Santhosh Raj
 [[news]]
 date = "2019-08-25"
 title = "2019 第二季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2019-04-2019-06.html\"> 2019 第二季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2019-04-2019-06.html\">2019 第二季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2019-07-16"
 title = "FreeBSD.org 外寄郵件系統變更"
-description = "<p>由於我們無法控制的情況，我們需要變更 FreeBSD.org 郵件的外寄 SMTP 伺服器位址。 我們了解到會因為 SMTP 寄件者信譽系統而遭遇一些挑戰</p> <p>更多資訊，請見 <a href=\"https://lists.freebsd.org/pipermail/freebsd-announce/2019-July/001892.html\"> 此公告</a>。</p>"
+description = "<p>由於我們無法控制的情況，我們需要變更 FreeBSD.org 郵件的外寄 SMTP 伺服器位址。 我們了解到會因為 SMTP 寄件者信譽系統而遭遇一些挑戰</p> <p>更多資訊，請見 <a href=\"https://lists.freebsd.org/pipermail/freebsd-announce/2019-July/001892.html\">此公告</a>。</p>"
 
 [[news]]
 date = "2019-07-09"
@@ -518,7 +768,7 @@ description = "<p> FreeBSD 11.3 的第三個 BETA 版本現已發布。 用於am
 [[news]]
 date = "2019-06-04"
 title = "2019 第一季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2019-01-2019-03.html\"> 2019 第一季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2019-01-2019-03.html\">2019 第一季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2019-05-31"
@@ -544,17 +794,17 @@ description = "新任 committer: <a href=\"mailto:dougm@FreeBSD.org\">Doug Moore
 
 [[news]]
 date = "2019-04-28"
-title = "<a href=\"https://lists.freebsd.org/pipermail/freebsd-pkgbase/2019-April/000396.html\">CFT     FreeBSD pkg base</a> 現已發布"
+title = "<a href=\"https://lists.freebsd.org/pipermail/freebsd-pkgbase/2019-April/000396.html\">CFT FreeBSD pkg base</a> 現已發布"
 description = "<p>FreeBSD 正在測試新的 pkgbase。詳情請見 <a href=\"https://lists.freebsd.org/pipermail/freebsd-pkgbase/2019-April/000396.html\">CFT FreeBSD pkg base</a> 。</p>"
 
 [[news]]
 date = "2019-04-27"
-title = "<a href=\"https://www.research.net/r/freebsd2019\">FreeBSD 2019           社群調查</a> 現已公布"
+title = "<a href=\"https://www.research.net/r/freebsd2019\">FreeBSD 2019 社群調查</a> 現已公布"
 description = "<p><a href=\"https://www.research.net/r/freebsd2019\">FreeBSD 2019 社群調查</a>現已公布。歡迎與您的雇主、同事、朋友或是任何對 FreeBSD 有興趣的社群成員分享調查連結。 調查將於5月13日 UTC 時間午夜結束。</p>"
 
 [[news]]
 date = "2019-04-19"
-title = "<a href=\"https://lists.freebsd.org/pipermail/freebsd-stable/2019-April/090915.html\">CFT   FreeBSD + 新的  ZFS 上游 (ZoL)</a>"
+title = "<a href=\"https://lists.freebsd.org/pipermail/freebsd-stable/2019-April/090915.html\">CFT FreeBSD + 新的 ZFS 上游 (ZoL)</a>"
 description = "<p>FreeBSD 正在測試新的 ZFS 實作的上游 - ZFS on Linux。 測試 FreeBSD + ZoL (ZFS on Linux) 的 FreeBSD 12-STABLE and 13-CURRENT 映像檔現已發布。 測試細節請見 <a href=\"https://lists.freebsd.org/pipermail/freebsd-stable/2019-April/090915.html\">CFT FreeBSD + ZoL</a>。</p>"
 
 [[news]]
@@ -580,7 +830,7 @@ description = "新任 committer: <a href=\"mailto:johalun@FreeBSD.org\">Johannes
 [[news]]
 date = "2018-12-24"
 title = "2018 第一至三季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2018-01-2018-09.html\"> 2018 第一至三季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2018-01-2018-09.html\">2018 第一至三季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2018-12-11"
@@ -786,7 +1036,7 @@ description = "<p>關於 <a href=\"https://meltdownattack.com/\">Meltdown</a> �
 [[news]]
 date = "2017-12-25"
 title = "2017 第三季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2017-07-2017-09.html\"> 2017 第三季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2017-07-2017-09.html\">2017 第三季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2017-11-11"
@@ -808,7 +1058,7 @@ description = "<p><a href=\"https://www.FreeBSD.org/releases/10.4R/announce.html
 [[news]]
 date = "2017-09-27"
 title = "2017 第二季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2017-04-2017-06.html\"> 2017 第二季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2017-04-2017-06.html\">2017 第二季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2017-09-23"
@@ -942,7 +1192,7 @@ description = "新任 committer: <a href=\"mailto:joneum@FreeBSD.org\">Jochen Ne
 [[news]]
 date = "2017-05-15"
 title = "2017 第一季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2017-01-2017-03.html\"> 2017 第一季開發進度報告</a>現已發布。</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2017-01-2017-03.html\">2017 第一季開發進度報告</a>現已發布。</p>"
 
 [[news]]
 date = "2017-05-03"
@@ -972,7 +1222,7 @@ description = "<p>FreeBSD 計畫開心地宣佈參加 Google 的 2017 年 Summer
 [[news]]
 date = "2017-02-13"
 title = "2016 第四季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2016-10-2016-12.html\"> 2016 第四季開發進度報告</a>現已發布</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2016-10-2016-12.html\">2016 第四季開發進度報告</a>現已發布</p>"
 
 [[news]]
 date = "2017-02-10"
@@ -1017,7 +1267,7 @@ description = "新任 committer: <a href=\"mailto:misha@FreeBSD.org\">Mikhail Pc
 [[news]]
 date = "2016-11-13"
 title = "2016 第三季開發進度報告發布"
-description = "<p><a href=\"https://www.FreeBSD.org/status/report-2016-07-2016-09.html\"> 2016 第三季開發進度報告</a>現已發布</p>"
+description = "<p><a href=\"https://www.FreeBSD.org/status/report-2016-07-2016-09.html\">2016 第三季開發進度報告</a>現已發布</p>"
 
 [[news]]
 date = "2016-11-02"
@@ -1061,7 +1311,7 @@ description = "New committer: <a href=\"mailto:jls@freebsd.org\">Jordan Sissel</
 [[news]]
 date = "2006-12-27"
 title = "FreeBSD 6.2-RC2 Available"
-description = "<p>FreeBSD 6.2 的第二個候選發布版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-December/031742.html\">發布</a>。 用於 Tier-1 平台的 ISO 映像檔案，已可以透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 獲得。</p>"
+description = "<p>FreeBSD 6.2 的第二個候選發布版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-December/031742.html\">發布</a>。 用於 Tier-1 平台的 ISO 映像檔案，已可以透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 獲得。</p>"
 
 [[news]]
 date = "2006-12-26"
@@ -1074,12 +1324,12 @@ description = "新增 committer： <a href=\"mailto:nox@FreeBSD.org\">Juergen Lo
 [[news]]
 date = "2006-12-10"
 title = "對 FreeBSD 開發人員 Joseph Koshy 的 Podcast 訪談"
-description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就 FreeBSD 開發人員 Joseph Koshy 近期在 libElf 上所做的工作進行了訪談。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk087.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk087.mp3</a> 收聽。</p>"
+description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就 FreeBSD 開發人員 Joseph Koshy 近期在 libElf 上所做的工作進行了訪談。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk087.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk087.mp3</a> 收聽。</p>"
 
 [[news]]
 date = "2006-12-07"
 title = "對 FreeBSD 開發人員 Kip Macy 的 Podcast 訪談"
-description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就近期 FreeBSD/sun4v 的移植進展，對 FreeBSD 開發人員 Joseph Koshy 進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk086.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk086.mp3</a> 收聽。</p>"
+description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就近期 FreeBSD/sun4v 的移植進展，對 FreeBSD 開發人員 Joseph Koshy 進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk086.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk086.mp3</a> 收聽。</p>"
 
 [[news]]
 date = "2006-12-05"
@@ -1092,7 +1342,7 @@ description = "新增 committer： <a href=\"mailto:gabor@FreeBSD.org\">Gábor K
 [[news]]
 date = "2006-12-01"
 title = "對 FreeBSD 開發人員 Tom McLaughlin 的 Podcast 訪談"
-description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就 BSD# 計畫和 FreeBSD 上的 Mono 對 FreeBSD 開發人員 Tom McLaughlin 進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk085.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk085.mp3</a> 收聽。</p>"
+description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就 BSD# 計畫和 FreeBSD 上的 Mono 對 FreeBSD 開發人員 Tom McLaughlin 進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk085.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk085.mp3</a> 收聽。</p>"
 
 [[news]]
 date = "2006-11-29"
@@ -1101,12 +1351,12 @@ description = "新增 committer： <a href=\"mailto:lx@FreeBSD.org\">David Thiel
 [[news]]
 date = "2006-11-29"
 title = "對 FreeBSD release engineer馬源浩的 Podcast 訪談"
-description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就將要發布的 FreeBSD 6.2 版對release engineer馬源浩 (Bruce Mah) 進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk084.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk084.mp3</a> 收聽</p>"
+description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就將要發布的 FreeBSD 6.2 版對release engineer馬源浩 (Bruce Mah) 進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk084.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk084.mp3</a> 收聽</p>"
 
 [[news]]
 date = "2006-11-17"
 title = "FreeBSD 6.2-RC1 發布了"
-description = "<p>FreeBSD 6.2 的第一個候選發布版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-November/030811.html\">發布</a>。 用於 Tier-1 平台的 ISO 映像檔案，已可透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 獲得。</p>"
+description = "<p>FreeBSD 6.2 的第一個候選發布版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-November/030811.html\">發布</a>。 用於 Tier-1 平台的 ISO 映像檔案，已可透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 獲得。</p>"
 
 [[news]]
 date = "2006-11-16"
@@ -1143,7 +1393,7 @@ description = "<p>用於提供 FreeBSD Project 郵件、web、CVS 等的 FreeBSD
 [[news]]
 date = "2006-10-31"
 title = "FreeBSD 6.2-BETA3 發布了"
-description = "<p>FreeBSD 6.2 的第三個 beta 版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-November/030277.html\">發布</a>。 用於 Tier-1 平台的 ISO 映像檔案，已可以透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 獲得。</p>"
+description = "<p>FreeBSD 6.2 的第三個 beta 版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-November/030277.html\">發布</a>。 用於 Tier-1 平台的 ISO 映像檔案，已可以透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 獲得。</p>"
 
 [[news]]
 date = "2006-10-25"
@@ -1167,7 +1417,7 @@ description = "新增 committer： <a href=\"mailto:syrinx@FreeBSD.org\">Shterya
 [[news]]
 date = "2006-10-05"
 title = "FreeBSD 6.2-BETA2 發布了"
-description = "<p>FreeBSD 6.2 的第二個 beta 版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-October/029171.html\">發布</a>。 用於 Tier-1 平台的 ISO 映像檔案，已可以透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 獲得。</p>"
+description = "<p>FreeBSD 6.2 的第二個 beta 版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-October/029171.html\">發布</a>。 用於 Tier-1 平台的 ISO 映像檔案，已可以透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 獲得。</p>"
 
 [[news]]
 date = "2006-09-28"
@@ -1180,7 +1430,7 @@ description = "新增 committer： <a href=\"mailto:jfv@FreeBSD.org\">Jack F. Vo
 [[news]]
 date = "2006-09-21"
 title = "FreeBSD 6.2-BETA1 發布了"
-description = "<p>FreeBSD 6.2 的第一個 beta 版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-September/028584.html\">發布</a>。 本次 BETA1 的 ISO 映像檔案，已可以透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 獲得。</p>"
+description = "<p>FreeBSD 6.2 的第一個 beta 版本現已 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-September/028584.html\">發布</a>。 本次 BETA1 的 ISO 映像檔案，已可以透過眾多的 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 獲得。</p>"
 
 [[news]]
 date = "2006-09-20"
@@ -1210,7 +1460,7 @@ description = "<p>FreeBSD Core Team 競選已經結束。 選舉結果已在 <a 
 [[news]]
 date = "2006-07-19"
 title = "對 FreeBSD 開發人員 Greg Lehey 的 Podcast 訪談"
-description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 對 FreeBSD 開發人員 Greg Lehey 就他在 FreeBSD 和 MySQL 上的工作進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk055.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk055.mp3</a> 收聽。</p>"
+description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 對 FreeBSD 開發人員 Greg Lehey 就他在 FreeBSD 和 MySQL 上的工作進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk055.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk055.mp3</a> 收聽。</p>"
 
 [[news]]
 date = "2006-07-18"
@@ -1219,7 +1469,7 @@ description = "新增 committer： <a href=\"mailto:acm@FreeBSD.org\">Jose Alons
 [[news]]
 date = "2006-07-13"
 title = "對 FreeBSD 開發人員 Pawel Jakub Dawidek 的 Podcast 訪談"
-description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 對 FreeBSD 開發人員 Pawel Jakub Dawidek 就他在 FreeBSD 上的工作，特別是 GEOM 日志計畫進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk052.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk052.mp3</a> 收聽。</p>"
+description = "<p>在最新一期 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 對 FreeBSD 開發人員 Pawel Jakub Dawidek 就他在 FreeBSD 上的工作，特別是 GEOM 日志計畫進行了採訪。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk052.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk052.mp3</a> 收聽。</p>"
 
 [[news]]
 date = "2006-07-12"
@@ -1229,7 +1479,7 @@ description = "<p>2006 年第二季度的開發進度報告 <a href=\"https://ww
 [[news]]
 date = "2006-07-05"
 title = "FreeBSD 基金會發布了用於 FreeBSD 5.5、6.1 以及 AMD64 平台的預編譯 Java"
-description = "<p>FreeBSD 基金會現已開始提供基於 Sun Microsystems UPDATE7 的專用於 FreeBSD 的預編譯版本 Java JDK 和 JRE 1.5。 欲了解更多詳情， 請參見 FreeBSD 基金會 <a href=\"http://www.freebsdfoundation.org/press/20060705-PRrelease.shtml\"> 發布的新聞</a>。</p>"
+description = "<p>FreeBSD 基金會現已開始提供基於 Sun Microsystems UPDATE7 的專用於 FreeBSD 的預編譯版本 Java JDK 和 JRE 1.5。 欲了解更多詳情， 請參見 FreeBSD 基金會 <a href=\"http://www.freebsdfoundation.org/press/20060705-PRrelease.shtml\">發布的新聞</a>。</p>"
 
 [[news]]
 date = "2006-06-24"
@@ -1264,7 +1514,7 @@ description = "<p><a href=\"mailto:piso@FreeBSD.org\">Paolo Pisati</a>， 去年
 [[news]]
 date = "2006-05-26"
 title = "對 FreeBSD 開發者 Poul-Henning Kamp 的 Podcast 訪談"
-description = "<p>在最新的 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就 FreeBSD 上的開發活動採訪了 FreeBSD 開發者 Poul-Henning Kamp。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk048.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk048.mp3</a> 收聽。</p>"
+description = "<p>在最新的 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 就 FreeBSD 上的開發活動採訪了 FreeBSD 開發者 Poul-Henning Kamp。 這期 podcast 可以透過 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk048.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk048.mp3</a> 收聽。</p>"
 
 [[news]]
 date = "2006-05-25"
@@ -1274,7 +1524,7 @@ description = "<p><a href=\"https://www.FreeBSD.org/releases/5.5R/announce.html\
 [[news]]
 date = "2006-05-21"
 title = "FreeBSD 能夠在 Sun T1 處理器上獨立運行了"
-description = "<p>FreeBSD 目前已經能夠在 <a href=\"http://www.sun.com/processors/UltraSPARC-T1/\">採用 CoolThreads 技術的 Sun T1 處理器</a> 的電腦上完整地完成 \"make buildworld\" 命令，從而達到了獨立運行的目標。 這些原始碼目前存放於 <a href=\"http://perforce.freebsd.org/branchView.cgi?BRANCH=kmacy%5fsun4v\"> FreeBSD 的 Perforce 版本控制系統</a> 中， 並將在對 logical domaining 的支持功能完成後，會合併回官方的 CVS repository。 開機過程的 log 檔可以在 <a href=\"http://www.fsmware.com/sun4v/dmesg_latest.txt\">這裡</a> 找到。</p>"
+description = "<p>FreeBSD 目前已經能夠在 <a href=\"http://www.sun.com/processors/UltraSPARC-T1/\">採用 CoolThreads 技術的 Sun T1 處理器</a> 的電腦上完整地完成 \"make buildworld\" 命令，從而達到了獨立運行的目標。 這些原始碼目前存放於 <a href=\"http://perforce.freebsd.org/branchView.cgi?BRANCH=kmacy%5fsun4v\">FreeBSD 的 Perforce 版本控制系統</a> 中， 並將在對 logical domaining 的支持功能完成後，會合併回官方的 CVS repository。 開機過程的 log 檔可以在 <a href=\"http://www.fsmware.com/sun4v/dmesg_latest.txt\">這裡</a> 找到。</p>"
 
 [[news]]
 date = "2006-05-17"
@@ -1283,7 +1533,7 @@ description = "新增 committer： <a href=\"mailto:twinterg@FreeBSD.org\">Thoma
 [[news]]
 date = "2006-05-16"
 title = "FreeBSD 5.5-RC1 發布了"
-description = "<p>FreeBSD 5.5 的首個，同時也有望成為最終的發行候選版本 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-May/025589.html\">發布了</a>。 RC1 ISO 映像檔案，已經可以從眾多 <a href=\"http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 獲得。</p>"
+description = "<p>FreeBSD 5.5 的首個，同時也有望成為最終的發行候選版本 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2006-May/025589.html\">發布了</a>。 RC1 ISO 映像檔案，已經可以從眾多 <a href=\"http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 獲得。</p>"
 
 [[news]]
 date = "2006-05-08"
@@ -1310,7 +1560,7 @@ description = "新增 committer： <a href=\"mailto:sat@FreeBSD.org\">Andrew Pan
 [[news]]
 date = "2006-05-02"
 title = "FreeBSD 6.1-RC2 發布了"
-description = "<p>FreeBSD 6.1 的第二個，也應該是最後一個候選發行版 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-May/016386.html\">發布了</a>。 RC2 ISO 映像檔案，可以從眾多 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 獲得。</p>"
+description = "<p>FreeBSD 6.1 的第二個，也應該是最後一個候選發行版 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-May/016386.html\">發布了</a>。 RC2 ISO 映像檔案，可以從眾多 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 獲得。</p>"
 
 [[news]]
 date = "2006-05-01"
@@ -1333,7 +1583,7 @@ description = "新增 committer： <a href=\"mailto:lbr@FreeBSD.org\">Lars Balke
 [[news]]
 date = "2006-04-15"
 title = "對 FreeBSD 開發者 Joe Marcus Clarke 的 Podcast 訪談"
-description = "<p>在最新的 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast中，Will Backman 訪問了 FreeBSD 開發者 Joe Marcus Clarke， 討論了與 FreeBSD 上的 GNOME 桌面環境有關的話題。 這期 podcast 可以從 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk032.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk032.mp3</a> 下載。</p>"
+description = "<p>在最新的 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast中，Will Backman 訪問了 FreeBSD 開發者 Joe Marcus Clarke， 討論了與 FreeBSD 上的 GNOME 桌面環境有關的話題。 這期 podcast 可以從 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk032.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk032.mp3</a> 下載。</p>"
 
 [[news]]
 date = "2006-04-14"
@@ -1348,7 +1598,7 @@ description = "<p>FreeBSD Project 愉快地參加了 Google 的 <a href=\"http:/
 [[news]]
 date = "2006-04-13"
 title = "FreeBSD 6.1-RC1 發布了"
-description = "<p>FreeBSD 6.1 的第一個候選發行版 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-April/016104.html\">發布了</a>。 RC1 的 ISO 映像檔案可以從多數 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 獲得。</p>"
+description = "<p>FreeBSD 6.1 的第一個候選發行版 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-April/016104.html\">發布了</a>。 RC1 的 ISO 映像檔案可以從多數 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 獲得。</p>"
 
 [[news]]
 date = "2006-04-11"
@@ -1358,7 +1608,7 @@ description = "<p>在 FreeBSD-CURRENT 中新增了 bce(4)，一個用於 Broadco
 [[news]]
 date = "2006-04-06"
 title = "FreeBSD 基金會宣布用於 FreeBSD 的預編譯版本 Java JDK 和 JRE 1.5"
-description = "<p>FreeBSD 基金會現在開始提供用於 FreeBSD 的預編譯版本 Java JDK 和 JRE 1.5。 更多細節，請參見 FreeBSD 基金會的 <a href=\"http://www.freebsdfoundation.org/press/20060405-PRrelease.shtml\"> 新聞稿</a>。</p>"
+description = "<p>FreeBSD 基金會現在開始提供用於 FreeBSD 的預編譯版本 Java JDK 和 JRE 1.5。 更多細節，請參見 FreeBSD 基金會的 <a href=\"http://www.freebsdfoundation.org/press/20060405-PRrelease.shtml\">新聞稿</a>。</p>"
 
 [[news]]
 date = "2006-04-04"
@@ -1375,7 +1625,7 @@ description = "新增 committer： <a href=\"mailto:jmelo@FreeBSD.org\">Jean Mil
 [[news]]
 date = "2006-03-15"
 title = "FreeBSD 5.5-BETA4 和 6.1-BETA4 發布了"
-description = "<p>FreeBSD 5.5 和 FreeBSD 6.1 的第四個 beta 版本 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-March/015730.html\">發布了</a>。 這些 BETA4 ISO 映像檔案，可以在多數 <a href=\"http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 上獲得。</p>"
+description = "<p>FreeBSD 5.5 和 FreeBSD 6.1 的第四個 beta 版本 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-March/015730.html\">發布了</a>。 這些 BETA4 ISO 映像檔案，可以在多數 <a href=\"http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 上獲得。</p>"
 
 [[news]]
 date = "2006-02-22"
@@ -1384,17 +1634,17 @@ description = "新增 committer： <a href=\"mailto:wkoszek@FreeBSD.org\">Wojcie
 [[news]]
 date = "2006-02-20"
 title = "FreeBSD 5.5-BETA2 和 6.1-BETA2 發布了"
-description = "<p>FreeBSD 5.5 和 FreeBSD 6.1 的第二個 BETA 版本現在 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-February/015499.html\">可用了</a>。 對應的 BETA2 ISO 鏡像檔案可以從眾多 <a href=\"http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 之一下載。</p>"
+description = "<p>FreeBSD 5.5 和 FreeBSD 6.1 的第二個 BETA 版本現在 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-February/015499.html\">可用了</a>。 對應的 BETA2 ISO 鏡像檔案可以從眾多 <a href=\"http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 之一下載。</p>"
 
 [[news]]
 date = "2006-02-18"
 title = "對 FreeBSD 開發者 Kirk McKusick 的 Podcast 訪談"
-description = "<p>在最新的 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 訪問了 FreeBSD 開發者 Marshall Kirk McKusick。 這期 podcast 可以從 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk018.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk018.mp3</a> 下載。</p>"
+description = "<p>在最新的 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> podcast 中，Will Backman 訪問了 FreeBSD 開發者 Marshall Kirk McKusick。 這期 podcast 可以從 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk018.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk018.mp3</a> 下載。</p>"
 
 [[news]]
 date = "2006-02-17"
 title = "對 FreeBSD release engineer Scott Long 的 Podcast 訪談"
-description = "<p>在 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> 系列 podcast 的第 17 期中，Will Backman 訪問了 FreeBSD release engineer 之一的 Scott Long，並就正在開發的 FreeBSD 5.5 和 6.1 版本， 以及一些相關話題進行了討論。 這期 podcast 可以從 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk017.mp3\"> http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk017.mp3</a> 下載。 </p>"
+description = "<p>在 <a href=\"http://bsdtalk.blogspot.com/\">bsdtalk</a> 系列 podcast 的第 17 期中，Will Backman 訪問了 FreeBSD release engineer 之一的 Scott Long，並就正在開發的 FreeBSD 5.5 和 6.1 版本， 以及一些相關話題進行了討論。 這期 podcast 可以從 <a href=\"http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk017.mp3\">http://cisx1.uma.maine.edu/~wbackman/bsdtalk/bsdtalk017.mp3</a> 下載。 </p>"
 
 [[news]]
 date = "2006-02-13"
@@ -1408,7 +1658,7 @@ description = "<p>在 2006 年春季將舉辦 “FreeBSD Kernel Internals: An In
 [[news]]
 date = "2006-02-09"
 title = "FreeBSD 5.5-BETA1 和 6.1-BETA1 發布了"
-description = "<p>FreeBSD 5.5 和 FreeBSD 6.1 的首個 BETA 版本現在 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-February/015418.html\">可用</a> 了。 對應的 BETA1 ISO 鏡像可以從許多 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 之一下載。</p>"
+description = "<p>FreeBSD 5.5 和 FreeBSD 6.1 的首個 BETA 版本現在 <a href=\"http://lists.freebsd.org/pipermail/freebsd-hackers/2006-February/015418.html\">可用</a> 了。 對應的 BETA1 ISO 鏡像可以從許多 <a href=\"http://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 之一下載。</p>"
 
 [[news]]
 date = "2006-01-31"
@@ -1443,12 +1693,12 @@ description = "歸來的 committer： <a href=\"mailto:jasone@FreeBSD.org\">Jaso
 [[news]]
 date = "2005-12-17"
 title = "2006 年發行版工作計畫"
-description = "<p>Scott Long 代表交付工程組宣布了 2006 年度的發行版工作計畫。 請參見 <a href=\"http://lists.freebsd.org/pipermail/freebsd-current/2005-December/058964.html\"> 公告</a> 以了解進一步的資訊。</p>"
+description = "<p>Scott Long 代表交付工程組宣布了 2006 年度的發行版工作計畫。 請參見 <a href=\"http://lists.freebsd.org/pipermail/freebsd-current/2005-December/058964.html\">公告</a> 以了解進一步的資訊。</p>"
 
 [[news]]
 date = "2005-12-14"
 title = "在 FreeBSD-CURRENT 上加入了 XFS 的只讀支持"
-description = "<p>在 FreeBSD 上加入了 XFS 文件系統的只讀支持。 這些原始碼派生自 SGI 所發布的 source code ，它受限於 GPL 授權。 您可以在 <a href=\"http://lists.freebsd.org/pipermail/freebsd-current/2005-December/058907.html\"> 公告</a> 中找到更多資訊。</p>"
+description = "<p>在 FreeBSD 上加入了 XFS 文件系統的只讀支持。 這些原始碼派生自 SGI 所發布的 source code ，它受限於 GPL 授權。 您可以在 <a href=\"http://lists.freebsd.org/pipermail/freebsd-current/2005-December/058907.html\">公告</a> 中找到更多資訊。</p>"
 
 [[news]]
 date = "2005-12-12"
@@ -1462,7 +1712,7 @@ description = "<p>FreeBSD project 有數百名遍布世界各地的活躍的開�
 [[news]]
 date = "2005-12-01"
 title = "惠普公司向 FreeBSD 基金會捐獻 blade 式伺服器 cluster"
-description = "<p>FreeBSD 基金會收到了來自惠普公司的一項 blade 系統捐贈， 它將用作 third-party 軟體的構建工作。 這個包含 20 個節點的 HP BladeSystem cluster 將 i386 預編譯 package 的構建過程提高了三倍。 您可以 <a href=\"http://www.freebsdfoundation.org/press/20051201-PRreleaseHP.pdf\"> 在這裡看到更多的細節</a>。</p>"
+description = "<p>FreeBSD 基金會收到了來自惠普公司的一項 blade 系統捐贈， 它將用作 third-party 軟體的構建工作。 這個包含 20 個節點的 HP BladeSystem cluster 將 i386 預編譯 package 的構建過程提高了三倍。 您可以 <a href=\"http://www.freebsdfoundation.org/press/20051201-PRreleaseHP.pdf\">在這裡看到更多的細節</a>。</p>"
 
 [[news]]
 date = "2005-12-01"
@@ -1475,7 +1725,7 @@ description = "新增 committer： <a href=\"mailto:oleg@FreeBSD.org\">Oleg Buly
 [[news]]
 date = "2005-11-27"
 title = "新文章： 用 FreeBSD 來做產品"
-description = "<p>一篇新的文章， <a href=\"https://www.FreeBSD.org/doc/en_US.ISO8859-1/articles/building-products/\"> 用 FreeBSD 來做產品</a> 介紹了在開發產品時與 FreeBSD project 合作的好處。 成功的軟體產品中的技術投入的一大部分， 是來自於如何讓其符合不斷變化的市場節奏。 透過使用成熟的、 採用寬鬆授權的原始碼，例如 FreeBSD project 的原始碼作為基礎， 並遵循這篇文章中所介紹的最佳實踐， 開發組織就能夠從因此而降低的研發投入和更好的市場佔有率中受益。</p>"
+description = "<p>一篇新的文章， <a href=\"https://www.FreeBSD.org/doc/en_US.ISO8859-1/articles/building-products/\">用 FreeBSD 來做產品</a> 介紹了在開發產品時與 FreeBSD project 合作的好處。 成功的軟體產品中的技術投入的一大部分， 是來自於如何讓其符合不斷變化的市場節奏。 透過使用成熟的、 採用寬鬆授權的原始碼，例如 FreeBSD project 的原始碼作為基礎， 並遵循這篇文章中所介紹的最佳實踐， 開發組織就能夠從因此而降低的研發投入和更好的市場佔有率中受益。</p>"
 
 [[news]]
 date = "2005-11-18"
@@ -1485,7 +1735,7 @@ description = "<p>2005 年七月至十月的進度報告 <a href=\"https://www.F
 [[news]]
 date = "2005-11-05"
 title = "FreeBSD 版本的 KDE 3.4.3 發布了"
-description = "<p>KDE 3.4.3 已經合併到了 ports tree 中。 要了解自 KDE 3.4.2 版本以來的改進， 請參見 KDE 3.4.2 <a href=\"http://www.kde.org/announcements/changelogs/changelog3_4_2to3_4_3.php\"> 修改日志</a>。 要了解進一步資訊，請參見 KDE 3.4.3 <a href=\"http://www.kde.org/info/3.4.3.php\">資訊頁</a>。 要了解關於在 FreeBSD 上運行 KDE 的日常資訊， 請參閱 FreeBSD 上的 KDE <a href=\"http://freebsd.kde.org\">計畫主頁</a>。</p>"
+description = "<p>KDE 3.4.3 已經合併到了 ports tree 中。 要了解自 KDE 3.4.2 版本以來的改進， 請參見 KDE 3.4.2 <a href=\"http://www.kde.org/announcements/changelogs/changelog3_4_2to3_4_3.php\">修改日志</a>。 要了解進一步資訊，請參見 KDE 3.4.3 <a href=\"http://www.kde.org/info/3.4.3.php\">資訊頁</a>。 要了解關於在 FreeBSD 上運行 KDE 的日常資訊， 請參閱 FreeBSD 上的 KDE <a href=\"http://freebsd.kde.org\">計畫主頁</a>。</p>"
 
 [[news]]
 date = "2005-11-05"
@@ -1513,12 +1763,12 @@ description = "新增 committer： <a href=\"mailto:ariff@FreeBSD.org\">Ariff Ab
 [[news]]
 date = "2005-10-11"
 title = "FreeBSD 6.0-RC1 發布了"
-description = "<p>FreeBSD 6.0 的第一個發行候選版本 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2005-October/018790.html\">發布了</a>。 RC1 ISO 鏡像，以及透過 FTP 的安裝支持可以在絕大多數的 <a href=\"https://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\"> FreeBSD 鏡像站點</a> 找到。</p>"
+description = "<p>FreeBSD 6.0 的第一個發行候選版本 <a href=\"http://lists.freebsd.org/pipermail/freebsd-stable/2005-October/018790.html\">發布了</a>。 RC1 ISO 鏡像，以及透過 FTP 的安裝支持可以在絕大多數的 <a href=\"https://www.FreeBSD.org/doc/zh_TW.UTF-8/books/handbook/mirrors-ftp.html\">FreeBSD 鏡像站點</a> 找到。</p>"
 
 [[news]]
 date = "2005-10-06"
 title = "新增成功案例： Argentina.com"
-description = "<p>新增了成功案例， <a href=\"https://www.FreeBSD.org/doc/en_US.ISO8859-1/articles/casestudy-argentina.com/\"> argentina.com</a>，介紹了在拉丁美洲的一家 ISP 是如何透過使用 FreeBSD 在競爭激烈的市場上取得成功的。</p>"
+description = "<p>新增了成功案例， <a href=\"https://www.FreeBSD.org/doc/en_US.ISO8859-1/articles/casestudy-argentina.com/\">argentina.com</a>，介紹了在拉丁美洲的一家 ISP 是如何透過使用 FreeBSD 在競爭激烈的市場上取得成功的。</p>"
 
 [[news]]
 date = "2005-10-05"
@@ -1562,7 +1812,7 @@ description = "新增 committer： <a href=\"mailto:garys@FreeBSD.org\">Gary W. 
 [[news]]
 date = "2005-08-21"
 title = "新任安全官： Colin Percival"
-description = "<p>在擔任安全官 43 個月之後，Jacques Vidrine 將這一職務交給了 Colin Percival。 Colin 的主要作品包括 FreeBSD Update、portsnap、bsdiff 工具， 以及最近發表的關於在 hyperthreaded 處理器系統上敏感資訊洩露問題的論文 \"Cache missing for fun and profit\"。 您可以在 <a href=\"http://lists.freebsd.org/pipermail/freebsd-security/2005-August/003115.html\"> 這裡</a> 找到進一步的資訊。 </p>"
+description = "<p>在擔任安全官 43 個月之後，Jacques Vidrine 將這一職務交給了 Colin Percival。 Colin 的主要作品包括 FreeBSD Update、portsnap、bsdiff 工具， 以及最近發表的關於在 hyperthreaded 處理器系統上敏感資訊洩露問題的論文 \"Cache missing for fun and profit\"。 您可以在 <a href=\"http://lists.freebsd.org/pipermail/freebsd-security/2005-August/003115.html\">這裡</a> 找到進一步的資訊。 </p>"
 
 [[news]]
 date = "2005-08-17"
@@ -1572,7 +1822,7 @@ description = "<p>使用能夠支持 iCalendar 格式的日程軟體的用戶，
 [[news]]
 date = "2005-08-17"
 title = "新增文章： 如何選擇 FreeBSD 版本"
-description = "<p>新增的一篇文章， <a href=\"http://docs.freebsd.org/doc/9.0-RELEASE/usr/share/doc/freebsd/en_US.ISO8859-1/articles/version-guide/index.html\"> 選擇適合您的 FreeBSD 版本</a>， 討論了選擇最適合具體應用的 FreeBSD 版本時所需要考慮的問題。 其中包括發行版與分支，以及 FreeBSD-STABLE 和 FreeBSD-CURRENT 等一些概念的區別。 此外，它還介紹了 FreeBSD 的開發過程如何達到適應頻繁發布主要版本的目標， 如何引入較小的功能集，並比較了過去的發行版所採用的方法。 這篇文章的目標讀者是正準備安裝 FreeBSD 的新用戶， 以及準備未來進行升級的現有用戶。</p>"
+description = "<p>新增的一篇文章， <a href=\"http://docs.freebsd.org/doc/9.0-RELEASE/usr/share/doc/freebsd/en_US.ISO8859-1/articles/version-guide/index.html\">選擇適合您的 FreeBSD 版本</a>， 討論了選擇最適合具體應用的 FreeBSD 版本時所需要考慮的問題。 其中包括發行版與分支，以及 FreeBSD-STABLE 和 FreeBSD-CURRENT 等一些概念的區別。 此外，它還介紹了 FreeBSD 的開發過程如何達到適應頻繁發布主要版本的目標， 如何引入較小的功能集，並比較了過去的發行版所採用的方法。 這篇文章的目標讀者是正準備安裝 FreeBSD 的新用戶， 以及準備未來進行升級的現有用戶。</p>"
 
 [[news]]
 date = "2005-08-05"
@@ -1794,7 +2044,7 @@ description = "新增 committer： <a href=\"mailto:sah@FreeBSD.org\">Sam Hopkin
 [[news]]
 date = "2004-12-23"
 title = "FreeBSD 基金會季刊發布"
-description = "<p>FreeBSD 基金會發布了它的 <a href=\"http://www.freebsdfoundation.org/press/20041221-newsletter.shtml\"> 季刊</a>，並借此呼籲對其進行捐助以維持它的 501(c)3 非盈利慈善團體地位。</p>"
+description = "<p>FreeBSD 基金會發布了它的 <a href=\"http://www.freebsdfoundation.org/press/20041221-newsletter.shtml\">季刊</a>，並借此呼籲對其進行捐助以維持它的 501(c)3 非盈利慈善團體地位。</p>"
 
 [[news]]
 date = "2004-12-18"
@@ -1807,7 +2057,7 @@ description = "新增 committer： <a href=\"mailto:niels@FreeBSD.org\">Niels He
 
 [[news]]
 date = "2004-12-06"
-description = "<a href=\"http://www.FreeSBIE.org/\">FreeSBIE</a> 1.1 FreeBSD Live CD 發布了 ── 參見 <a href=\"http://www.freesbie.org/doc/1.1/ANNOUNCE.txt\"> 發布公告</a> 了解更進一步的詳情。"
+description = "<a href=\"http://www.FreeSBIE.org/\">FreeSBIE</a> 1.1 FreeBSD Live CD 發布了 ── 參見 <a href=\"http://www.freesbie.org/doc/1.1/ANNOUNCE.txt\">發布公告</a> 了解更進一步的詳情。"
 
 [[news]]
 date = "2004-12-06"
@@ -1816,7 +2066,7 @@ description = "新增 committer： <a href=\"mailto:girgen@FreeBSD.org\">Palle G
 [[news]]
 date = "2004-12-02"
 title = "正式公告 FreeBSD 4.11 發行日程"
-description = "<p>FreeBSD 4.11 發行版的發行日程已經正式公告， 我們的目標是在 2005 年 1 月 24 日發布它。 完整的日程表在 <a href=\"http://www.freebsd.org/releases/4.11R/schedule.html\"> 這裡</a>。</p>"
+description = "<p>FreeBSD 4.11 發行版的發行日程已經正式公告， 我們的目標是在 2005 年 1 月 24 日發布它。 完整的日程表在 <a href=\"http://www.freebsd.org/releases/4.11R/schedule.html\">這裡</a>。</p>"
 
 [[news]]
 date = "2004-12-01"
@@ -1914,7 +2164,7 @@ description = "新增 committer： <a href=\"mailto:ssouhlal@FreeBSD.org\">Sulei
 [[news]]
 date = "2004-07-23"
 title = "FreeBSD 切換為使用 X.Org"
-description = "<p>FreeBSD-CURRENT 現在默認採用 X.Org 的 X 系統， 而 XFree86 仍然繼續被支持。 欲了解如何在 -CURRENT 和 -STABLE 上升級到 X.org 的詳情，請參考 <a href=\"http://lists.freebsd.org/pipermail/freebsd-current/2004-July/032267.html\"> HEADS UP</a>。</p>"
+description = "<p>FreeBSD-CURRENT 現在默認採用 X.Org 的 X 系統， 而 XFree86 仍然繼續被支持。 欲了解如何在 -CURRENT 和 -STABLE 上升級到 X.org 的詳情，請參考 <a href=\"http://lists.freebsd.org/pipermail/freebsd-current/2004-July/032267.html\">HEADS UP</a>。</p>"
 
 [[news]]
 date = "2004-07-14"

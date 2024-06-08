@@ -1,7 +1,7 @@
 # Generate the FreeBSD website
 #
-# Copyright (c) 2020-2022, The FreeBSD Documentation Project
-# Copyright (c) 2020-2022, Sergio Carlavilla <carlavilla@FreeBSD.org>
+# Copyright (c) 2020-2023, The FreeBSD Documentation Project
+# Copyright (c) 2020-2023, Sergio Carlavilla <carlavilla@FreeBSD.org>
 #
 # Targets intended for use on the command line
 #
@@ -16,13 +16,13 @@
 MAINTAINER=carlavilla@FreeBSD.org
 
 # List of all languages we have content for
-ALL_LANGUAGES=	de el en es fr hu it ja nl ru tr zh-cn zh-tw
+ALL_LANGUAGES=	de en it zh-tw
 
 LOCALBASE?=	/usr/local
 
 RUBY_CMD =	${LOCALBASE}/bin/ruby
 HUGO_CMD =	${LOCALBASE}/bin/hugo
-HUGO_ARGS?=	--verbose
+HUGO_ARGS?=
 RUBYLIB =	../shared/lib
 .export	RUBYLIB
 
@@ -108,6 +108,13 @@ releases-clean:
 	rm -f data/releases.toml
 
 generate-release:
+.if empty(RELEASE)
+	@echo "Specify a release. Example RELEASE=14.1"
+.else
+	${HUGO_CMD} new --kind release releases/${RELEASE}R/
+.endif
+
+generate-hardware-notes:
 .if empty(RELEASE) && empty(MAIN)
 	@echo "Specify a release or use main. Example RELEASE=14.1 MAIN=true"
 .else
@@ -122,7 +129,6 @@ generate-release:
 .elif !empty(RELEASE)
 	git clone --depth 1 --branch releng/${RELEASE} https://git.FreeBSD.org/src.git tmp
 .endif
-	${HUGO_CMD} new --kind release releases/${RELEASE}R/
 	${RUBY_CMD} ./tools/hardware-notes-processor.rb content/en/releases/${RELEASE}R/hardware.adoc
 	rm -fr ./tmp
 .endif

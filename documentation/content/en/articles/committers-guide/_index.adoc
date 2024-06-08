@@ -2,9 +2,9 @@
 title: Committer's Guide
 authors:
   - author: The FreeBSD Documentation Project
-copyright: 1999-2021 The FreeBSD Documentation Project
+copyright: 1999-2022 The FreeBSD Documentation Project
 description: Introductory information for FreeBSD committers
-trademarks: ["freebsd", "coverity", "ibm", "intel", "general"]
+trademarks: ["freebsd", "coverity", "git", "github", "gitlab", "ibm", "intel", "general"]
 weight: 25
 tags: ["FreeBSD Committer's Guide", "Guide", "Community"]
 ---
@@ -48,7 +48,7 @@ All new committers should read this document before they start, and existing com
 
 Almost all FreeBSD developers have commit rights to one or more repositories.
 However, a few developers do not, and some of the information here applies to them as well.
-(For instance, some people only have rights to work with the Problem Report database).
+(For instance, some people only have rights to work with the Problem Report database.)
 Please see <<non-committers>> for more information.
 
 This document may also be of interest to members of the FreeBSD community who want to learn more about how the project works.
@@ -77,19 +77,19 @@ toc::[]
 |`smtp.FreeBSD.org:587` (see also <<smtp-setup>>).
 
 |`_src/_` Git Repository
-|`ssh://git@gitrepo.FreeBSD.org/src.git` (see also <<git-getting-started-base-layout>>).
+|`ssh://git@gitrepo.FreeBSD.org/src.git`
 
 |`_doc/_` Git Repository
-|`ssh://git@gitrepo.FreeBSD.org/doc.git` (see also <<git-getting-started-doc-layout>>).
+|`ssh://git@gitrepo.FreeBSD.org/doc.git`
 
 |`_ports/_` Git Repository
-|`ssh://git@gitrepo.FreeBSD.org/ports.git` (see also <<git-getting-started-ports-layout>>).
+|`ssh://git@gitrepo.FreeBSD.org/ports.git`
 
 |_Internal Mailing Lists_
-|developers (technically called all-developers), doc-developers, doc-committers, ports-developers, ports-committers, src-developers, src-committers. (Each project repository has its own -developers and -committers mailing lists. Archives for these lists can be found in the files [.filename]#/local/mail/repository-name-developers-archive# and [.filename]#/local/mail/repository-name-committers-archive# on the `FreeBSD.org` cluster.)
+|developers (technically called all-developers), doc-developers, doc-committers, ports-developers, ports-committers, src-developers, src-committers. (Each project repository has its own -developers and -committers mailing lists. Archives for these lists can be found in the files [.filename]#/local/mail/repository-name-developers-archive# and [.filename]#/local/mail/repository-name-committers-archive# on `freefall.FreeBSD.org`.)
 
 |_Core Team monthly reports_
-|[.filename]#/home/core/public/monthly-reports# on the `FreeBSD.org` cluster.
+|[.filename]#/home/core/public/reports# on the `FreeBSD.org` cluster.
 
 |_Ports Management Team monthly reports_
 |[.filename]#/home/portmgr/public/monthly-reports# on the `FreeBSD.org` cluster.
@@ -124,18 +124,14 @@ For those who do not yet have an OpenPGP key, or need a new key to meet FreeBSD 
 [[pgpkeys-create-steps]]
 [.procedure]
 ====
-. Install [.filename]#security/gnupg#. Enter these lines in [.filename]#~/.gnupg/gpg.conf# to set minimum acceptable defaults:
+. Install [.filename]#security/gnupg#. Enter these lines in [.filename]#~/.gnupg/gpg.conf# to set minimum acceptable defaults for signing and new key preferences (see the link:https://www.gnupg.org/documentation/manuals/gnupg/GPG-Options.html[GnuPG options documentation] for more details):
 +
 [.programlisting]
 ....
-fixed-list-mode
-keyid-format 0xlong
+# Sorted list of preferred algorithms for signing (strongest to weakest).
 personal-digest-preferences SHA512 SHA384 SHA256 SHA224
-default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 BZIP2 ZLIB ZIP Uncompressed
-verify-options show-uid-validity
-list-options show-uid-validity
-sig-notation issuer-fpr@notations.openpgp.fifthhorseman.net=%g
-cert-digest-algo SHA512
+# Default preferences for new keys
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 CAMELLIA256 AES192 CAMELLIA192 AES CAMELLIA128 CAST5 BZIP2 ZLIB ZIP Uncompressed
 ....
 . Generate a key:
 +
@@ -177,7 +173,7 @@ Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
 You need a Passphrase to protect your secret key.
 ....
 
-<.> 2048-bit keys with a three-year expiration provide adequate protection at present (2013-12). http://danielpocock.com/rsa-key-sizes-2048-or-4096-bits[] describes the situation in more detail.
+<.> 2048-bit keys with a three-year expiration provide adequate protection at present (2022-10).
 
 <.> A three year key lifespan is short enough to obsolete keys weakened by advancing computer power, but long enough to reduce key management problems.
 
@@ -185,7 +181,7 @@ You need a Passphrase to protect your secret key.
 +
 After the email address is entered, a passphrase is requested.
 Methods of creating a secure passphrase are contentious.
-Rather than suggest a single way, here are some links to sites that describe various methods: http://world.std.com/~reinhold/diceware.html[], http://www.iusmentis.com/security/passphrasefaq/[], http://xkcd.com/936/[], http://en.wikipedia.org/wiki/Passphrase[].
+Rather than suggest a single way, here are some links to sites that describe various methods: https://world.std.com/~reinhold/diceware.html[], https://www.iusmentis.com/security/passphrasefaq/[], https://xkcd.com/936/[], https://en.wikipedia.org/wiki/Passphrase[].
 ====
 
 Protect the private key and passphrase.
@@ -266,7 +262,7 @@ Committers are encouraged to seek review for their work as part of the normal de
 === Policy for Committer Activity in Other Trees
 
 * All committers may modify [.filename]#src/share/misc/committers-*.dot#, [.filename]#src/usr.bin/calendar/calendars/calendar.freebsd#, and [.filename]#ports/astro/xearth/files#.
-* doc committers may commit documentation changes to [.filename]#src# files, such as man pages, READMEs, fortune databases, calendar files, and comment fixes without approval from a src committer, subject to the normal care and tending of commits.
+* doc committers may commit documentation changes to [.filename]#src# files, such as manual pages, READMEs, fortune databases, calendar files, and comment fixes without approval from a src committer, subject to the normal care and tending of commits.
 * Any committer may make changes to any other tree with an "Approved by" from a non-mentored committer with the appropriate bit.
 Mentored committers can provide a "Reviewed by" but not an "Approved by".
 * Committers can acquire an additional bit by the usual process of finding a mentor who will propose them to core, doceng, or portmgr, as appropriate. When approved, they will be added to 'access' and the normal mentoring period will ensue, which will involve a continuing of "Approved by" for some period.
@@ -338,7 +334,13 @@ There are many primers for Git on the web, but the https://git-scm.com/book/en/v
 
 This section describes the read-write access for committers to push the commits from developers or contributors.
 
+[[git-mini-daily-use]]
 ===== Daily use
+
+[NOTE]
+====
+In the examples below, replace `${repo}` with the name of the desired FreeBSD repository: `doc`, `ports`, or `src`.
+====
 
 * Clone the repository:
 +
@@ -385,14 +387,31 @@ freebsd  https://git.freebsd.org/${repo}.git (fetch)
 freebsd  git@gitrepo.freebsd.org:${repo}.git (push)
 ....
 +
-Again, note that `gitrepo.freebsd.org` will be canonicalized to `repo.freebsd.org` in the future.
+Again, note that `gitrepo.freebsd.org` has been canonicalized to `repo.freebsd.org`.
 
 * Install commit message template hook:
 +
+For doc repository:
++
 [source,shell]
 ....
-% fetch https://cgit.freebsd.org/src/plain/tools/tools/git/hooks/prepare-commit-msg -o .git/hooks
-% chmod 755 .git/hooks/prepare-commit-msg
+% cd .git/hooks
+% ln -s ../../.hooks/prepare-commit-msg
+....
++
+For ports repository:
++
+[source,shell]
+....
+% git config --add core.hooksPath .hooks
+....
++
+For src repository:
++
+[source,shell]
+....
+% cd .git/hooks
+% ln -s ../../tools/tools/git/hooks/prepare-commit-msg
 ....
 
 [[admin-branch]]
@@ -416,20 +435,13 @@ git worktree add -b admin ../${repo}-admin internal/admin
 ....
 
 For browsing `internal/admin` branch on web:
-https://cgit.freebsd.org/${repo}/log/?h=internal/admin
+`https://cgit.freebsd.org/${repo}/log/?h=internal/admin`
 
-For pushing, either specify the full refspec:
+For pushing, specify the full refspec:
 
 [source,shell]
 ....
 git push freebsd HEAD:refs/internal/admin
-....
-
-Or set `push.default` to `freebsd` which will make `git push` to push the current branch back to its upstream by default, which is more suitable for our workflow:
-
-[source,shell]
-....
-git config push.default freebsd
 ....
 
 ==== Keeping Current With The FreeBSD src Tree
@@ -440,13 +452,24 @@ There are two ways to download.
 Most people will want to do a deep clone of the repository.
 However, there are times when you may wish to do a shallow clone.
 
-===== Branch names
-The branch names in the new Git repository are similar to the old names.
-For the stable branches, they are stable/X where X is the major release (like 11 or 12).
-The main branch in the new repository is 'main'.
-The main branch in the old GitHub mirror was 'master', but is now 'main'.
-Both reflect the defaults of Git at the time they were created.
-The 'main' branch is the default branch if you omit the '-b branch' or '--branch branch' options below.
+===== Branch Names
+FreeBSD-CURRENT uses the  `main` branch.
+
+`main` is the default branch.
+
+For FreeBSD-STABLE, branch names include `stable/12` and `stable/13`.
+
+For FreeBSD-RELEASE, release engineering branch names include `releng/12.4` and `releng/13.2`.
+
+https://www.freebsd.org/releng/[] shows:
+
+* `main` and `stable/⋯` branches open
+* `releng/⋯` branches, each of which is frozen when a release is tagged.
+
+Examples:
+
+* tag https://cgit.freebsd.org/src/tag/?h=release/13.1.0[release/13.1.0] on the https://cgit.freebsd.org/src/log/?h=releng/13.1[releng/13.1] branch
+* tag https://cgit.freebsd.org/src/tag/?h=release/13.2.0[release/13.2.0] on the https://cgit.freebsd.org/src/log/?h=releng/13.2[releng/13.2] branch.
 
 ===== Repositories
 Please see the <<admin,Administrative Details>> for the latest information on where to get FreeBSD sources.
@@ -461,12 +484,12 @@ It is the easiest to do.
 It also allows you to use Git's worktree feature to have all your active branches checked out into separate directories but with only one copy of the repository.
 [source,shell]
 ....
-% git clone -o freebsd $URL -b branch [dir]
+% git clone -o freebsd $URL -b branch [<directory>]
 ....
-is how you make a deep clone.
-'branch' should be one of the branches listed in the previous section.
-It is optional if it is the main branch.
-'dir' is an optional directory to place it in (the default will be the name of the repo you are cloning (src, doc, etc)).
+-- will create a deep clone.
+`branch` should be one of the branches listed in the previous section.
+If no `branch` is given: the default (`main`) will be used.
+If no `<directory>` is given: the name of the new directory will match the name of the repo ([.filename]#doc#, [.filename]#ports# or [.filename]#src#).
 
 You will want a deep clone if you are interested in the history, plan on making local changes, or plan on working on more than one branch.
 It is the easiest to keep up to date as well.
@@ -487,7 +510,7 @@ However, see below for a significant limitation of this approach.
 
 This clones the repository, but only has the most recent version in the repository.
 The rest of the history is not downloaded.
-Should you change your mind later, you can do 'git fetch --unshallow' to get the old history.
+Should you change your mind later, you can do `git fetch --unshallow` to get the old history.
 
 [WARNING]
 ====
@@ -522,15 +545,15 @@ This pulls in all the revisions since your last update.
 ....
 will update the tree.
 In Git, a 'fast forward' merge is one that only needs to set a new branch pointer and doesn't need to re-create the commits.
-By always doing a 'fast forward' merge/pull, you'll ensure that you have an exact copy of the FreeBSD tree.
+By always doing a fast forward merge/pull, you'll ensure that you have an exact copy of the FreeBSD tree.
 This will be important if you want to maintain local patches.
 
 See below for how to manage local changes.
-The simplest is to use --autostash on the 'git pull' command, but more sophisticated options are available.
+The simplest is to use `--autostash` on the `git pull` command, but more sophisticated options are available.
 
 ==== Selecting a Specific Version
 
-In Git, the 'git checkout' checks out both branches and specific versions.
+In Git, `git checkout` checks out both branches and specific versions.
 Git's versions are the long hashes rather than a sequential number.
 
 When you checkout a specific version, just specify the hash you want on the command line (the git log command can help you decide which hash you might want):
@@ -564,29 +587,29 @@ Sometimes, things go wrong.
 The last version worked, but the one you just updated to does not.
 A developer may ask you to bisect the problem to track down which commit caused the regression.
 
-Git makes bisecting changes easy with a powerful 'git bisect' command.
+Git makes bisecting changes easy with a powerful `git bisect` command.
 Here's a brief outline of how to use it.
 For more information, you can view https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination or https://git-scm.com/docs/git-bisect for more details.
 The man git-bisect page is good at describing what can go wrong, what to do when versions won't build, when you want to use terms other than 'good' and 'bad', etc, none of which will be covered here.
 
 `git bisect start --first-parent` will start the bisection process.
 Next, you need to tell a range to go through.
-'git bisect good XXXXXX' will tell it the working version and 'git bisect bad XXXXX' will tell it the bad version.
+`git bisect good XXXXXX` will tell it the working version and `git bisect bad XXXXX` will tell it the bad version.
 The bad version will almost always be HEAD (a special tag for what you have checked out).
 The good version will be the last one you checked out.
 The `--first-parent` argument is necessary so that subsequent `git bisect` commands do not try to check out a vendor branch which lacks the full FreeBSD source tree.
 
 [TIP]
 ====
-If you want to know the last version you checked out, you should use 'git reflog':
+If you want to know the last version you checked out, you should use `git reflog`:
 [source,shell]
 ....
 5ef0bd68b515 (HEAD -> main, freebsd/main, freebsd/HEAD) HEAD@{0}: pull --ff-only: Fast-forward
 a8163e165c5b (upstream/main) HEAD@{1}: checkout: moving from b6fb97efb682994f59b21fe4efb3fcfc0e5b9eeb to main
 ...
 ....
-shows me moving the working tree to the main branch (a816...) and then updating from upstream (to 5ef0...).
-In this case, bad would be HEAD (or 5rf0bd68) and good would be a8163e165.
+shows me moving the working tree to the `main` branch (a816...) and then updating from upstream (to 5ef0...).
+In this case, bad would be HEAD (or 5ef0bd68b515) and good would be a8163e165c5b.
 As you can see from the output, HEAD@{1} also often works, but isn't foolproof if you have done other things to your Git tree after updating, but before you discover the need to bisect.
 ====
 
@@ -602,11 +625,11 @@ Bisecting: 1722 revisions left to test after this (roughly 11 steps)
 ....
 
 You would then build/install that version.
-If it's good you'd type 'git bisect good' otherwise 'git bisect bad'.
-If the version doesn't compile, type 'git bisect skip'.
+If it's good you'd type `git bisect good` otherwise `git bisect bad`.
+If the version doesn't compile, type `git bisect skip`.
 You will get a similar message to the above after each step.
 When you are done, report the bad version to the developer (or fix the bug yourself and send a patch).
-'git bisect reset' will end the process and return you back to where you started (usually tip of main).
+`git bisect reset` will end the process and return you back to where you started (usually tip of `main`).
 Again, the git-bisect manual (linked above) is a good resource for when things go wrong or for unusual cases.
 
 [[git-gpg-signing]]
@@ -649,7 +672,7 @@ For example, to encrypt for the subkey `DEADBEEF`, use `DEADBEEF!`.
 
 Commit signatures can be verified by running either `git verify-commit <commit hash>`, or `git log --show-signature`.
 
-Tag signatures can be verified with `git verity-tag <tag name>`, or `git tag -v <tag name>`.
+Tag signatures can be verified with `git verify-tag <tag name>`, or `git tag -v <tag name>`.
 
 ////
 Commented out for now until we decide what to do.
@@ -667,8 +690,8 @@ The cgit repository web interface for use with web browsers is at https://cgit.F
 The production Git repository is at https://git.FreeBSD.org/ports.git and at ssh://anongit@git.FreeBSD.org/ports.git (or anongit@git.FreeBSD.org:ports.git).
 
 There is also a mirror on GitHub, see extref:{handbook}/mirrors[External mirrors, mirrors] for an overview.
-The 'current' branch is 'main' .
-The quarterly branches are named 'yyyyQn' for year 'yyyy' and quarter 'n'.
+The _latest_ branch is `main`.
+The _quarterly_ branches are named `yyyyQn` for year 'yyyy' and quarter 'n'.
 
 [[port-commit-message-formats]]
 ===== Commit message formats
@@ -700,7 +723,7 @@ Another blank line should be added if there are any metadata fields, so that the
 
 ==== Managing Local Changes
 This section addresses tracking local changes.
-If you have no local changes, you can stop reading now (it is the last section and OK to skip).
+If you have no local changes you can skip this section.
 
 One item that is important for all of them: all changes are local until pushed.
 Unlike Subversion, Git uses a distributed model.
@@ -709,16 +732,16 @@ However, if you have local changes, you can use the same tool to manage them as 
 All changes that you have not pushed are local and can easily be modified (git rebase, discussed below does this).
 
 ===== Keeping local changes
-The simplest way to keep local changes (especially trivial ones) is to use 'git stash'.
-In its simplest form, you use 'git stash' to record the changes (which pushes them onto the stash stack).
+The simplest way to keep local changes (especially trivial ones) is to use `git stash`.
+In its simplest form, you use `git stash` to record the changes (which pushes them onto the stash stack).
 Most people use this to save changes before updating the tree as described above.
-They then use 'git stash apply' to re-apply them to the tree.
-The stash is a stack of changes that can be examined with 'git stash list'.
+They then use `git stash apply` to re-apply them to the tree.
+The stash is a stack of changes that can be examined with `git stash list`.
 The git-stash man page (https://git-scm.com/docs/git-stash) has all the details.
 
 This method is suitable when you have tiny tweaks to the tree.
 When you have anything non trivial, you'll likely be better off keeping a local branch and rebasing.
-Stashing is also integrated with the 'git pull' command: just add '--autostash' to the command line.
+Stashing is also integrated with the `git pull` command: just add `--autostash` to the command line.
 
 ===== Keeping a local branch
 [[keeping_a_local_branch]]
@@ -729,7 +752,7 @@ Git also allows one to merge, along with the same problems.
 That's one way to manage the branch, but it's the least flexible.
 
 In addition to merging, Git supports the concept of 'rebasing' which avoids these issues.
-The 'git rebase' command replays all the commits of a branch at a newer location on the parent branch.
+The `git rebase` command replays all the commits of a branch at a newer location on the parent branch.
 We will cover the most common scenarios that arise using it.
 
 ====== Create a branch
@@ -766,7 +789,7 @@ The commit will pop you into an editor to describe what you've done.
 Once you enter that, you have your own **local** branch in the Git repo.
 Build and install it like you normally would, following the directions in the handbook.
 Git differs from other version control systems in that you have to tell it explicitly which files to commit.
-I have opted to do it on the commit command line, but you can also do it with 'git add' which many of the more in depth tutorials cover.
+I have opted to do it on the commit command line, but you can also do it with `git add` which many of the more in depth tutorials cover.
 
 ====== Time to update
 
@@ -793,7 +816,7 @@ That is OK.
 Do not panic.
 Instead, handle them the same as any other merge conflicts.
 To keep it simple, I will just describe a common issue that may arise.
-A pointer to a more complete treatment can be found at the end of this section.
+A pointer to a complete treatment can be found at the end of this section.
 
 Let's say the includes changes upstream in a radical shift to terminfo as well as a name change for the option.
 When you updated, you might see something like this:
@@ -811,15 +834,14 @@ Could not apply 646e0f9cda11... no color ls
 which looks scary.
 If you bring up an editor, you will see it is a typical 3-way merge conflict resolution that you may be familiar with from other source code systems (the rest of ls.c has been omitted):
 [source,shell]
-....
-<<<<<<< HEAD
-#ifdef COLORLS_NEW
-#include <terminfo.h>
-=======
-#undef COLORLS
-#ifdef COLORLS
-#include <termcap.h>
->>>>>>> 646e0f9cda11... no color ls
+ <<<<<<< HEAD
+ #ifdef COLORLS_NEW
+ #include <terminfo.h>
+ =======
+ #undef COLORLS
+ #ifdef COLORLS
+ #include <termcap.h>
+ >>>>>>> 646e0f9cda11... no color ls
 ....
 The new code is first, and your code is second.
 The right fix here is to just add a #undef COLORLS_NEW before #ifdef and then delete the old changes:
@@ -844,7 +866,7 @@ If the commit message is still accurate, just exit the editor.
 If you get stuck during the rebase, do not panic.
 git rebase --abort will take you back to a clean slate.
 It is important, though, to start with an unmodified tree.
-An aside: The above mentioned 'git reflog' comes in handy here, as it will have a list of all the (intermediate) commits that you can view or inspect or cherry-pick.
+An aside: The above mentioned `git reflog` comes in handy here, as it will have a list of all the (intermediate) commits that you can view or inspect or cherry-pick.
 
 For more on this topic, https://www.freecodecamp.org/news/the-ultimate-guide-to-git-merge-and-git-rebase/ provides a rather extensive treatment.
 It is a good resource for issues that arise occasionally but are too obscure for this guide.
@@ -860,7 +882,7 @@ If you have a deep clone, the following will suffice:
 If you have a local branch, though, there are one or two caveats.
 First, rebase will rewrite history, so you will likely want to do something to save it.
 Second, jumping branches tends to cause more conflicts.
-If we pretend the example above was relative to stable/12, then to move to main, I'd suggest the following:
+If we pretend the example above was relative to stable/12, then to move to `main`, I'd suggest the following:
 [source,shell]
 ....
 % git checkout no-color-ls
@@ -870,50 +892,9 @@ If we pretend the example above was relative to stable/12, then to move to main,
 
 What the above does is checkout no-color-ls.
 Then create a new name for it (no-color-ls-stable-12) in case you need to get back to it.
-Then you rebase onto the main branch.
+Then you rebase onto the `main` branch.
 This will find all the commits to the current no-color-ls branch (back to where it meets up with the stable/12 branch) and then it will
-replay them onto the main branch creating a new no-color-ls branch there (which is why I had you create a place holder name).
-
-===== Migrating from an existing Git clone
-If you have work based on a previous Git conversion or a locally running git-svn conversion, migrating to new repository can encounter problems because Git has no knowledge about the connection between the two.
-
-When you have only a few local changes, the easiest way would be to cherry-pick those changes to the new base:
-[source,shell]
-....
-% git checkout main
-% git cherry-pick old_branch..your_branch
-....
-Or alternatively, do the same thing with rebase:
-[source,shell]
-....
-% git rebase --onto main master your_branch
-....
-
-If you do have a lot of changes, you would probably want to perform a merge instead.
-The idea is to create a merge point that consolidates the history of the old_branch, and the new FreeBSD repository (main).
-
-You can find out by looking up the same commit that are found on both parents:
-[source,shell]
-....
-% git show old_branch
-....
-You will see a commit message, now search for that in the new branch:
-[source,shell]
-....
-% git log --grep="commit message on old_branch" freebsd/main
-....
-You would help locate the commit hash on the new main branch, create a helper branch (in the example we call it 'stage') from that hash:
-[source,shell]
-....
-% git checkout -b stage _hash_found_from_git_log_
-....
-Then perform a merge of the old branch:
-[source,shell]
-....
-% git merge -s ours -m "Mark old branch as merged" old_branch
-....
-With that, it's possible to merge your work branch or the main branch in any order without problem.
-Eventually, when you are ready to commit your work back to main, you can perform a rebase to main, or do a squash commit by combining everything into one commit.
+replay them onto the `main` branch creating a new no-color-ls branch there (which is why I had you create a place holder name).
 
 [[mfc-with-git]]
 === MFC (Merge From Current) Procedures
@@ -996,9 +977,9 @@ Once the MFC is complete, you can delete the temporary branch:
 
 ==== MFC a vendor import
 
-Vendor imports are the only thing in the tree that creates a merge commit in the main line.
+Vendor imports are the only thing in the tree that creates a merge commit in the `main` branch.
 Cherry picking merge commits into stable/XX presents an additional difficulty because there are two parents for a merge commit.
-Generally, you'll want the first parent's diff since that's the diff to mainline (though there may be some exceptions).
+Generally, you'll want the first parent's diff since that's the diff to `main` (though there may be some exceptions).
 
 [source,shell]
 ....
@@ -1007,9 +988,9 @@ Generally, you'll want the first parent's diff since that's the diff to mainline
 is typically what you want.
 This will tell cherry-pick to apply the correct diff.
 
-There are some, hopefully, rare cases where it's possible that the mainline was merged backwards by the conversion script.
-Should that be the case (and we've not found any yet), you'd change the above to '-m 2' to pickup the proper parent.
-Just do
+There are some, hopefully, rare cases where it's possible that the `main` branch was merged backwards by the conversion script.
+Should that be the case (and we've not found any yet), you'd change the above to `-m 2` to pickup the proper parent.
+Just do:
 [source,shell]
 ....
 % git cherry-pick --abort
@@ -1026,7 +1007,7 @@ then the easiest way is to use `git reset --hard` like so:
 % git reset --hard freebsd/stable/12
 ....
 though if you have some revs you want to keep, and others you don't,
-using 'git rebase -i' is better.
+using `git rebase -i` is better.
 
 ==== Considerations when MFCing
 
@@ -1038,7 +1019,7 @@ When committing source commits to stable and releng branches, we have the follow
 
 With Subversion, we used the following practices to achieve these goals:
 
-* Using 'MFC' and 'MFS' tags to mark commits that merged changes from another branch.
+* Using `MFC` and `MFS` tags to mark commits that merged changes from another branch.
 * Squashing fixup commits into the main commit when merging a change.
 * Recording mergeinfo so that `svn mergeinfo --show-revs` worked.
 
@@ -1053,17 +1034,8 @@ Instead, when this document refers to "merge commits", it means a commit origina
 
 Git provides some built-in support for this via the `git cherry` and `git log --cherry` commands.
 These commands compare the raw diffs of commits (but not other metadata such as log messages) to determine if two commits are identical.
-This works well when each commit from head is landed as a single commit to a stable branch, but it falls over if multiple commits from main are squashed together as a single commit to a stable branch.
-
-There are a few options for resolving this:
-
-1. We could ban squashing of commits and instead require that committers stage all of the fixup / follow-up commits to stable into a single push.
-This would still achieve the goal of stability in stable and releng branches since pushes are atomic and users doing a simple pull will never end up with a tree that has the main commit without the fixup(s).
-`git bisect` is also able to cope with this model via `git bisect skip`.
-
-2. We could adopt a consistent style for describing MFCs and write our own tooling to wrap around `git cherry` to determine the list of eligible commits.
-A simple approach here might be to use the syntax from `git cherry-pick -x`, but require that a squashed commit list all of the hashes (one line per hash) at the end of the commit message.
-Developers could do this by using `git cherry-pick -x` of each individual commit into a branch and then use `git rebase` to squash the commits down into a single commit, but collecting the `-x` annotations at the end of the landed commit log.
+This works well when each commit from `main` is landed as a single commit to a stable branch, but it falls over if multiple commits from `main` are squashed together as a single commit to a stable branch.
+The project makes extensive use of `git cherry-pick -x` with all lines preserved to work around these difficulties and is working on automated tooling to take advantage of this.
 
 ==== Commit message standards
 ===== Marking MFCs
@@ -1082,7 +1054,7 @@ Should it include the metadata from the original commit unchanged, or should it 
 Historical practice has varied, though some of the variance is by field.
 For example, MFCs that are relevant to a PR generally include the PR field in the MFC so that MFC commits are included in the bug tracker's audit trail.
 Other fields are less clear.
-For example, Phabricator shows the diff of the last commit tagged to a review, so including Phabricator URLs replaces the `main` commit with the landed commits.
+For example, Phabricator shows the diff of the last commit tagged to a review, so including Phabricator URLs replaces the main commit with the landed commits.
 The list of reviewers is also not clear.
 If a reviewer has approved a change to `main`, does that mean they have approved the MFC commit?  Is that true if it's identical code only, or with merely trivial rework? It's clearly not true for more extensive reworks.
 Even for identical code what if the commit doesn't conflict but introduces an ABI change?  A reviewer may have ok'd a commit for `main` due to the ABI breakage but may not approve of merging the same commit as-is.
@@ -1093,267 +1065,12 @@ This new metadata will have to be added via `git commit --amend` or similar afte
 We may also want to reserve some metadata fields in MFC commits such as Phabricator URLs for use by re@ in the future.
 
 Preserving existing metadata provides a very simple workflow.
-Developers can just use `git cherry-pick -x` without having to edit the log message.
+Developers use `git cherry-pick -x` without having to edit the log message.
 
 If instead we choose to adjust metadata in MFCs, developers will have to edit log messages explicitly via the use of `git cherry-pick --edit` or `git commit --amend`.
 However, as compared to svn, at least the existing commit message can be pre-populated and metadata fields can be added or removed without having to re-enter the entire commit message.
 
 The bottom line is that developers will likely need to curate their commit message for MFCs that are non-trivial.
-
-==== Examples
-
-===== Merging a Single Subversion Commit
-
-This walks through the process of merging a commit to stable/12 that was originally committed to head in Subversion.
-In this case, the original commit is r368685.
-
-The first step is to map the Subversion commit to a Git hash.
-Once you have fetched refs/notes/commits, you can pass the revision number to `git log --grep`:
-
-[source,shell]
-....
-% git log main --grep 368685
-commit ce8395ecfda2c8e332a2adf9a9432c2e7f35ea81
-Author: John Baldwin <jhb@FreeBSD.org>
-Date:   Wed Dec 16 00:11:30 2020 +0000
-
-    Use the 't' modifier to print a ptrdiff_t.
-
-    Reviewed by:    imp
-    Obtained from:  CheriBSD
-    Sponsored by:   DARPA
-    Differential Revision:  https://reviews.freebsd.org/D27576
-
-Notes:
-    svn path=/head/; revision=368685
-....
-
-Next, MFC the commit to a `stable/12` checkout:
-
-[source,shell]
-....
-git checkout stable/12
-git cherry-pick -x ce8395ecfda2c8e332a2adf9a9432c2e7f35ea81 --edit
-....
-
-Git will invoke the editor.
-Use this to remove the metadata that only applied to the original commit (Phabricator URL and Reviewed by).
-After the editor saves the updated log message, Git completes the commit:
-
-[source,shell]
-....
-[stable/12 3e3a548c4874] Use the 't' modifier to print a ptrdiff_t.
- Date: Wed Dec 16 00:11:30 2020 +0000
- 1 file changed, 1 insertion(+), 1 deletion(-)
-....
-
-The contents of the MFCd commit can be examined via `git show`:
-
-[source,shell]
-....
-% git show
-commit 3e3a548c487450825679e4bd63d8d1a67fd8bd2d (HEAD -> stable/12)
-Author: John Baldwin <jhb@FreeBSD.org>
-Date:   Wed Dec 16 00:11:30 2020 +0000
-
-    Use the 't' modifier to print a ptrdiff_t.
-
-    Obtained from:  CheriBSD
-    Sponsored by:   DARPA
-
-    (cherry picked from commit ce8395ecfda2c8e332a2adf9a9432c2e7f35ea81)
-
-diff --git a/sys/compat/linuxkpi/common/include/linux/printk.h b/sys/compat/linuxkpi/common/include/linux/printk.h
-index 31802bdd2c99..e6510e9e9834 100644
---- a/sys/compat/linuxkpi/common/include/linux/printk.h
-+++ b/sys/compat/linuxkpi/common/include/linux/printk.h
-@@ -68,7 +68,7 @@ print_hex_dump(const char *level, const char *prefix_str,
-                        printf("[%p] ", buf);
-                        break;
-                case DUMP_PREFIX_OFFSET:
--                       printf("[%p] ", (const char *)((const char *)buf -
-+                       printf("[%#tx] ", ((const char *)buf -
-                            (const char *)buf_old));
-                        break;
-                default:
-....
-
-The MFC commit can now be published via `git push`
-
-[source,shell]
-....
-% git push freebsd
-Enumerating objects: 17, done.
-Counting objects: 100% (17/17), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (9/9), 817 bytes | 204.00 KiB/s, done.
-Total 9 (delta 5), reused 1 (delta 1), pack-reused 0
-To gitrepo-dev.FreeBSD.org:src.git
-   525bd9c9dda7..3e3a548c4874  stable/12 -> stable/12
-....
-
-===== Merging a Single Subversion Commit with a Conflict
-
-This example is similar to the previous example except that the commit in question encounters a merge conflict.
-In this case, the original commit is r368314.
-
-As above, the first step is to map the Subversion commit to a Git hash:
-
-[source,shell]
-....
-% git log main --grep 368314
-commit 99963f5343a017e934e4d8ea2371a86789a46ff9
-Author: John Baldwin <jhb@FreeBSD.org>
-Date:   Thu Dec 3 22:01:13 2020 +0000
-
-    Don't transmit mbufs that aren't yet ready on TOE sockets.
-
-    This includes mbufs waiting for data from sendfile() I/O requests, or
-    mbufs awaiting encryption for KTLS.
-
-    Reviewed by:    np
-    MFC after:      2 weeks
-    Sponsored by:   Chelsio Communications
-    Differential Revision:  https://reviews.freebsd.org/D27469
-
-Notes:
-    svn path=/head/; revision=368314
-....
-
-Next, MFC the commit to a `stable/12` checkout:
-
-[source,shell]
-....
-% git checkout stable/12
-% git cherry-pick -x 99963f5343a017e934e4d8ea2371a86789a46ff9 --edit
-Auto-merging sys/dev/cxgbe/tom/t4_cpl_io.c
-CONFLICT (content): Merge conflict in sys/dev/cxgbe/tom/t4_cpl_io.c
-warning: inexact rename detection was skipped due to too many files.
-warning: you may want to set your merge.renamelimit variable to at least 7123 and retry the command.
-error: could not apply 99963f5343a0... Don't transmit mbufs that aren't yet ready on TOE sockets.
-hint: after resolving the conflicts, mark the corrected paths
-hint: with 'git add <paths>' or 'git rm <paths>'
-hint: and commit the result with 'git commit'
-....
-
-In this case, the commit encountered a merge conflict in sys/dev/cxge/tom/t4_cpl_io.c as kernel TLS is not present in stable/12.
-Note that Git does not invoke an editor to adjust the commit message due to the conflict.
-`git status` confirms that this file has merge conflicts:
-
-[source,shell]
-....
-% git status
-On branch stable/12
-Your branch is up to date with 'upstream/stable/12'.
-
-You are currently cherry-picking commit 99963f5343a0.
-  (fix conflicts and run "git cherry-pick --continue")
-  (use "git cherry-pick --skip" to skip this patch)
-  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
-
-Unmerged paths:
-  (use "git add <file>..." to mark resolution)
-        both modified:   sys/dev/cxgbe/tom/t4_cpl_io.c
-
-no changes added to commit (use "git add" and/or "git commit -a")
-....
-
-After editing the file to resolve the conflict, `git status` shows the conflict as resolved:
-
-[source,shell]
-....
-% git status
-On branch stable/12
-Your branch is up to date with 'upstream/stable/12'.
-
-You are currently cherry-picking commit 99963f5343a0.
-  (all conflicts fixed: run "git cherry-pick --continue")
-  (use "git cherry-pick --skip" to skip this patch)
-  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
-
-Changes to be committed:
-        modified:   sys/dev/cxgbe/tom/t4_cpl_io.c
-....
-
-The cherry-pick can now be completed:
-
-[source,shell]
-....
-% git cherry-pick --continue
-....
-
-Since there was a merge conflict, Git invokes the editor to adjust the commit message.
-Trim the metadata fields from the commit log from the original commit to head and save the updated log message.
-
-The contents of the MFC commit can be examined via `git show`:
-
-[source,shell]
-....
-% git show
-commit 525bd9c9dda7e7c7efad2d4570c7fd8e1a8ffabc (HEAD -> stable/12)
-Author: John Baldwin <jhb@FreeBSD.org>
-Date:   Thu Dec 3 22:01:13 2020 +0000
-
-    Don't transmit mbufs that aren't yet ready on TOE sockets.
-
-    This includes mbufs waiting for data from sendfile() I/O requests, or
-    mbufs awaiting encryption for KTLS.
-
-    Sponsored by:   Chelsio Communications
-
-    (cherry picked from commit 99963f5343a017e934e4d8ea2371a86789a46ff9)
-
-diff --git a/sys/dev/cxgbe/tom/t4_cpl_io.c b/sys/dev/cxgbe/tom/t4_cpl_io.c
-index 8e8c2b8639e6..43861f10b689 100644
---- a/sys/dev/cxgbe/tom/t4_cpl_io.c
-+++ b/sys/dev/cxgbe/tom/t4_cpl_io.c
-@@ -746,6 +746,8 @@ t4_push_frames(struct adapter *sc, struct toepcb *toep, int drop)
-                for (m = sndptr; m != NULL; m = m->m_next) {
-                        int n;
-
-+                       if ((m->m_flags & M_NOTAVAIL) != 0)
-+                               break;
-                        if (IS_AIOTX_MBUF(m))
-                                n = sglist_count_vmpages(aiotx_mbuf_pages(m),
-                                    aiotx_mbuf_pgoff(m), m->m_len);
-@@ -821,8 +823,9 @@ t4_push_frames(struct adapter *sc, struct toepcb *toep, int drop)
-
-                /* nothing to send */
-                if (plen == 0) {
--                       KASSERT(m == NULL,
--                           ("%s: nothing to send, but m != NULL", __func__));
-+                       KASSERT(m == NULL || (m->m_flags & M_NOTAVAIL) != 0,
-+                           ("%s: nothing to send, but m != NULL is ready",
-+                           __func__));
-                        break;
-                }
-
-@@ -910,7 +913,7 @@ t4_push_frames(struct adapter *sc, struct toepcb *toep, int drop)
-                toep->txsd_avail--;
-
-                t4_l2t_send(sc, wr, toep->l2te);
--       } while (m != NULL);
-+       } while (m != NULL && (m->m_flags & M_NOTAVAIL) == 0);
-
-        /* Send a FIN if requested, but only if there's no more data to send */
-        if (m == NULL && toep->flags & TPF_SEND_FIN)
-....
-
-The MFC commit can now be published via `git push`
-
-[source,shell]
-....
-git push freebsd
-Enumerating objects: 13, done.
-Counting objects: 100% (13/13), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (7/7), 819 bytes | 117.00 KiB/s, done.
-Total 7 (delta 6), reused 0 (delta 0), pack-reused 0
-To gitrepo.FreeBSD.org:src.git
-   f4d0bc6aa6b9..525bd9c9dda7  stable/12 -> stable/12
-....
 
 [[vendor-import-git]]
 === Vendor Imports with Git
@@ -1408,8 +1125,24 @@ package:net/rsync[] is commonly installed, so I'll use that.
 % git tag -a vendor/NetBSD/mtree/20201211
 ....
 
-Note: I run the `git diff` and `git status` commands to make sure nothing weird was present.
-Also I used `-m` to illustrate, but you should compose a proper message in an editor (using a commit message template).
+It is critical to verify that the source code you are importing comes from a
+trustworthy source. Many open-source projects use cryptographic signatures to
+sign code changes, git tags, and/or source code tarballs. Always verify these
+signatures, and use isolation mechanisms like jails, chroot, in combination with
+a dedicated, non-privileged user account that is different from the one you
+regularly use (see the Updating the FreeBSD source tree section below for
+more details), until you are confident that the source code you are importing
+looks safe. Following the upstream development and occasionally reviewing the
+upstream code changes can greatly help in improving code quality and benefit
+everyone involved. It is also a good idea to examine the git diff results
+before importing them into the vendor area.
+
+Always run the `git diff` and `git status` commands and examine the results
+carefully. When in doubt, it is useful to do a `git annotate` on the vendor
+branch or the upstream git repository to see who and why a change was made.
+
+In the example above we used `-m` to illustrate, but you should compose a
+proper message in an editor (using a commit message template).
 
 It is also important to create an annotated tag using `git tag -a`, otherwise the push will be rejected.
 Only annotated tags are allowed to be pushed.
@@ -1432,6 +1165,12 @@ At this point you can push the import to `vendor` into our repo.
 Now you need to update the mtree in FreeBSD.
 The sources live in `contrib/mtree` since it is upstream software.
 
+From time to time, we may have to make changes to the contributed code to
+better satisfy FreeBSD's needs. Whenever possible, please try to contribute
+the local changes back to the upstream projects, this helps them to better
+support FreeBSD, and also saves your time for future conflict resolutions
+when importing updates.
+
 [source,shell]
 ....
 % cd ../src
@@ -1439,8 +1178,34 @@ The sources live in `contrib/mtree` since it is upstream software.
 ....
 
 This would generate a subtree merge commit of `contrib/mtree` against the local `vendor/NetBSD/mtree` branch.
+Examine the diff from the merge result and the contents of the
+upstream branch. If the merge reduced our local changes to more
+trivial difference like blank line or indenting changes, try amending
+the local changes to reduce diff against upstream, or try to
+contribute the remaining changes back to the upstream project.
 If there were conflicts, you would need to fix them before committing.
 Include details about the changes being merged in the merge commit message.
+
+Some open-source software includes a `configure` script that generates files
+used to define how the code is built; usually, these generated files like
+`config.h` should be updated as part of the import process. When doing
+this, always keep in mind that these scripts are executable code running
+under the current user's credentials. This process should always be run
+in an isolated environment, ideally inside a jail that does not have
+network access, and with an unprivileged account; or, at minimum, a
+dedicated account that is different from the user account you normally
+use for everyday purposes or for pushing to the FreeBSD source
+code repository. This minimizes the risk of encountering bugs that can
+cause data loss or, in worse cases, maliciously planted code. Using an
+isolated jail also prevents the configure scripts from detecting locally
+installed software packages, which may lead to unexpected results.
+
+When testing your changes, run them in a chroot or jailed environment,
+or even within a virtual machine first, especially for kernel or library
+modifications. This approach helps prevent adverse interactions with
+your working environment. It can be particularly beneficial for
+changes to libraries that many base system components use,
+among others.
 
 ==== Rebasing your change against latest FreeBSD source tree
 
@@ -1449,46 +1214,50 @@ Because the current policy recommends against using merges, if the upstream Free
 Regular `git rebase` or `git pull --rebase` doesn't know how to rebase a merge commit **as a merge commit**,
 so instead of that you would have to recreate the commit.
 
-The easiest way to do this would be to create a side branch with the **contents** of the merged tree:
+The following steps should be taken to easily recreate the merge commit as if `git rebase --merge-commits` worked properly:
+
+* cd to the top of the repo
+* Create a side branch `XXX` with the **contents** of the merged tree.
+* Update this side branch `XXX` to be merged and up-to-date with FreeBSD's `main` branch.
+** In the worst case scenario, you would still have to resolve merge conflicts, if there was any, but this  should be really rare.
+** Resolve conflicts, and collapse multiple commits down to 1 if need be (without conflicts, there's no collapse needed)
+* checkout `main`
+* create a branch `YYY` (allows for easier unwinding if things go wrong)
+* Re-do the subtree merge
+* Instead of resolving any conflicts from the subtree merge, checkout the contents of XXX on top of it.
+** The trailing `.` is important, as is being at the top level of the repo.
+** Rather than switching branches to XXX, it splats the contents of XXX on top of the repo
+* Commit the results with the prior commit message (the example assumes there's only one merge on the XXX branch).
+* Make sure the branches are the same.
+* Do whatever review you need, including having others check it out if you think that's needed.
+* Push the commit, if you 'lost the race' again, just redo these steps again (see below for a recipe)
+* Delete the branches once the commit is upstream. They are throw-a-way.
+
+The commands one would use, following the above example of mtree, would be like so (the `#` starts a comment to help link commands to descriptions above):
 
 [source,shell]
 ....
-% cd ../src
-% git fetch freebsd
-% git checkout -b merge_result
-% git merge freebsd/main
+% cd ../src			# CD to top of tree
+% git checkout -b XXX		# create new throw-away XXX branch for merge
+% git fetch freebsd		# Get changes from upstream from upstream
+% git merge freebsd/main	# Merge the changes and resolve conflicts
+% git checkout -b YYY freebsd/main # Create new throw-away YYY branch for redo
+% git subtree merge -P contrib/mtree vendor/NetBSD/mtree # Redo subtree merge
+% git checkout XXX .		# XXX branch has the conflict resolution
+% git commit -c XXX~1		# -c reuses the commit message from commit before rebase
+% git diff XXX YYY		# Should be empty
+% git show YYY			# Should only have changes you want, and be a merge commit from vendor branch
 ....
 
-Typically, there would be no merge conflicts here (because developers tend to work on different components).
-In the worst case scenario, you would still have to resolve merge conflicts, if there was any, but this  should be really rare.
-
-Now, checkout `freebsd/main` again as `new_merge`, and redo the merge:
-
+Note: if things go wrong with the commit, you can reset the `YYY` branch by reissuing the checkout command that created it with -B to start over:
 [source,shell]
 ....
-% git checkout -b new_merge freebsd/main
-% git subtree merge -P contrib/mtree vendor/NetBSD/mtree
-....
-
-Instead of resolving the conflicts, perform this instead:
-
-[source,shell]
-....
-% git checkout merge_result .
-....
-
-Which will overwrite the files with conflicts with the version found in `merge_result`.
-
-Examine the tree against `merge_result` to make sure that you haven't missed deleted files:
-
-[source,shell]
-....
-% git diff merge_result
+% git checkout -B YYY freebsd/main # Create new throw-away YYY branch if starting over is just going to be easier
 ....
 
 ==== Pushing the changes
 
-Once you are sure that you have a set of deltas you think is good, you can push it to a fork off GitHub or GitLab for others to review.
+Once you think you have a set of changes that are good, you can push it to a fork off GitHub or GitLab for others to review.
 One nice thing about Git is that it allows you to publish rough drafts of your work for others to review.
 While Phabricator is good for content review, publishing the updated vendor branch and merge commits lets others check the details as they will eventually appear in the repository.
 
@@ -1496,8 +1265,33 @@ After review, when you are sure it is a good change, you can push it to the Free
 
 [source,shell]
 ....
-% git push freebsd main
+% git push freebsd YYY:main	# put the commit on upstream's 'main' branch
+% git branch -D XXX		# Throw away the throw-a-way branches.
+% git branch -D YYY
 ....
+
+Note: I used `XXX` and `YYY` to make it obvious they are terrible names and should not leave your machine.
+If you use such names for other work, then you'll need to pick different names, or risk losing the other work.
+There is nothing magic about these names.
+Upstream will not allow you to push them, but never the less, please pay attention to the exact commands above.
+Some commands use syntax that differs only slightly from typical uses and that different behavior is critical to this recipe working.
+
+==== How to redo things if need be
+
+If you've tried to do the push in the previous section and it fails, then you should do the following to 'redo' things.
+This sequence keeps the commit with the commit message always at XXX~1 to make committing easier.
+
+[source,shell]
+....
+% git checkout -B XXX YYY	# recreate that throw-away-branch XXX and switch to it
+% git merge freebsd/main	# Merge the changes and resolve conflicts
+% git checkout -B YYY freebsd/main # Recreate new throw-away YYY branch for redo
+% git subtree merge -P contrib/mtree vendor/NetBSD/mtree # Redo subtree merge
+% git checkout XXX .		# XXX branch has the conflict resolution
+% git commit -c XXX~1		# -c reuses the commit message from commit before rebase
+....
+
+Then go check it out as above and push as above when ready.
 
 === Creating a new vendor branch
 
@@ -1594,7 +1388,7 @@ Here 'good' means:
 
 . All the right files, and none of the wrong ones, were merged into contrib/glorbnitz.
 . No other changes are in the tree.
-. The commit messages look <<commit-log-message,good>>. It should contain a summary of what's changed since the last merge to the FreeBSD main line and any caveats.
+. The commit messages look <<commit-log-message,good>>. It should contain a summary of what's changed since the last merge to the FreeBSD `main` branch and any caveats.
 . UPDATING should be updated if there is anything of note, such as user visible changes, important upgrade concerns, etc.
 
 [NOTE]
@@ -1602,90 +1396,6 @@ Here 'good' means:
 This hasn't connected `glorbnitz` to the build yet.
 How so do that is specific to the software being imported and is beyond the scope of this tutorial.
 ====
-
-=== FreeBSD Src Committer Transition Guide
-
-This section is designed to walk people through the conversion process from Subversion to Git, written from the source committer's point of view.
-
-==== Migrating from a Subversion tree
-
-This section will cover a couple of common scenarios for migrating from using the FreeBSD Subversion repo to the FreeBSD source Git repo.
-The FreeBSD Git conversion is still in beta status, so some minor things may change between this and going into production.
-
-The first thing to do is install Git. Any version of Git will do, though the latest one in ports / packages generally will be good.
-Either build it from ports, or install it using pkg (though some folks might use `su` or `doas` instead of `sudo`):
-
-[source,shell]
-....
-% sudo pkg install git
-....
-
-===== No staged changes migration
-
-If you have no changes pending, the migration is straightforward.
-In this, you abandon the Subversion tree and clone the Git repository.
-It's likely best to retain your Subversion tree, in case there's something you've forgotten about there.
-First, let's clone the repository:
-
-[source,shell]
-....
-% git clone -o freebsd --config remote.freebsd.fetch='+refs/notes/*:refs/notes/*' https://git.freebsd.org/src.git freebsd-src
-....
-
-will create a clone of the FreeBSD src repository into a subdirectory called `freebsd-src` and include the 'notes' about the revisions.
-We are currently mirroring the source repository to https://github.com/freebsd/freebsd-src.git as well.
-https://github.com/freebsd/freebsd-legacy.git has the old GitHub mirror with the old hashes should you need that for your migration.
-The GitHub `master` branch has been frozen.
-As the default in Git has changed, we've shifted from `master` to `main`; the new repository uses `main`.
-We also mirror the repository to GitLab at https://gitlab.com/FreeBSD/src.git .
-
-It's useful to have the old Subversion revisions available.
-This data is stored using Git notes, but Git doesn't fetch those by default.
-The --config and the argument above changed the default to fetch the notes.
-If you've cloned the repository without this, or wish to add notes to a previously cloned repository, use the following commands:
-
-[source,shell]
-....
-% git config --add remote.freebsd.fetch "+refs/notes/*:refs/notes/*"
-% git fetch
-....
-
-At this point you have the src checked out into a Git tree, ready to do other things.
-
-===== But I have changes that I've not committed
-
-If you are migrating from a tree that has changes you've not yet committed to FreeBSD, you'll need to follow the steps from the previous section first, and then follow these.
-
-[source,shell]
-....
-% cd path-to-svn-checkout-tree
-% svn diff > /tmp/src.diff
-% cd _mumble_/freebsd-src
-% git checkout -b working
-....
-
-This will create a diff of your current changes.
-The last command creates a branch called `working` though you can call it whatever you want.
-
-[source,shell]
-....
-% git apply /tmp/src.diff
-....
-
-this will apply all your pending changes to the working tree.
-This doesn't commit the change, so you'll need to make this permanent:
-
-[source,shell]
-....
-% git add _files_
-% git commit
-....
-
-The last command will commit these changes to the branch.
-The editor will prompt you for a commit message.
-Enter one as if you were committing to FreeBSD.
-
-At this point, your work is preserved, and in the Git repository.
 
 ===== Keeping current
 
@@ -1695,7 +1405,7 @@ When you checkout `main` make sure that you have no diffs.
 It's a lot easier to commit those to a branch (or use `git stash`) before doing the following.
 
 If you are used to `git pull`, we strongly recommend using the `--ff-only` option, and further setting it as the default option.
-Alternatively, `git pull --rebase` is useful if you have changes staged in the main branch.
+Alternatively, `git pull --rebase` is useful if you have changes staged in the `main` branch.
 
 [source,shell]
 ....
@@ -1724,7 +1434,7 @@ The longer form is also recommended.
 % git merge --ff-only freebsd/main
 ....
 
-These commands reset your tree to the main branch, and then update it from where you pulled the tree from originally.
+These commands reset your tree to the `main` branch, and then update it from where you pulled the tree from originally.
 It's important to switch to `main` before doing this so it moves forward.
 Now, it's time to move the changes forward:
 
@@ -1761,9 +1471,9 @@ freefall% gen-gitconfig.sh
 
 on freefall.freebsd.org to get a recipe that you can use directly, assuming /usr/local/bin is in the PATH.
 
-The below command merges the `working` branch into the upstream main line.
+The below command merges the `working` branch into the upstream `main` branch.
 It's important that you curate your changes to be just like you want them in the FreeBSD source repo before doing this.
-This syntax pushes the `working` branch to main, moving the `main` branch forward.
+This syntax pushes the `working` branch to `main`, moving the `main` branch forward.
 You will only be able to do this if this results in a linear change to `main` (e.g. no merges).
 
 [source,shell]
@@ -1805,7 +1515,7 @@ Note: merging vendor branch commits will not work with this technique.
 
 ===== Finding the Subversion Revision
 
-You'll need to make sure that you've fetched the notes (see the `No staged changes migration` section above for details.
+You'll need to make sure that you've fetched the notes (see the <<git-mini-daily-use>> for details).
 Once you have these, notes will show up in the git log command like so:
 
 [source,shell]
@@ -1822,51 +1532,6 @@ If you have a specific version in mind, you can use this construct:
 
 to find the specific revision.
 The hex number after 'commit' is the hash you can use to refer to this commit.
-
-==== Migrating from GitHub fork
-
-Note: as of this writing, https://github.com/freebsd/freebsd-src is mirroring all official branches, along with a `master` branch which is the legacy svn2git result.
-The `master` branch will not be updated anymore, and the link:https://github.com/freebsd/freebsd-src/commit/de1aa3dab23c06fec962a14da3e7b4755c5880cf[last commit] contains the instructions for migrating to the new `main` branch.
-We'll retain the `master` branch for a certain time, but in the future it will only be kept in the link:https://github.com/freebsd/freebsd-legacy[freebsd-legacy] repository.
-In addition, link:https://github.com/freebsd/git_conv/wiki/Migrating-merge-based-project-from-legacy-git-tree[this article] has an earlier version of the last commit instructions that may be helpful.
-
-When migrating branches from a GitHub fork from the old GitHub mirror to the official repo, the process is straight forward.
-This assumes that you have a `freebsd` upstream pointing to GitHub, adjust if necessary.
-This also assumes a clean tree before starting...
-
-===== Add the new `freebsd` upstream repository:
-
-[source,shell]
-....
-% git remote add freebsd https://git.freebsd.org/src.git
-% git fetch freebsd
-% git checkout --track freebsd/main
-....
-
-===== Rebase all your WIP branches.
-
-For each branch FOO, do the following after fetching the `freebsd` sources and creating a local `main` branch with the above checkout:
-
-[source,shell]
-....
-% git rebase -i freebsd/master FOO --onto main
-....
-
-And you'll now be tracking the official repository.
-You can then follow the `Keeping Current` section above to stay up to date.
-
-If you need to then commit work to FreeBSD, you can do so following the `Time to push changes upstream` instructions.
-You'll need to do the following once to update the push URL if you are a FreeBSD committer:
-
-[source,shell]
-....
-% git remote set-url --push freebsd ssh://git@gitrepo.freebsd.org/src.git
-....
-
-(note that gitrepo.freebsd.org will be change to repo.freebsd.org in the future.)
-
-You will also need to add `freebsd` as the location to push to.
-The author recommends that your upstream GitHub repository remain the default push location so that you only push things into FreeBSD you intend to by making it explicit.
 
 [[git-faq]]
 === Git FAQ
@@ -1927,9 +1592,9 @@ Here's https://adventurist.me/posts/00296[a good writeup] that goes into more de
 
 ==== Developers
 
-===== Ooops! I committed to `main` instead of a branch.
+===== Ooops! I committed to `main`, instead of another branch.
 
-**Q:** From time to time, I goof up and commit to main instead of to a branch. What do I do?
+**Q:** From time to time, I goof up and mistakenly commit to the `main` branch. What do I do?
 
 **A:** First, don't panic.
 
@@ -1970,7 +1635,7 @@ cherry-pick it over.
 **Q:** But what if I want to commit a few changes to `main`, but keep the rest in `wilma` for some reason?
 
 **A:** The same technique above also works if you are wanting to 'land' parts of the branch you are working on into `main` before the rest of the branch is ready (say you noticed an unrelated typo, or fixed an incidental bug).
-You can cherry pick those changes into main, then push to the parent repository.
+You can cherry pick those changes into `main`, then push to the parent repository.
 Once you've done that, cleanup couldn't be simpler: just `git rebase -i`.
 Git will notice you've done this and skip the common changes automatically (even if you had to change the commit message or tweak the commit slightly).
 There's no need to switch back to wilma to adjust it: just rebase!
@@ -2047,8 +1712,8 @@ You can also stack:
 ....
 
 and you are ready to try again.
-The 'checkout -B' with the hash combines checking out and creating a branch for it.
-The -B instead of -b forces the movement of a pre-existing branch.
+The `checkout -B` with the hash combines checking out and creating a branch for it.
+The `-B` instead of `-b` forces the movement of a pre-existing branch.
 Either way works, which is what's great (and awful) about Git.
 One reason I tend to use `git checkout -B xxxx hash` instead of checking out the hash, and then creating / moving the branch is purely to avoid the slightly distressing message about detached heads:
 
@@ -2075,7 +1740,7 @@ this produces the same effect, but I have to read a lot more and severed heads a
 
 ===== Ooops! I did a `git pull` and it created a merge commit, what do I do?
 
-**Q:** I was on autopilot and did a `git pull` for my development tree and that created a merge commit on the mainline.
+**Q:** I was on autopilot and did a `git pull` for my development tree and that created a merge commit on `main`.
 How do I recover?
 
 **A:** This can happen when you invoke the pull with your development branch checked out.
@@ -2225,7 +1890,7 @@ However, there are two disadvantages to this if you want to use it for anything 
 
 First, this is a 'bare repository' which has the repository database, but no checked out worktree.
 This is great for mirroring, but terrible for day to day work.
-There's a number of ways around this with 'git worktree':
+There's a number of ways around this with `git worktree`:
 
 [source,shell]
 ....
@@ -2262,7 +1927,7 @@ To setup your repository to do that:
 git config --add remote.freebsd.fetch '+refs/*:refs/freebsd/*'
 ....
 
-which will put everything in the upstream repository into your local repository's 'refs/freebsd/' namespace.
+which will put everything in the upstream repository into your local repository's `refs/freebsd/` namespace.
 Please note, that this also grabs all the unconverted vendor branches and the number of refs associated with them is quite large.
 
 You'll need to refer to these 'refs' with their full name because they aren't in and of Git's regular namespaces.
@@ -2277,9 +1942,9 @@ would look at the log for the vendor branch for zlib starting at 1.2.10.
 === Collaborating with others
 
 One of the keys to good software development on a project as large as FreeBSD is the ability to collaborate with others before you push your changes to the tree.
-The FreeBSD project's Git repositories do not, yet, allow user-created branches to be pushed to the repository, and therefore if you wish to share your changes with others you must use another mechanism, such as a hosted GitLab or GitHub, in order to share changes in a user-generated branch.
+The FreeBSD project's Git repositories do not, yet, allow user-created branches to be pushed to the repository, and therefore if you wish to share your changes with others you must use another mechanism, such as a hosted GitLab or GitHub, to share changes in a user-generated branch.
 
-The following instructions show how to set up a user-generated branch, based on the FreeBSD main branch, and push it to GitHub.
+The following instructions show how to set up a user-generated branch, based on the FreeBSD `main` branch, and push it to GitHub.
 
 Before you begin, make sure that your local Git repo is up to date and has the correct origins set <<keeping_current,as shown above.>>
 
@@ -2488,7 +2153,7 @@ Those who have been given commit rights to the FreeBSD repositories must follow 
 [.filename]#doc/shared/contrib-additional.adoc# - _Remove_ the entry. Entries are sorted by first name.
 . Add a News Item
 +
-[.filename]#doc/website/data/en/news/news.toml# - Add an entry. Look for the other entries that announce new committers and follow the format. Use the date from the commit bit approval email from mailto:core@FreeBSD.org[core@FreeBSD.org].
+[.filename]#doc/website/data/en/news/news.toml# - Add an entry. Look for the other entries that announce new committers and follow the format. Use the date from the commit bit approval email.
 . Add a PGP Key
 +
 `{des}` has written a shell script ([.filename]#doc/documentation/tools/addkey.sh#) to make this easier. See the https://cgit.freebsd.org/doc/plain/documentation/static/pgpkeys/README[README] file for more information.
@@ -2508,13 +2173,15 @@ It is very important to have a current PGP/GnuPG key in the repository. The key 
 Add an entry for each additional mentor/mentee relationship in the bottom section.
 . Generate a Kerberos Password
 +
-See <<kerberos-ldap>> to generate or set a Kerberos for use with other FreeBSD services like the bug tracking database.
+See <<kerberos-ldap>> to generate or set a Kerberos account for use with other FreeBSD services like the link:https://bugs.freebsd.org/bugzilla/[bug-tracking database] (you get a bug-tracking account as part of that step).
 . Optional: Enable Wiki Account
 +
-https://wiki.freebsd.org[FreeBSD Wiki] Account - A wiki account allows sharing projects and ideas. Those who do not yet have an account can follow instructions on the https://wiki.freebsd.org/AboutWiki[AboutWiki Page] to obtain one. Contact mailto:wiki-admin@FreeBSD.org[wiki-admin@FreeBSD.org] if you need help with your Wiki account.
+link:https://wiki.freebsd.org[FreeBSD Wiki] Account - A wiki account allows sharing projects and ideas.
+Those who do not yet have an account can follow instructions on the link:https://wiki.freebsd.org/Wiki/About[Wiki/About page] to obtain one.
+Contact mailto:wiki-admin@FreeBSD.org[wiki-admin@FreeBSD.org] if you need help with your Wiki account.
 . Optional: Update Wiki Information
 +
-Wiki Information - After gaining access to the wiki, some people add entries to the https://wiki.freebsd.org/HowWeGotHere[How We Got Here], https://wiki.freebsd.org/IRC/Nicknames[IRC Nicks], and https://wiki.freebsd.org/Community/Dogs[Dogs of FreeBSD] pages.
+Wiki Information - After gaining access to the wiki, some people add entries to the https://wiki.freebsd.org/HowWeGotHere[How We Got Here], https://wiki.freebsd.org/IRC/Nicknames[IRC Nicks], https://wiki.freebsd.org/Community/Dogs[Dogs of FreeBSD], and or https://wiki.freebsd.org/Community/Cats[Cats of FreeBSD] pages.
 . Optional: Update Ports with Personal Information
 +
 [.filename]#ports/astro/xearth/files/freebsd.committers.markers# and [.filename]#src/usr.bin/calendar/calendars/calendar.freebsd# - Some people add entries for themselves to these files to show where they are located or the date of their birthday.
@@ -2677,10 +2344,11 @@ freebsd_smtp:
   hosts_require_auth = smtp.freebsd.org
 
 Authenticators:
-fixed_plain:
+freebsd_plain:
   driver = plaintext
   public_name = PLAIN
   client_send = ^example/mail^examplePassword
+  client_condition = ${if eq{$host}{smtp.freebsd.org}}
 ....
 
 Create [.filename]#/usr/local/etc/exim/freebsd_send# with the following content:
@@ -2710,7 +2378,7 @@ Detailed information on how to access these branches can be found in <<admin-bra
 == Pre-Commit Review
 
 Code review is one way to increase the quality of software.
-The following guidelines apply to commits to the `head` (-CURRENT) branch of the `src` repository.
+The following guidelines apply to commits to the `main` (-CURRENT) branch of the `src` repository.
 Other branches and the `ports` and `docs` trees have their own review policies, but these guidelines generally apply to commits requiring review:
 
 * All non-trivial changes should be reviewed before they are committed to the repository.
@@ -2744,7 +2412,7 @@ This section contains some suggestions and traditions for how commit logs are fo
 === Why are commit messages important?
 
 When you commit a change in Git, Subversion, or another version control system (VCS), you're prompted to write some text describing the commit -- a commit message.
-How important is this commit message? Should you spend some significant effort writing it? Does it really matter if you write simply fixed a bug?
+How important is this commit message? Should you spend some significant effort writing it? Does it really matter if you write simply `fixed a bug`?
 
 Most projects have more than one developer and last for some length of time.
 Commit messages are a very important method of communicating with other developers, in the present and for the future.
@@ -2880,7 +2548,8 @@ The key words or phrases are:
 Typically used when there is no PR, for example if the issue was reported on
 a mailing list.
 
-|`Submitted by:`
+|`Submitted by:` +
+(deprecated)
 |This has been deprecated with git; submitted patches should have the author set by using `git commit --author` with a full name and valid email.
 
 |`Reviewed by:`
@@ -2913,6 +2582,7 @@ There are several cases where approval is customary:
 * commits to an area of the tree covered by the LOCKS file (src)
 * during a release cycle
 * committing to a repo where you do not hold a commit bit (e.g. src committer committing to docs)
+* committing to a port maintained by someone else
 
 While under mentorship, get mentor approval before the commit. Enter the mentor's username in this field, and note that they are a mentor:
 
@@ -2940,9 +2610,6 @@ Approved by: re (username)
 |`MFC to:`
 |If the commit should be merged to a subset of stable branches, specify the branch names.
 
-|`MFC with:`
-|If the commit should be merged together with a previous one in a single MFC commit (for example, where this commit corrects a bug in the previous change), specify the corresponding Git hash.
-
 |`MFH:`
 |If the commit is to be merged into a ports quarterly branch name, specify the quarterly branch. For example `2021Q2`.
 
@@ -2962,6 +2629,10 @@ Approved by: re (username)
 |This change was submitted as a pull request or merge request against one of FreeBSD's public read-only Git repositories.
 It should include the entire URL to the pull request, as these often act as code reviews for the code.
 For example: `https://github.com/freebsd/freebsd-src/pull/745`
+
+|`Co-authored-by:`
+|The name and email address of an additional author of the commit.
+GitHub has a detailed description of the Co-authored-by trailer at https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors.
 
 |`Signed-off-by:`
 |ID certifies compliance with https://developercertificate.org/
@@ -3088,7 +2759,7 @@ The FreeBSD Project suggests and uses this text as the preferred license scheme:
 [.programlisting]
 ....
 /*-
- * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ * SPDX-License-Identifier: BSD-2-Clause
  *
  * Copyright (c) [year] [your name]
  *
@@ -3123,7 +2794,7 @@ If you have code in the tree with the advertising clause, please consider removi
 In fact, please consider using the above license for your code.
 
 The FreeBSD project discourages completely new licenses and variations on the standard licenses.
-New licenses require the approval of the {core-email} to reside in the main repository.
+New licenses require the approval of {core-email} to reside in the `src` repository.
 The more different licenses that are used in the tree, the more problems that this causes to those wishing to utilize this code, typically from unintended consequences from a poorly worded license.
 
 Project policy dictates that code under some non-BSD licenses must be placed only in specific sections of the repository, and in some cases, compilation must be conditional or even disabled by default.
@@ -3176,13 +2847,19 @@ As of March 2021, approximately 25,000 out of 90,000 files in the tree have been
 == Developer Relations
 
 When working directly on your own code or on code which is already well established as your responsibility, then there is probably little need to check with other committers before jumping in with a commit.
-Working on a bug in an area of the system which is clearly orphaned (and there are a few such areas, to our shame), the same applies.
-When modifying parts of the system which are maintained, formally, or informally, consider asking for review just as a developer would have before becoming a committer.
+When working on a bug in an area of the system which is clearly orphaned (and there are a few such areas, to our shame), the same applies.
+When modifying parts of the system which are maintained, formally or informally, consider asking for a review just as a developer would have before becoming a committer.
 For ports, contact the listed `MAINTAINER` in the [.filename]#Makefile#.
 
 To determine if an area of the tree is maintained, check the MAINTAINERS file at the root of the tree.
 If nobody is listed, scan the revision history to see who has committed changes in the past.
-An example script that lists each person who has committed to a given file along with the number of commits each person has made can be found at on `freefall` at [.filename]#~eadler/bin/whodid#.
+To list the names and email addresses of all commit authors for a given file in the last 2 years and the number of commits each has authored, ordered by descending number of commits, use:
+
+[source,shell]
+----
+% git -C /path/to/repo shortlog -sne --since="2 years" -- relative/path/to/file
+----
+
 If queries go unanswered or the committer otherwise indicates a lack of interest in the area affected, go ahead and commit it.
 
 [IMPORTANT]
@@ -3236,8 +2913,8 @@ Once your question is answered, if no one pointed you to documentation that spel
 == Bugzilla
 
 The FreeBSD Project utilizes Bugzilla for tracking bugs and change requests.
-Be sure that if you commit a fix or suggestion found in the PR database to close it.
-It is also considered nice if you take time to close any PRs associated with your commits, if appropriate.
+If you commit a fix or suggestion found in the PR database, be sure to close the PR.
+It is also considered nice if you take time to close any other PRs associated with your commits.
 
 Committers with non-``FreeBSD.org`` Bugzilla accounts can have the old account merged with the `FreeBSD.org` account by following these steps:
 
@@ -3295,7 +2972,7 @@ If there is something you want merged from FreeBSD-CURRENT to FreeBSD-STABLE (wh
 `{so-name}` is the link:https://www.FreeBSD.org/security/[FreeBSD Security Officer] and oversees the `{security-officer}`.
 
 {committers-name}::
-{svn-src-all}, {svn-ports-all} and {svn-doc-all} are the mailing lists that the version control system uses to send commit messages to.
+{dev-src-all}, {dev-ports-all} and {dev-doc-all} are the mailing lists that the version control system uses to send commit messages to.
 _Never_ send email directly to these lists.
 Only send replies to this list when they are short and are directly related to a commit.
 
@@ -3473,11 +3150,11 @@ If you have not done it before, chances are good that you do not actually know t
 There is no shame in asking "how in the heck do I do this?" We already know you are an intelligent person; otherwise, you would not be a committer.
 . Test your changes before committing them.
 +
-This may sound obvious, but if it really were so obvious then we probably would not see so many cases of people clearly not doing this.
 If your changes are to the kernel, make sure you can still compile both GENERIC and LINT.
 If your changes are anywhere else, make sure you can still make world.
 If your changes are to a branch, make sure your testing occurs with a machine which is running that code.
 If you have a change which also may break another architecture, be sure and test on all supported architectures.
+Please ensure your change works for <<compilers,supported toolchains>>.
 Please refer to the https://www.FreeBSD.org/internal/[FreeBSD Internal Page] for a list of available resources.
 As other architectures are added to the FreeBSD supported platforms list, the appropriate shared testing resources will be made available.
 . Do not commit to contributed software without _explicit_ approval from the respective maintainers.
@@ -3505,13 +3182,69 @@ In an effort to make it easier to keep FreeBSD portable across the platforms we 
 Our 32-bit reference platform is i386, and our 64-bit reference platform is amd64.
 Major design work (including major API and ABI changes) must prove itself on at least one 32-bit and at least one 64-bit platform, preferably the primary reference platforms, before it may be committed to the source tree.
 
-The i386 and amd64 platforms were chosen due to being more readily available to developers and as representatives of more diverse processor and system designs - big versus little endian, register file versus register stack, different DMA and cache implementations, hardware page tables versus software TLB management etc.
-
-We will continue to re-evaluate this policy as cost and availability of the 64-bit platforms change.
-
 Developers should also be aware of our Tier Policy for the long term support of hardware architectures.
 The rules here are intended to provide guidance during the development process, and are distinct from the requirements for features and architectures listed in that section.
 The Tier rules for feature support on architectures at release-time are more strict than the rules for changes during the development process.
+
+[[compilers]]
+=== Policy on Multiple Compilers
+
+FreeBSD builds with both Clang and GCC.
+The project does this in a careful and controlled way to maximize benefits from this extra work, while keeping the extra work to a minimum.
+Supporting both Clang and GCC improves the flexibility our users have.
+These compilers have different strengths and weaknesses, and supporting both allows users to pick the best one for their needs.
+Clang and GCC support similar dialects of C and C++, necessitating a relatively small amount of conditional code.
+The project gains increased code coverage and improves the code quality by using features from both compilers.
+The project is able to build in more user environments and leverage more CI environments by supporting this range, increasing convenience for users and giving them more tools to test with.
+By carefully constraining the range of versions supported to modern versions of these compilers, the project avoids unduly increasing the testing matrix.
+Older and obscure compilers, as well as older dialects of the languages, have extremely limited support that allow user programs to build with them, but without constraining the base system to being built with them.
+The exact balance continues to evolve to ensure the benefits of extra work remain greater than the burdens it imposes.
+The project used to support really old Intel compilers or old GCC versions, but we traded supporting those obsolete compilers for a carefully selected range of modern compilers.
+This section documents where we use different compilers, and the expectations around that.
+
+The FreeBSD project provides an in-tree Clang compiler.
+Due to being in the tree, this compiler is the most supported compiler.
+All changes must compile with it, prior to commit.
+Complete testing, as appropriate for the change, should be done with this compiler.
+
+At any moment in time, the FreeBSD project also supports one or more out-of-tree compilers.
+At present, this is GCC 12.x.
+Ideally, committers should test compile with this compiler, especially for large or risky changes.
+This compiler is available as the `${TARGET_ARCH}-gcc${VERSION}` package, such as package:devel/freebsd-gcc12@aarch64[aarch64-gcc12] or package:devel/freebsd-gcc12@riscv64[riscv64-gcc12].
+The project runs automated CI jobs to build everything with these compilers.
+Committers are expected to fix the jobs they break with their changes.
+Committers may test build with, for example `CROSS_TOOLCHAIN=aarch64-gcc12` or `CROSS_TOOLCHAIN=llvm15` where necessary.
+
+The FreeBSD project also has some CI pipelines on github.
+For pull requests on github and some branches pushed to the github forks, a number of cross compilation jobs run.
+These test FreeBSD building using a version of Clang that sometimes lags the in-tree compiler by a major version for a time.
+
+The FreeBSD project is also upgrading compilers.
+Both Clang and GCC are fast moving targets.
+Some work to change things in the tree, for example removing the old-style K&R function declarations and definitions, will land in the tree prior to the compiler landing.
+Committers should try to be mindful about this and be receptive to looking into problems with their code or changes with these new compilers.
+Also, just after a new compiler version hits the tree, people may need to compile things with the old version if there was an undetected regression suspected.
+
+In addition to the compiler, LLVM's LLD and GNU's binutils are used indirectly by the compiler.
+Committers should be mindful of variations in assembler syntax and features of the linkers and ensure both variants work.
+These components will be tested as part of FreeBSD's CI jobs for Clang or GCC.
+
+The FreeBSD project provides headers and libraries that allow other compilers to be used to build software not in the base system.
+These headers have support for making the environment as strict as the standard, supporting prior dialects of ANSI-C back to C89, and other edge cases our large ports collection has uncovered.
+This support constrains retirement of older standards in places like header files, but does not constrain updating the base system to newer dialects.
+Nor does it require the base system to compile with these older standards as a whole.
+Breaking this support will cause packages in the ports collection to fail, so should be avoided where possible, and promptly fixed when it is easy to do so.
+
+The FreeBSD build system currently accommodates these different environments.
+As new warnings are added to compilers, the project tries to fix them.
+However, sometimes these warnings require extensive rework, so are suppressed in some way by using make variables that evaluate to the proper thing depending on the compiler version.
+Developers should be mindful of this, and ensure any compiler specific flags are properly conditionalized.
+
+==== Current Compiler Versions
+The in-tree compiler is currently Clang 15.x.
+Currently, GCC 12 and Clang 12, 13, 14 and 15 are tested in the github and project's CI jenkins jobs.
+Work is underway to get the tree ready for Clang 16.
+The oldest project supported branch has Clang 12, so the bootstrap portions of the build must work for Clang major versions 12 to 15.
 
 === Other Suggestions
 
@@ -3615,7 +3348,7 @@ The native "ABI" generally shares certain properties with the kernel ABI such as
 
 Tiers are defined for both kernels and userland ABIs. In the common case, a platform's kernel and FreeBSD ABIs are assigned to the same tier.
 
-=== Tier 1: Fully-Supported Architectures
+==== Tier 1: Fully-Supported Architectures
 
 Tier 1 platforms are the most mature FreeBSD platforms.
 They are supported by the security officer, release engineering, and Ports Management Team.
@@ -3651,7 +3384,7 @@ Collectively, developers are required to provide the following to maintain the T
 * Changes cannot break the userland ABI. If an ABI change is required, ABI compatibility for existing binaries should be provided via use of symbol versioning or shared library version bumps.
 * Changes merged to stable branches cannot break the protected portions of the kernel ABI. If a kernel ABI change is required, the change should be modified to preserve functionality of existing kernel modules.
 
-=== Tier 2: Developmental and Niche Architectures
+==== Tier 2: Developmental and Niche Architectures
 
 Tier 2 platforms are functional, but less mature FreeBSD platforms.
 They are not supported by the security officer, release engineering, and Ports Management Team.
@@ -3679,7 +3412,7 @@ Collectively, developers are required to provide the following to maintain the T
 * While changes are permitted to break the userland ABI, the ABI should not be broken gratuitously. Significant userland ABI changes should be restricted to major versions.
 * New features that are not yet implemented on Tier 2 architectures should provide a means of disabling them on those architectures.
 
-=== Tier 3: Experimental Architectures
+==== Tier 3: Experimental Architectures
 
 Tier 3 platforms have at least partial FreeBSD support.
 They are _not_ supported by the security officer, release engineering, and Ports Management Team.
@@ -3690,7 +3423,7 @@ Initial support for Tier 3 platforms may exist in a separate repository rather t
 The FreeBSD Project provides no guarantees to consumers of Tier 3 platforms and is not committed to maintaining resources to support development.
 Tier 3 platforms may not always be buildable, nor are any kernel or userland ABIs considered stable.
 
-=== Unsupported Architectures
+==== Unsupported Architectures
 
 Other platforms are not supported in any form by the project.
 The project previously described these as Tier 4 systems.
@@ -3738,7 +3471,7 @@ Don't forget to <<port-commit-message-formats,setup git hooks for the ports tree
 Check the port, preferably to make sure it compiles and packages correctly.
 
 The extref:{porters-handbook}testing[Porters Handbook's Testing Chapter] contains more detailed instructions.
-See the extref:{porters-handbook}testing[Portclippy / Portfmt, testing-portclippy] and the extref:{porters-handbook}testing[Poudriere, testing-poudriere] sections.
+See the extref:{porters-handbook}testing[Portclippy / Portfmt, testing-portclippy] and the extref:{porters-handbook}testing[poudriere, testing-poudriere] sections.
 
 You do not necessarily have to eliminate all warnings but make sure you have fixed the simple ones.
 
@@ -3749,7 +3482,7 @@ To close a PR, change the state to `Issue Resolved` and the resolution as `Fixed
 
 [NOTE]
 ====
-If for some reason using extref:{porters-handbook}testing[Poudriere, testing-poudriere] to test the new port is not possible, the bare minimum of testing includes this sequence:
+If for some reason using extref:{porters-handbook}testing[poudriere, testing-poudriere] to test the new port is not possible, the bare minimum of testing includes this sequence:
 
 [source,shell]
 ....
@@ -3854,8 +3587,8 @@ Merging commits to the quarterly branch (a process we call MFH for a historical 
 % git push
 ....
 
-where '$HASH' is the hash of the commit you want to copy over to the quarterly branch.
-The -x parameter ensures the hash '$HASH' of the main branch is included in the new commit message of the quarterly branch.
+where `$HASH` is the hash of the commit you want to copy over to the quarterly branch.
+The `-x` parameter ensures the hash `$HASH` of the `main` branch is included in the new commit message of the quarterly branch.
 
 [[ports-qa-new-category]]
 === Creating a New Category
@@ -4038,7 +3771,7 @@ FreeBSD committers can get a free 4-CD or DVD set at conferences from http://www
 https://gandi.net[Gandi] provides website hosting, cloud computing, domain registration, and X.509 certificate services.
 
 Gandi offers an E-rate discount to all FreeBSD developers.
-In order to streamline the process of getting the discount first set up a Gandi account, fill in the billing information and select the currency.
+To streamline the process of getting the discount first set up a Gandi account, fill in the billing information and select the currency.
 Then send an mail to mailto:non-profit@gandi.net[non-profit@gandi.net] using your `@freebsd.org` mail address, and indicate your Gandi handle.
 
 [[benefits-rsync]]
@@ -4047,15 +3780,3 @@ Then send an mail to mailto:non-profit@gandi.net[non-profit@gandi.net] using you
 https://rsync.net[rsync.net] provides cloud storage for offsite backup that is optimized for UNIX users. Their service runs entirely on FreeBSD and ZFS.
 
 rsync.net offers a free-forever 500 GB account to FreeBSD developers. Simply sign up at https://www.rsync.net/freebsd.html[https://www.rsync.net/freebsd.html] using your `@freebsd.org` address to receive this free account.
-
-[[benefits-jetbrains]]
-=== `JetBrains`
-
-https://www.jetbrains.com[JetBrains] is a software development company which makes tools for software developers and project managers. The company offers many integrated development environments (IDEs) for different programming languages.
-
-JetBrains offers 100 free yearly licenses for all https://www.jetbrains.com/products[JetBrains IDE products]. Simply sign up at https://account.jetbrains.com/a/322tl3z7[https://account.jetbrains.com/a/322tl3z7] using your `@freebsd.org` address and the account will have a license attached to it automatically. Once the account is active, use it in any of the products to activate them and you're done.
-
-[IMPORTANT]
-====
-Please, only use these licences personally and do not share them with anyone outside of the FreeBSD project, as that would be a violation of the terms of the donation.
-====

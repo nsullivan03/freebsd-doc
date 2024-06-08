@@ -1,14 +1,13 @@
 ---
-title: Chapter 9. Configuring the FreeBSD Kernel
+title: Chapter 10. Configuring the FreeBSD Kernel
 part: Part II. Common Tasks
 prev: books/handbook/multimedia
 next: books/handbook/printing
 description: This chapter covers how to configure the FreeBSD Kernel. When to build a custom kernel, how to take a hardware inventory, how to customize a kernel configuration file, etc
 tags: ["configuring", "kernel", "custom kernel", "hardware requirements", "pciconf"]
 showBookMenu: true
-weight: 12
-path: "/books/handbook/"
-aliases: ["/en/books/handbook/kernelconfig-custom-kernel/","/en/books/handbook/kernelconfig-devices/","/en/books/handbook/kernelconfig-config/","/en/books/handbook/kernelconfig-building/","/en/books/handbook/kernelconfig-trouble/"]
+weight: 13
+path: "/books/handbook/kernelconfig/"
 ---
 
 [[kernelconfig]]
@@ -19,7 +18,7 @@ aliases: ["/en/books/handbook/kernelconfig-custom-kernel/","/en/books/handbook/k
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 9
+:sectnumoffset: 10
 :partnums:
 :source-highlighter: rouge
 :experimental:

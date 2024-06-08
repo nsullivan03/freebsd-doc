@@ -63,9 +63,6 @@ shown in the Handbook PGP keys chapter.
 === {security-officer-name} `<{security-officer-email}>`
 include::{include-path}security-officer.key[]
 
-=== {secteam-secretary-name} `<{secteam-secretary-email}>`
-include::{include-path}secteam-secretary.key[]
-
 === {core-secretary-name} `<{core-secretary-email}>`
 include::{include-path}core-secretary.key[]
 
@@ -210,6 +207,9 @@ include::{include-path}mbr.key[]
 === `{bvs}`
 include::{include-path}bvs.key[]
 
+=== `{jbo}`
+include::{include-path}jbo.key[]
+
 === `{novel}`
 include::{include-path}novel.key[]
 
@@ -264,6 +264,9 @@ include::{include-path}jcamou.key[]
 === `{acm}`
 include::{include-path}acm.key[]
 
+=== `{olce}`
+include::{include-path}olce.key[]
+
 === `{gahr}`
 include::{include-path}gahr.key[]
 
@@ -306,6 +309,9 @@ include::{include-path}cjc.key[]
 === `{marcus}`
 include::{include-path}marcus.key[]
 
+=== `{fuz}`
+include::{include-path}fuz.key[]
+
 === `{nik}`
 include::{include-path}nik.key[]
 
@@ -327,8 +333,14 @@ include::{include-path}alc.key[]
 === `{olivier}`
 include::{include-path}olivier.key[]
 
+=== `{dch}`
+include::{include-path}dch.key[]
+
 === `{bcran}`
 include::{include-path}bcran.key[]
+
+=== `{cc}`
+include::{include-path}cc.key[]
 
 === `{culot}`
 include::{include-path}culot.key[]
@@ -507,6 +519,9 @@ include::{include-path}mjg.key[]
 === `{jhale}`
 include::{include-path}jhale.key[]
 
+=== `{jah}`
+include::{include-path}jah.key[]
+
 === `{dannyboy}`
 include::{include-path}dannyboy.key[]
 
@@ -665,6 +680,9 @@ include::{include-path}jkim.key[]
 
 === `{zack}`
 include::{include-path}zack.key[]
+
+=== `{akiyano}`
+include::{include-path}akiyano.key[]
 
 === `{jceel}`
 include::{include-path}jceel.key[]
@@ -846,6 +864,9 @@ include::{include-path}mtm.key[]
 === `{dwmalone}`
 include::{include-path}dwmalone.key[]
 
+=== `{christos}`
+include::{include-path}christos.key[]
+
 === `{marino}`
 include::{include-path}marino.key[]
 
@@ -860,6 +881,9 @@ include::{include-path}mm.key[]
 
 === `{sem}`
 include::{include-path}sem.key[]
+
+=== `{rcm}`
+include::{include-path}rcm.key[]
 
 === `{mckusick}`
 include::{include-path}mckusick.key[]
@@ -1002,6 +1026,12 @@ include::{include-path}royger.key[]
 === `{rpaulo}`
 include::{include-path}rpaulo.key[]
 
+=== `{misha}`
+include::{include-path}misha.key[]
+
+=== `{dumbbell}`
+include::{include-path}dumbbell.key[]
+
 === `{rpokala}`
 include::{include-path}rpokala.key[]
 
@@ -1094,6 +1124,9 @@ include::{include-path}roberto.key[]
 
 === `{rodrigc}`
 include::{include-path}rodrigc.key[]
+
+=== `{michaelo}`
+include::{include-path}michaelo.key[]
 
 === `{ler}`
 include::{include-path}ler.key[]
@@ -1326,6 +1359,9 @@ include::{include-path}tuexen.key[]
 === `{gonzo}`
 include::{include-path}gonzo.key[]
 
+=== `{uzsolt}`
+include::{include-path}uzsolt.key[]
+
 === `{ume}`
 include::{include-path}ume.key[]
 
@@ -1442,6 +1478,18 @@ include::{include-path}ronald.key[]
 
 === `{meta}`
 include::{include-path}meta.key[]
+
+=== `{rnagy}`
+include::{include-path}rnagy.key[]
+
+=== `{vvd}`
+include::{include-path}vvd.key[]
+
+=== `{gbe}`
+include::{include-path}gbe.key[]
+
+=== `{bnovkov}`
+include::{include-path}bnovkov.key[]
 
 [[pgpkeys-other]]
 == Other Cluster Account Holders

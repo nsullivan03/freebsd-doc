@@ -6,7 +6,7 @@ description: Describes the FreeBSD Documentation Build Process
 tags: ["build", "process", "make"]
 showBookMenu: true
 weight: 6
-path: "/books/fdp-primer/"
+path: "/books/fdp-primer/doc-build/"
 ---
 
 [[doc-build]]
@@ -115,13 +115,13 @@ To render the documentation and the website to `html` use one of the following e
 Advanced build examples are given below:
 
 [[documentation-build-example-verbose]]
-.Build the documentation with verbose and debug messages
+.Build English and Spanish documentation with verbose and debug messages
 [example]
 ====
 [source,shell]
 ....
 % cd ~/doc/documentation
-% make HUGO_ARGS="--verbose --debug --path-warnings"
+% make DOC_LANG="en es" HUGO_ARGS="--verbose --debug"
 ....
 ====
 
@@ -136,11 +136,11 @@ Advanced build examples are given below:
 ....
 This webserver runs on `localhost`, port `1313` by default.
 
-To serve the content with Hugo’s internal webserver binding a specific IP address:
+To serve the content with Hugo’s internal webserver binding a specific IP address and port:
 
 [source,shell]
 ....
-% make run BIND=192.168.15.10
+% make run BIND=192.168.15.10 HUGO_ARGS="-p 8080"
 ....
 
 A `hostname` can also be set as base url to Hugo’s internal webserver:
@@ -148,6 +148,25 @@ A `hostname` can also be set as base url to Hugo’s internal webserver:
 [source,shell]
 ....
 % make run BIND=192.168.15.10 HOSTNAME=example.com
+....
+====
+
+[[documentation-build-example-offline]]
+.Build documentation in html for offline usage
+[example]
+====
+[source,shell]
+....
+% cd ~/doc/documentation
+% make html
+....
+
+To compress the html output, add `DOC_HTML_ARCHIVE=1`:
+
+[source,shell]
+....
+% cd ~/doc/documentation
+% DOC_HTML_ARCHIVE=1 make html
 ....
 ====
 

@@ -1,14 +1,13 @@
 ---
-title: Chapter 24. Localization - i18n/L10n Usage and Setup
+title: Chapter 25. Localization - i18n/L10n Usage and Setup
 part: Part III. System Administration
 prev: books/handbook/virtualization
 next: books/handbook/cutting-edge
 description: FreeBSD supports localization into many languages, allowing users to view, input, or process data in non-English languages
 tags: ["i18n", "L10n", "localization", "Locale", "LANG", "MM_CHARSET", "cap_mkdb"]
 showBookMenu: true
-weight: 28
-path: "/books/handbook/"
-aliases: ["/en/books/handbook/using-localization/","/en/books/handbook/l10n-compiling/","/en/books/handbook/lang-setup/"]
+weight: 29
+path: "/books/handbook/l10n/"
 ---
 
 [[l10n]]
@@ -19,7 +18,7 @@ aliases: ["/en/books/handbook/using-localization/","/en/books/handbook/l10n-comp
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 24
+:sectnumoffset: 25
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -264,7 +263,7 @@ Invoke it as superuser and provide the username to edit as the argument.
 ==== Shell Startup File Method
 
 This second method is not recommended as each shell that is used requires manual configuration, where each shell has a different configuration file and differing syntax.
-As an example, to set the German language for the `sh` shell, these lines could be added to [.filename]#~/.profile# to set the shell for that user only. 
+As an example, to set the German language for the `sh` shell, these lines could be added to [.filename]#~/.profile# to set the shell for that user only.
 These lines could also be added to [.filename]#/etc/profile# or [.filename]#/usr/share/skel/dot.profile# to set that shell for all users:
 
 [.programlisting]
@@ -539,7 +538,7 @@ It then provides some additional resources for localizing other languages.
 === Russian Language (KOI8-R Encoding)
 
 This section shows the specific settings needed to localize a FreeBSD system for the Russian language.
-Refer to <<using-localization,Using Localization>> for a more complete description of each type of setting.
+Refer to <<using-localization,Using Localization>> for a complete description of each type of setting.
 
 To set this locale for the login shell, add the following lines to each user's [.filename]#~/.login_conf#:
 

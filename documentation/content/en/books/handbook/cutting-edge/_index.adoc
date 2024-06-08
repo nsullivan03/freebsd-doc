@@ -1,14 +1,13 @@
 ---
-title: Chapter 25. Updating and Upgrading FreeBSD
+title: Chapter 26. Updating and Upgrading FreeBSD
 part: Part III. System Administration
 prev: books/handbook/l10n
 next: books/handbook/dtrace
 description: Information about how to keep a FreeBSD system up-to-date with freebsd-update or Git, how to rebuild and reinstall the entire base system, etc
 tags: ["updating", "upgrading", "documentation", "FreeBSD-STABLE", "FreeBSD-CURRENT", "Security Patches"]
 showBookMenu: true
-weight: 29
-path: "/books/handbook/"
-aliases: ["/en/books/handbook/updating-upgrading-freebsdupdate/","/en/books/handbook/updating-upgrading-documentation/","/en/books/handbook/current-stable/","/en/books/handbook/makeworld/","/en/books/handbook/small-lan/"]
+weight: 30
+path: "/books/handbook/cutting-edge/"
 ---
 
 [[updating-upgrading]]
@@ -19,7 +18,7 @@ aliases: ["/en/books/handbook/updating-upgrading-freebsdupdate/","/en/books/hand
 :icons: font
 :sectnums:
 :sectnumlevels: 6
-:sectnumoffset: 25
+:sectnumoffset: 26
 :partnums:
 :source-highlighter: rouge
 :experimental:
@@ -147,10 +146,9 @@ MergeChanges /etc/ /var/named/etc/ /boot/device.hints
 ....
 
 List of directories with configuration files that `freebsd-update` should attempt to merge.
-The file merge process is a series of man:diff[1] patches similar to man:mergemaster[8], but with fewer options.
+The file merge process is a series of man:diff[1] patches.
 Merges are either accepted, open an editor, or cause `freebsd-update` to abort.
 When in doubt, backup [.filename]#/etc# and just accept the merges.
-See man:mergemaster[8] for more information about `mergemaster`.
 
 [.programlisting]
 ....
@@ -174,6 +172,8 @@ In cases where the user is doing a version upgrade, this location should have at
 When this option is set to `yes`, `freebsd-update` will assume that the `Components` list is complete and will not attempt to make changes outside of the list.
 Effectively, `freebsd-update` will attempt to update every file which belongs to the `Components` list.
 
+Refer to man:freebsd-update.conf[5] for more details.
+
 [[freebsdupdate-security-patches]]
 === Applying Security Patches
 
@@ -181,7 +181,7 @@ The process of applying FreeBSD security patches has been simplified, allowing a
 More information about FreeBSD security advisories can be found in crossref:security[security-advisories,"FreeBSD Security Advisories"].
 
 FreeBSD security patches may be downloaded and installed using the following commands.
-The first command will determine if any outstanding patches are available, and if so, will list the files that will be modifed if the patches are applied.
+The first command will determine if any outstanding patches are available, and if so, will list the files that will be modified if the patches are applied.
 The second command will apply the patches.
 
 [source,shell]
@@ -244,11 +244,35 @@ Rebuilding a custom kernel, even if nothing else changed, allows `uname` to accu
 This is particularly helpful when maintaining multiple systems, as it allows for a quick assessment of the updates installed in each one.
 
 [[freebsdupdate-upgrade]]
-=== Performing Major and Minor Version Upgrades
+=== Performing Minor and Major Version Upgrades
 
-Upgrades from one minor version of FreeBSD to another, like from FreeBSD 9.0 to FreeBSD 9.1, are called _minor version_ upgrades.
-_Major version_ upgrades occur when FreeBSD is upgraded from one major version to another, like from FreeBSD 9.X to FreeBSD 10.X.
-Both types of upgrades can be performed by providing `freebsd-update` with a release version target.
+Upgrades from one minor version of FreeBSD to another are called _minor version_ upgrades. An example:
+
+- FreeBSD 13.1 to 13.2.
+
+_Major version_ upgrades increase the major version number. An example:
+
+- FreeBSD 13.2 to 14.0.
+
+Both types of upgrade can be performed by providing `freebsd-update` with a release version target.
+
+[WARNING]
+====
+After each new `RELEASE`, FreeBSD package build servers will, for a limited period, *not* use the newer version of the operating system.
+This provides continuity for the many users who do not upgrade immediately after a release announcement.
+For example:
+
+* packages for users of 13.1 and 13.2 will be built on a server running 13.1, until 13.1 reaches end of life
+
+-- and, critically:
+
+* a kernel module that is built on 13.1 might *not* be suitable for 13.2.
+
+So, with any minor or major OS upgrade, if your package requirements include any kernel module:
+
+* *be prepared to build the module from source*.
+
+====
 
 [NOTE]
 ====
@@ -256,11 +280,19 @@ If the system is running a custom kernel, make sure that a copy of the [.filenam
 Refer to <<freebsd-update-custom-kernel-9x>> for instructions on how to get a copy of the [.filename]#GENERIC# kernel.
 ====
 
-The following command, when run on a FreeBSD 9.0 system, will upgrade it to FreeBSD 9.1:
+Before upgrading to a new version, ensure the existing FreeBSD installation is up to date with respect to security and errata patches:
 
 [source,shell]
 ....
-# freebsd-update -r 9.1-RELEASE upgrade
+# freebsd-update fetch
+# freebsd-update install
+....
+
+The following command, when run on a FreeBSD 13.1 system, will upgrade it to FreeBSD 13.2:
+
+[source,shell]
+....
+# freebsd-update -r 13.2-RELEASE upgrade
 ....
 
 After the command has been received, `freebsd-update` will evaluate the configuration file and current system in an attempt to gather the information necessary to perform the upgrade.
@@ -270,7 +302,7 @@ For example:
 [source,shell]
 ....
 Looking up update.FreeBSD.org mirrors... 1 mirrors found.
-Fetching metadata signature for 9.0-RELEASE from update1.FreeBSD.org... done.
+Fetching metadata signature for 13.1-RELEASE from update1.FreeBSD.org... done.
 Fetching metadata index... done.
 Inspecting system... done.
 
@@ -295,7 +327,7 @@ When using a custom kernel, the above step will produce a warning similar to the
 [source,shell]
 ....
 WARNING: This system is running a "MYKERNEL" kernel, which is not a
-kernel configuration distributed as part of FreeBSD 9.0-RELEASE.
+kernel configuration distributed as part of FreeBSD 13.1-RELEASE.
 This kernel will not be updated: you MUST update the kernel manually
 before running "/usr/sbin/freebsd-update install"
 ....
@@ -605,7 +637,7 @@ In order to track changes for the whole source tree, subscribe to {dev-commits-s
 . To install a new FreeBSD-STABLE system, install the most recent FreeBSD-STABLE release from the crossref:mirrors[mirrors,FreeBSD mirror sites] or use a monthly snapshot built from FreeBSD-STABLE. Refer to link:https://www.FreeBSD.org/snapshots/[www.freebsd.org/snapshots] for more information about snapshots.
 +
 To compile or upgrade an existing FreeBSD system to FreeBSD-STABLE, use `git` to check out the source for the desired branch.
-Branch names, such as `stable/9`, are listed at link:https://www.FreeBSD.org/releng/[www.freebsd.org/releng].
+Branch names, such as `stable/13`, are listed at link:https://www.FreeBSD.org/releng/[www.freebsd.org/releng].
 . Before compiling or upgrading to FreeBSD-STABLE , read [.filename]#/usr/src/Makefile# carefully and follow the instructions in <<makeworld>>. Read the {freebsd-stable} and [.filename]#/usr/src/UPDATING# to keep up-to-date on other bootstrapping procedures that sometimes become necessary on the road to the next release.
 
 [[translate-n-number]]
@@ -615,9 +647,10 @@ FreeBSD provides version information compiled into the kernel.
 man:uname[1] retrieves this information, for example:
 [source,shell]
 ....
-% uname -a
+% uname -v
 FreeBSD 14.0-CURRENT #112 main-n247514-031260d64c18: Tue Jun 22 20:43:19 MDT 2021     fred@machine:/usr/home/fred/obj/usr/home/fred/git/head/amd64.amd64/sys/FRED
 ....
+The final field gives information regarding the kernel name, the person that built it, and the location that it was compiled in.
 Looking at the 4th field, it is made up of several parts:
 [source,shell]
 ....
@@ -688,7 +721,7 @@ To prevent this, perform the following steps *before* updating sources and build
 +
 [source,shell]
 ....
-# git pull /usr/src  <.>
+# git pull -C /usr/src  <.>
 check /usr/src/UPDATING  <.>
 # cd /usr/src          <.>
 # make -j4 buildworld  <.>
@@ -749,7 +782,7 @@ This indicates that [.filename]#/usr/src/# is under version control and can be u
 [[synching]]
 [source,shell]
 ....
-# git pull /usr/src
+# git pull -C /usr/src
 ....
 
 The update process can take some time if the directory has not been updated recently.
@@ -757,16 +790,17 @@ After it finishes, the source code is up to date and the build process described
 
 [NOTE]
 ====
-*Obtaining the Source:* +
+Obtaining the source:
 
 If the output says `fatal: not a git repository`, the files there are missing or were installed with a different method.
 A new checkout of the source is required.
+====
 
 [[updating-src-obtaining-src-repopath]]
 .FreeBSD Versions and Repository Branches
 [cols="10%,10%,80%", options="header"]
 |===
-| uname -r Output
+| uname&#160;&#8209;r Output
 | Repository Path
 | Description
 
@@ -792,21 +826,21 @@ Determine which version of FreeBSD is being used with man:uname[1]:
 [source,shell]
 ....
 # uname -r
-10.3-RELEASE
+13.2-RELEASE
 ....
 
-Based on <<updating-src-obtaining-src-repopath>>, the source used to update `10.3-RELEASE` has a repository path of `releng/10.3`. That path is used when checking out the source:
+Based on <<updating-src-obtaining-src-repopath>>, the source used to update `13.2-RELEASE` has a repository path of `releng/13.2`.
+That path is used when checking out the source:
 
 [source,shell]
 ....
 # mv /usr/src /usr/src.bak <.>
-# git clone --branch releng/10.3 https://git.FreeBSD.org/src.git /usr/src <.>
+# git clone --branch releng/13.2 https://git.FreeBSD.org/src.git /usr/src <.>
 ....
 
 <.> Move the old directory out of the way. If there are no local modifications in this directory, it can be deleted.
 
 <.> The path from <<updating-src-obtaining-src-repopath>> is added to the repository URL. The third parameter is the destination directory for the source code on the local system.
-====
 
 [[updating-src-building]]
 === Building from Source
@@ -950,7 +984,7 @@ Any modified configuration files are merged with the new versions, outdated libr
 
 man:etcupdate[8] is a tool for managing updates to files that are not updated as part of an installworld such as files located in [.filename]#/etc/#.
 It manages updates by doing a three-way merge of changes made to these files against the local versions.
-It is also designed to minimize the amount of user intervention, in contrast to man:mergemaster[8]'s interactive prompts.
+man:etcupdate[8] is designed to minimize the amount of user intervention.
 
 [NOTE]
 ====
@@ -987,21 +1021,6 @@ To prevent this, perform the following steps *before* updating sources and build
 
 <.> Check the diff after bootstrapping. Trim any local changes that are no longer needed to reduce the chance of conflicts in future updates.
 ====
-
-[[updating-src-completing-merge-mergemaster]]
-==== Merging Configuration Files with man:mergemaster[8]
-
-man:mergemaster[8] provides a way to merge changes that have been made to system configuration files with new versions of those files.
-man:mergemaster[8] is an alternative to the preferred man:etcupdate[8]
-With `-Ui`, man:mergemaster[8] automatically updates files that have not been user-modified and installs new files that are not already present:
-
-[source,shell]
-....
-# mergemaster -Ui
-....
-
-If a file must be manually merged, an interactive display allows the user to choose which portions of the files are kept.
-See man:mergemaster[8] for more information.
 
 [[updating-src-completing-check-old]]
 ==== Checking for Outdated Files and Libraries
@@ -1094,7 +1113,7 @@ On the build machine, build the kernel and world as described in <<makeworld>>,
 but do not install anything on the build machine.
 Instead, install the built kernel on the test machine.
 On the test machine, mount [.filename]#/usr/src# and [.filename]#/usr/obj# via NFS.
-Then, run `shutdown now` to go to single-user mode in order to install the new kernel and world and run `mergemaster` as usual.
+Then, run `shutdown now` to go to single-user mode in order to install the new kernel and world and run `etcupdate` as usual.
 When done, reboot to return to normal multi-user operations.
 
 After verifying that everything on the test machine is working properly,
@@ -1107,3 +1126,49 @@ set `DISTDIR` to a common shared directory that is writable by whichever user `r
 Each machine should set `WRKDIRPREFIX` to a local build directory, if ports are to be built locally.
 Alternately, if the build system is to build and distribute packages to the machines in the build set,
 set `PACKAGES` on the build system to a directory similar to `DISTDIR`.
+
+[[building-on-non-freebsd-hosts]]
+== Building on non-FreeBSD Hosts
+
+Historically, building FreeBSD required a FreeBSD host.
+Nowadays, the FreeBSD can be build on Linux distributions and macOS.
+
+To build FreeBSD on non-FreeBSD hosts, the recommendation is to use the `tools/build/make.py` script.
+This script acts as a wrapper around `bmake`, which is the make implementation used by FreeBSD.
+It ensures that the necessary tooling, including the actual FreeBSD's man:make[1], is bootstrapped and that the build environment is properly configured.
+In particular, it sets the external toolchain variables, such as `XCC`, `XLD`, and others.
+Additionally, the script can pass any additional command arguments, such as `-j 4` for parallel builds or specific make targets, to `bmake`.
+
+[NOTE]
+====
+A recent version of `bmake` can be used instead of the `tools/build/make.py` script as well.
+In that case, however, required environment variables need to be set manually (the easiest way to obtain a list of them is by running `tools/build/make.py --debug`).
+====
+
+Otherwise, the list of prerequisites for building FreeBSD is rather short.
+In fact, it boils down to installing a couple of dependencies.
+
+On macOS, the only dependency LLVM.
+The necessary dependencies can be installed with package manager (e.g., link:https://brew.sh/[Homebrew]):
+
+[source,shell]
+....
+brew install llvm
+....
+
+On a Linux distributions, install link:https://clang.llvm.org/[Clang] version 10.0 or newer and the headers for libarchive and libbz2 (often packaged as libarchive-dev and libbz2-dev).
+
+Once the dependencies are installed, the host should be able to build FreeBSD.
+
+For example, the following `tools/build/make.py` invocation builds the world:
+
+[source,shell]
+....
+MAKEOBJDIRPREFIX=/tmp/obj tools/build/make.py -j 8 TARGET=arm64 TARGET_ARCH=aarch64 buildworld
+....
+
+It builds the world for target `aarch64:arm64` on 8 CPUs and uses [.filename]#/tmp/obj# for object files.
+Note that the variables `MAKEOBJDIRPREFIX`, `TARGET`, and `TARGET_ARCH` are mandatory when building on non-FreeBSD hosts.
+Also, make sure to create the object directory pointed to by the `MAKEOBJDIRPREFIX` environment variable.
+
+Refer to man:arch[7] and man:build[7] for more details.

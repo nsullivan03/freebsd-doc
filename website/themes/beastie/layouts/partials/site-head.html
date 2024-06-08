@@ -3,7 +3,7 @@
   <meta name="description" content="FreeBSD is an operating system used to power modern servers, desktops, and embedded platforms." />
   <meta name="keywords" content="FreeBSD, BSD, UNIX, open source" />
 
-  <meta name="copyright" content="1995-2021 The FreeBSD Foundation">
+  <meta name="copyright" content="1995-{{ now.Format "2006" }} The FreeBSD Foundation" />
 
   <title>{{ with .Params.Title }}{{ . }} | {{ end }} {{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
@@ -11,11 +11,10 @@
 
   <link rel="stylesheet" href="{{ absLangURL ($.Site.BaseURL) }}css/fixed.css">
 
-  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/man.xml" title="FreeBSD Manual Pages">
-  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/man-freebsd-release-ports.xml" title="FreeBSD + Ports Manual Pages">
-  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/ports.xml" title="FreeBSD Ports and Packages Collection">
-  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/message-id.xml" title="FreeBSD Mailing List Message-ID Search">
-  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/markmail.xml" title="FreeBSD Mailing List Search by MarkMail">
+  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/man.xml" title="FreeBSD Man">
+  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/man-freebsd-release-ports.xml" title="FreeBSD Man+P">
+  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/ports.xml" title="FreeBSD Ports">
+  <link rel="search" type="application/opensearchdescription+xml" href="{{ absLangURL ($.Site.BaseURL) }}opensearch/message-id.xml" title="FreeBSD M-ID">
 
   <!-- SEO -->
   <meta name="twitter:card" content="summary_large_image"/>

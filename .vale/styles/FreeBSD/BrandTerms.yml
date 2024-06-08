@@ -1,0 +1,13 @@
+extends: substitution
+message: Use '%s' instead of '%s'.
+level: error
+ignorecase: true
+swap:
+  '(?:LetsEncrypt|Let''s Encrypt)': Let's Encrypt
+  'node[.]?js': Node.js
+  'Post?gr?e(?:SQL)': PostgreSQL
+  'java[ -]?scripts?': JavaScript
+  freebsd: FreeBSD
+  github: GitHub
+  xml: XML
+  nvidia: NVIDIA

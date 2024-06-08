@@ -3,8 +3,8 @@ title: Part IV. Network Communication
 prev: books/handbook/usb-device-mode
 next: books/handbook/serialcomms
 showBookMenu: true
-weight: 32
-path: "/books/handbook/"
+weight: 33
+path: "/books/handbook/partiv/"
 ---
 
 [[network-communication]]

@@ -352,6 +352,7 @@
 * Chia-liang Kao <mailto:clkao@CirX.ORG[clkao@CirX.ORG]>
 * Chiang Cheng-Hsiung <mailto:elvis@sslab.cs.ccu.edu.tw[elvis@sslab.cs.ccu.edu.tw]>
 * Chie Taguchi <mailto:taguchi.ch@gmail.com[taguchi.ch@gmail.com]>
+* Chih-Hsin Chang <mailto:starbops@hey.com[starbops@hey.com]>
 * Chiharu Shibata <mailto:chi@bd.mbn.or.jp[chi@bd.mbn.or.jp]>
 * Chip Norkus
 * Choe, Cheng-Dae <mailto:whitekid@netian.com[whitekid@netian.com]>
@@ -723,7 +724,6 @@
 * Gábor Kincses <mailto:gabor@acm.org[gabor@acm.org]>
 * Gábor Zahemszky <mailto:zgabor@CoDe.hu[zgabor@CoDe.hu]>
 * Gasol Wu <mailto:gasol.wu@gmail.com[gasol.wu@gmail.com]>
-* Gabriel Dutra <mailto:0xdutra@gmail.com[0xdutra@gmail.com]>
 * Gabriel Rizzo <mailto:gabriel96.gsr@gmail.com[gabriel96.gsr@gmail.com]>
 * Gareth McCaughan <mailto:gjm11@dpmms.cam.ac.uk[gjm11@dpmms.cam.ac.uk]>
 * Garrett Rooney <mailto:rooneg@electricjellyfish.net[rooneg@electricjellyfish.net]>
@@ -907,6 +907,7 @@
 * Jacob Bohn Lorensen <mailto:jacob@jblhome.ping.mk[jacob@jblhome.ping.mk]>
 * Jacques Marneweck <mailto:jacques@php.net[jacques@php.net]>
 * Jagane D Sundar <mailto:jagane@netcom.com[jagane@netcom.com]>
+* Jake Freeland <mailto:jake@technologyfriends.net[jake@technologyfriends.net]>
 * Jake Hamby <mailto:jehamby@anobject.com[jehamby@anobject.com]>
 * Jake Smith <mailto:jake@xz.cx[jake@xz.cx]>
 * Jakub Klausa <mailto:jacke@bofh.pl[jacke@bofh.pl]>
@@ -1032,7 +1033,6 @@
 * Joe Orthoefer <mailto:j_orthoefer@tia.net[j_orthoefer@tia.net]>
 * Joe Smith <mailto:inwap@best.com[inwap@best.com]>
 * Joe Traister <mailto:traister@mojozone.org[traister@mojozone.org]>
-* Joel Bodenmann <mailto:jbo@insane.engineer[jbo@insane.engineer]>
 * Joel Diaz <mailto:joeldiaz@bellsouth.net[joeldiaz@bellsouth.net]>
 * Joel Faedi <mailto:Joel.Faedi@esial.u-nancy.fr[Joel.Faedi@esial.u-nancy.fr]>
 * Joel Ray Holveck <mailto:joelh@gnu.org[joelh@gnu.org]>
@@ -1082,6 +1082,7 @@
 * Jon Morgan <mailto:morgan@terminus.trailblazer.com[morgan@terminus.trailblazer.com]>
 * Jon Nistor <mailto:nistor@snickers.org[nistor@snickers.org]>
 * Jon Passki <mailto:cykyc@yahoo.com[cykyc@yahoo.com]>
+* Jon Stuart <mailto:freebsd@zikomo.xyz[freebsd@zikomo.xyz]>
 * Jon Wilson <mailto:jon@phuq.co.uk[jon@phuq.co.uk]>
 * Jona Joachim <mailto:walkingshadow@grummel.net[walkingshadow@grummel.net]>
 * Jonas Ferreira <mailto:jonas.h.ferreira@me.com[jonas.h.ferreira@me.com]>
@@ -1235,6 +1236,7 @@
 * Kurt Kanzenbach <mailto:kurt@kmk-computers.de[kurt@kmk-computers.de]>
 * Kurt Olsen <mailto:kurto@tiny.mcs.usu.edu[kurto@tiny.mcs.usu.edu]>
 * Kyle Martin <mailto:mkm@ieee.org[mkm@ieee.org]>
+* Kyung-tak, Yoo <mailto:stonegaze@me.com[stonegaze@me.com]>
 * L. Jonas Olsson <mailto:ljo@ljo-slip.DIALIN.CWRU.Edu[ljo@ljo-slip.DIALIN.CWRU.Edu]>
 * Lacey Powers <mailto:lacey.leanne@gmail.com[lacey.leanne@gmail.com]>
 * Lapo Luchini <mailto:lapo@lapo.it[lapo@lapo.it]>
@@ -1290,6 +1292,7 @@
 * Magnus Enbom <mailto:dot@tinto.campus.luth.se[dot@tinto.campus.luth.se]>
 * Mahesh Neelakanta <mailto:mahesh@gcomm.com[mahesh@gcomm.com]>
 * Mahlon E. Smith <mailto:mahlon@martini.nu[mahlon@martini.nu]>
+* Maja Reberc <maja.reberc@freedommail.ch[maja.reberc@freedommail.ch]>
 * Makoto WATANABE <mailto:watanabe@zlab.phys.nagoya-u.ac.jp[watanabe@zlab.phys.nagoya-u.ac.jp]>
 * Makoto YAMAKURA <mailto:makoto@pinpott.spnet.ne.jp[makoto@pinpott.spnet.ne.jp]>
 * Malte Lance <mailto:malte.lance@gmx.net[malte.lance@gmx.net]>
@@ -1531,6 +1534,7 @@
 * Miks Mikelsons <mailto:miks@cubesystems.lv[miks@cubesystems.lv]>
 * Milan Obuch <mailto:bsd@dino.sk[bsd@dino.sk]>
 * Milosz Galazka <mailto:milosz.galazka@gmail.com[milosz.galazka@gmail.com]>
+* Mina Galić <mailto:freebsd@igalic.co[freebsd@igalic.co]>
 * Ming-I Hseh <mailto:PA@FreeBSD.ee.Ntu.edu.TW[PA@FreeBSD.ee.Ntu.edu.TW]>
 * Mitsuru Yoshida <mailto:mitsuru@riken.go.jp[mitsuru@riken.go.jp]>
 * Mohammad S. Babaei <mailto:info@babaei.net[info@babaei.net]>
@@ -1791,6 +1795,7 @@
 * Philippe Pepiot <mailto:phil@philpep.org[phil@philpep.org]>
 * Philippe Rocques <mailto:phil@teaser.fr[phil@teaser.fr]>
 * Pierre David <mailto:pdagog@gmail.com[pdagog@gmail.com]>
+* Pierre Pronchery <mailto:pierre@freebsdfoundation.org[pierre@freebsdfoundation.org]>
 * Pierre Y. Dampure <mailto:pierre.dampure@k2c.co.uk[pierre.dampure@k2c.co.uk]>
 * Pierre-Paul Lavoie <mailto:ppl@nbnet.nb.ca[ppl@nbnet.nb.ca]>
 * Pieter Danhieux <mailto:opr@bsdaemon.be[opr@bsdaemon.be]>
@@ -2049,6 +2054,7 @@
 * Stefan Schwarzer <mailto:sschwarzer@sschwarzer.net[sschwarzer@sschwarzer.net]>
 * Stefan Tell <mailto:stefan.tell@crashmail.de[stefan.tell@crashmail.de]>
 * Stefan `Sec` Zehl <mailto:sec@42.org[sec@42.org]>
+* Stefano Marinelli <mailto:stefano@dragas.it[stefano@dragas.it]>
 * Steffen Fritz <mailto:steffen@fritz.wtf[steffen@fritz.wtf]>
 * Steffen Mazanek <mailto:steffen.mazanek@unibw-muenchen.de[steffen.mazanek@unibw-muenchen.de]>
 * Steffen Vogelreuter <mailto:Steffen@Vogelreuter.De[Steffen@Vogelreuter.De]>
@@ -2056,6 +2062,7 @@
 * Sten Poldma <mailto:exile@chamber.ee[exile@chamber.ee]>
 * Sten Spans <mailto:sten@blinkenlights.nl[sten@blinkenlights.nl]>
 * Stepan Zastupov <mailto:redchrom@gmail.com[redchrom@gmail.com]>
+* Stephan Lichtenauer <mailto:sl@honeyguide.eu[sl@honeyguide.eu]>
 * Stephane Lapie <mailto:stephane.lapie@darkbsd.org[stephane.lapie@darkbsd.org]>
 * Stephen Clawson <mailto:sclawson@marker.cs.utah.edu[sclawson@marker.cs.utah.edu]>
 * Stephen F. Combs <mailto:combssf@salem.ge.com[combssf@salem.ge.com]>
@@ -2085,6 +2092,7 @@
 * Steven Honson <mailto:steven@honson.org[steven@honson.org]>
 * Steven McCanne <mailto:mccanne@cs.berkeley.edu[mccanne@cs.berkeley.edu]>
 * Steven Plite <mailto:splite@purdue.edu[splite@purdue.edu]>
+* Steven Stallion <mailto:sstallion@gmail.com[sstallion@gmail.com]>
 * Steven Wallace
 * Stig Inge Lea Bjørnsen <mailto:stiginge@pvv.org[stiginge@pvv.org]>
 * Stijn Hoop <mailto:stijn@win.tue.nl[stijn@win.tue.nl]>
@@ -2225,6 +2233,7 @@
 * Trevor Cornpropst <mailto:tcornpropst@cox.net[tcornpropst@cox.net]>
 * Trober <mailto:trober@trober.com[trober@trober.com]>
 * Troels Kofoed Jacobsen <mailto:tkjacobsen@gmail.com[tkjacobsen@gmail.com]>
+* Trond Endrestøl <mailto:Trond.Endrestol@ximalas.info[Trond.Endrestol@ximalas.info]>
 * Tsung-Han Yeh <mailto:snowfly@yuntech.edu.tw[snowfly@yuntech.edu.tw]>
 * Tz-Huan Huang <mailto:tzhuan@gmail.com[tzhuan@gmail.com]>
 * Tzanetos Balitsaris <mailto:tzabal@it.teithe.gr[tzabal@it.teithe.gr]>
@@ -2377,7 +2386,6 @@
 * Zhihao Yuan <mailto:lichray@gmail.com[lichray@gmail.com]>
 * Zhixiang JIANG <mailto:luckrill@yahoo.com.cn[luckrill@yahoo.com.cn]>
 * Zhong Ming-Xun <mailto:zmx@mail.CDPA.nsysu.edu.tw[zmx@mail.CDPA.nsysu.edu.tw]>
-* Zsolt Udvari <mailto:udvzsolt@gmail.com[udvzsolt@gmail.com]>
 * appleboy <mailto:appleboy.tw@gmail.com[appleboy.tw@gmail.com]>
 * arci <mailto:vega@sophia.inria.fr[vega@sophia.inria.fr]>
 * ayunyan <mailto:ayunyan@gmail.com[ayunyan@gmail.com]>

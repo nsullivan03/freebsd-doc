@@ -5,7 +5,7 @@ description: Example of an article and a book used in the FreeBSD Documentation 
 tags: ["examples", "tutorial", "AsciiDoctor", "Book", "Article"]
 showBookMenu: true
 weight: 16
-path: "/books/fdp-primer/"
+path: "/books/fdp-primer/examples/"
 ---
 
 [appendix]
@@ -154,7 +154,7 @@ toc::[]
 
 This is the first section in my article.
 
-== My First Sub-Section
+=== My First Sub-Section
 
 This is the first sub-section in my article.
 

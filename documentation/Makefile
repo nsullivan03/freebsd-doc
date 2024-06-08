@@ -1,19 +1,20 @@
 # Generate the FreeBSD documentation
 #
-# Copyright (c) 2020-2022, The FreeBSD Documentation Project
-# Copyright (c) 2020-2022, Sergio Carlavilla <carlavilla@FreeBSD.org>
+# Copyright (c) 2020-2023, The FreeBSD Documentation Project
+# Copyright (c) 2020-2023, Sergio Carlavilla <carlavilla@FreeBSD.org>
 #
 # Targets intended for use on the command line
 #
-# all (default)	-	generate the books TOC and compile all the documentation
+# all (default)	-	generate books and articles without generating the
+#				PDFs or EPUBs
 # clean		- 	removes generated files
 # run		-	serves the built documentation site for local browsing
 # pdf		-	build PDF versions of the articles and books.
 # html		-	build HTML versions of the articles and books for
-#			offline use.
-#			If variable DOC_HTML_ARCHIVE is set, all documents will be
-#			archived/compressed, and only these files will be kept in the public
-#			directory.
+#				offline use.
+#				If variable DOC_HTML_ARCHIVE is set, all documents will be
+#				archived/compressed, and only these files will be kept in the
+#				public directory.
 # epub		-	build EPUB versions of the articles and books (Experimental).
 #
 # The run target uses hugo's built-in webserver to make the documentation site
@@ -41,10 +42,10 @@ GEMBASE?= 	${GEM_PATH}
 GEMBASE?= 	${LOCALBASE}
 .endif
 
-RUBY_CMD =	${GEMBASE}/bin/ruby
+RUBY_CMD ?=	${LOCALBASE}/bin/ruby
 HUGO_CMD =	${LOCALBASE}/bin/hugo
-HUGO_ARGS?=	--verbose --minify
-HUGO_OFFLINE_ARGS?= 	--environment offline --verbose --minify
+HUGO_ARGS?=	--minify
+HUGO_OFFLINE_ARGS?= 	--environment offline --minify
 ROUGIFY_CMD=	${GEMBASE}/bin/rougify
 ASCIIDOCTOR_CMD=	${GEMBASE}/bin/asciidoctor
 ASCIIDOCTORPDF_CMD=	${GEMBASE}/bin/asciidoctor-pdf

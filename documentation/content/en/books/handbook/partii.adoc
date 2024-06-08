@@ -1,10 +1,10 @@
 ---
 title: Part II. Common Tasks
-prev: books/handbook/wayland
+prev: books/handbook/network
 next: books/handbook/desktop
 showBookMenu: true
-weight: 9
-path: "/books/handbook/"
+weight: 10
+path: "/books/handbook/partii/"
 ---
 
 [[common-tasks]]

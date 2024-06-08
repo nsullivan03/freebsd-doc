@@ -6,7 +6,7 @@ description: How to quickly create a new FreeBSD Port
 tags: ["quick porting", "guide", "port", "ports collection", "how-to"]
 showBookMenu: true
 weight: 3
-path: "/books/porters-handbook/"
+path: "/books/porters-handbook/quick-porting/"
 ---
 
 [[quick-porting]]
@@ -81,7 +81,7 @@ The minimal [.filename]#Makefile# would look something like this:
 PORTNAME=	oneko
 DISTVERSION=	1.1b
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.cs.columbia.edu/archives/X11R5/contrib/
+MASTER_SITES=	ftp://ftp.rediris.es/sites/ftp.freebsd.org/pub/FreeBSD/
 
 MAINTAINER=	youremail@example.com
 COMMENT=	Cat chasing a mouse all over the screen
@@ -149,6 +149,8 @@ Refer to the man:pkg-create[8] manual page for details on the packing list.
 ====
 It is recommended to keep all the filenames in this file sorted alphabetically.
 It will make verifying changes when upgrading the port much easier.
+The sorting should be applied after variable expansion takes place.
+The framework does this correctly when the package list is crossref:plist[plist-autoplist,generated automatically].
 ====
 
 [TIP]
@@ -227,7 +229,7 @@ These are the important points to verify:
 
 Make certain no warnings are shown in any of the stages.
 
-Thorough automated testing can be done with package:ports-mgmt/poudriere[] from the Ports Collection, see crossref:testing[testing-poudriere,Poudriere] for more information.
+Thorough automated testing can be done with package:ports-mgmt/poudriere[] from the Ports Collection, see crossref:testing[testing-poudriere,poudriere] for more information.
 It maintains `jails` where all of the steps shown above can be tested without affecting the state of the host system.
 
 [[porting-portlint]]
@@ -295,7 +297,7 @@ Add a short description of the program to the Description field of the PR (perha
 [NOTE]
 ====
 Giving a good description in the summary of the problem report makes the work of port committers and triagers a lot easier.
-The expected format for new ports is "[NEW PORT] _category/portname short description of the port_" for new ports.
+The expected format for new ports is "[NEW PORT] _category/portname short description of the port_".
 Using this scheme makes it easier and faster to begin the work of committing the new port.
 ====
 
@@ -308,20 +310,8 @@ To get a listing of _open_ port PRs, select _Open_ and _Ports & Packages_ in the
 After looking at the new port, we will reply if necessary, and commit it to the tree.
 The submitter's name will also be added to the list of extref:{contributors}[Additional FreeBSD Contributors, contrib-additional] and other files.
 
-It is also possible to submit ports using a man:shar[1] file.
-Using the previous example with the `oneko` port above.
-
-.Creating a [.filename]#.shar# for a New Port
-[[porting-submitting-shar]]
-[example]
+[IMPORTANT]
 ====
-go to the directory above where the port directory is located, and use `tar` to create the shar archive:
-
-[source,shell]
-....
-% cd ..
-% tar cf oneko.shar --format shar oneko
-....
+Previously it was possible to submit patches for new ports using a man:shar[1] file; this is no longer the case with the evolution of man:git[1].
+Committers no longer accept man:shar[1] files as their use is prone to mistake and does not add the relevant entry in the category's [.filename]#Makefile#.
 ====
-
-[.filename]#oneko.shar# can then be submitted in the same way as [.filename]#oneko.diff# above.
