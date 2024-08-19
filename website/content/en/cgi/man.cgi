@@ -730,7 +730,7 @@ $manPathDefault = 'FreeBSD 14.1-RELEASE and Ports';
     'Red Hat 7.2', "$manLocalDir/RedHat-7.2-i386",
     'Red Hat 7.3', "$manLocalDir/RedHat-7.3-i386",
     'Red Hat 8.0', "$manLocalDir/RedHat-8.0-i386",
-    'Red Hat 9',   "$manLocalDir/RedHat-9-i386",
+    'Red Hat 9.0', "$manLocalDir/RedHat-9.0-i386",
 
     'CentOS 3.9', "$manLocalDir/CentOS-3.9",
     'CentOS 4.8', "$manLocalDir/CentOS-4.8",
@@ -837,6 +837,8 @@ $manPathDefault = 'FreeBSD 14.1-RELEASE and Ports';
     'DragonFly 2.10.1', "$manLocalDir/DragonFly-2.10.1",
     'DragonFly 1.12.1', "$manLocalDir/DragonFly-1.12.1",
     'DragonFly 1.0A',   "$manLocalDir/DragonFly-1.0A",
+
+    'Dell UNIX SVR4 2.2', "$manLocalDir/Dell-SVR4-2.2",
 
     'HP-UX 11.22', "$manLocalDir/HP-UX-11.22",
     'HP-UX 11.20', "$manLocalDir/HP-UX-11.20",
@@ -971,6 +973,7 @@ my @no_pdf_output = (
     'OpenBSD 4.8',
     'OpenBSD 4.9',
     'IRIX 6.5.30',
+    'Dell UNIX SVR4 2.2',
 );
 
 my %no_pdf_output = map { $_ => 1 } @no_pdf_output;
@@ -2284,6 +2287,7 @@ Copyright (c) for manual pages by OS vendors:
 <a href="https://en.wikipedia.org/wiki/History_of_the_Berkeley_Software_Distribution">2.11 BSD</a>,
 <a href="https://www.apple.com">Apple</a>,
 <a href="https://www.centos.org">CentOS</a>,
+<a href="https://www.dell.com">Dell</a>,
 <a href="https://www.debian.org">Debian</a>,
 <a href="https://www.dragonflybsd.org">DragonFly BSD</a>,
 <a href="https://www.freebsd.org">FreeBSD</a>,

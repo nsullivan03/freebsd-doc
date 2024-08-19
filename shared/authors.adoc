@@ -2576,6 +2576,10 @@
 :osa-email: osa@FreeBSD.org
 :osa: {osa-name} <{osa-email}>
 
+:osamaabb-name: Osama Abboud
+:osamaabb-email: osamaabb@FreeBSD.org
+:osamaabb: {osamaabb-name} <{osamaabb-email}>
+
 :oshogbo-name: Mariusz Zaborski
 :oshogbo-email: oshogbo@FreeBSD.org
 :oshogbo: {oshogbo-name} <{oshogbo-email}>
@@ -3734,7 +3738,7 @@
 :core-secretary-email: core-secretary@FreeBSD.org
 
 // FreeBSD Doc Engineering Team
-:doceng-members: {bcr}, {blackend}, {dbaio}, {fernape}, {hrs}, {carlavilla}
+:doceng-members: {blackend}, {carlavilla}, {dbaio}, {fernape}, {hrs}
 :doceng-secretary-email: <doceng-secretary@FreeBSD.org>
 
 // FreeBSD Donations Liaison
@@ -3751,9 +3755,8 @@
 
 // FreeBSD Release Engineering Teams
 :re: re@FreeBSD.org
-:re-members: {kib}, {blackend}, {karels}, {delphij}, {cperciva}
-:re-members-email: {kib-email}, {blackend-email}, {karels-email}, {delphij-email}, {cperciva-email}
-:re-builders: {marcel}, {nyan}, {nwhitehorn}
+:re-members: {kib}, {dch}, {blackend}, {jhixson}, {delphij}, {emaste}, {mmokhi}, {cperciva}, {dfr}, {bofh}
+:re-members-email: {kib-email}, {dch-email}, {blackend-email}, {jhixson-email}, {delphij-email}, {emaste-email}, {mmokhi-email}, {cperciva-email}, {dfr-email}, {bofh-email}
 
 // FreeBSD Security Officer
 :so: {gordon}
